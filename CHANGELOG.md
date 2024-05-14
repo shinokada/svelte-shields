@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.0.2
+
+### Patch Changes
+
+- feat: GitHub, GitHubDownloads, NpmDownloads, NpmVersion components ([`24b6e929fb4e960db060c2fcda00554708a2583a`](https://github.com/shinokada/svelte-shields/commit/24b6e929fb4e960db060c2fcda00554708a2583a))
+
 ## 0.4.23
 
 ### Patch Changes
