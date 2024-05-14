@@ -6,7 +6,7 @@
   import { GithubSolid, random_tailwind_color, DotsHorizontalOutline, XSolid, Sidebar, sidebarList } from 'runes-webkit'
   import DynamicCodeBlockStyle from './DynamicCodeBlockStyle.svelte';
   import { sineIn } from 'svelte/easing';
-  import { newSidebarList } from '../+layout.svelte';
+  // import { newSidebarList } from '../+layout.svelte';
 
   function isIncluded(url: string, allowedUrls: string[]): boolean {
     return allowedUrls.some(allowedUrl => url.startsWith(allowedUrl));
@@ -106,9 +106,9 @@
 			<NavBrand {siteName} spanclass="self-center whitespace-nowrap text-2xl font-semibold text-primary-900 dark:text-primary-500" />
     {/if}
 			<div class="ml-auto flex items-center lg:order-1">
-        {#if include}
+        
 				<DynamicCodeBlockStyle />
-        {/if}
+        
         <DotsHorizontalOutline onclick={dropdown.toggle} class="dark:text-white ml-6 mr-4" size="lg" />
       <div class="relative">
         <Dropdown {dropdownStatus}
@@ -175,12 +175,7 @@
       <span class="sr-only">Close drawer</span>
     </button>
   </div>
-  <Sidebar
-    sidebarList={newSidebarList}
-    s_b_aside="w-60 p-0 border-none mx-2 mt-20 !important"
-    s_b_div="bg-transparent p-0"
-    sidebarClose={closeNavDrawer}
-  />
+
 </Drawer>
 
 <!--

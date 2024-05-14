@@ -39,9 +39,19 @@ const badge3: NpmVersionPropsType = {
   });
 </script>
 
-<h1>NpmVersion</h1>
+<h1>NpmVersion component</h1>
 
+<H2>Props</H2>
 
+<HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} />
+
+<H2>Types</H2>
+
+<HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string} />
+
+<H2>Examples</H2>
+
+<CodeWrapper>
 <NpmVersion {...badge} />
 
 <NpmVersion {...badge1} />
@@ -49,3 +59,4 @@ const badge3: NpmVersionPropsType = {
 <NpmVersion {...badge2} />
 
 <NpmVersion {...badge3} />
+</CodeWrapper>

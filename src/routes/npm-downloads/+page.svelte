@@ -26,7 +26,17 @@ const download1: NpmDownloadsPropsType = {
   });
 </script>
 
-<h1>NpmDownloads</h1>
+<h1>NpmDownloads component</h1>
+
+<H2>Props</H2>
+
+<HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} />
+
+<H2>Types</H2>
+
+<HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string} />
+
+<H2>Examples</H2>
 
 <CodeWrapper>
 <NpmDownloads {...download} />

@@ -1,0 +1,12 @@
+- user
+- repo
+- style
+- logo
+- logoColor
+- logoSize
+- label
+- labelColor
+- color
+- cacheSeconds
+- link
+- ...attributes

@@ -24,7 +24,17 @@
   });
 </script>
 
-<h1>GitHubDownloads</h1>
+<h1>GitHubDownloads component</h1>
+
+<H2>Props</H2>
+
+<HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} />
+
+<H2>Types</H2>
+
+<HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string} />
+
+<H2>Examples</H2>
 
 <CodeWrapper>
 <GitHubDownloads {...download} />

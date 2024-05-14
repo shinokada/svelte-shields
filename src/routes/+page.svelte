@@ -1,14 +1,36 @@
 <script lang="ts">
-  import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo, BellActiveAltOutline, insertObjectToArray, excludeByTitle, cards, info, pkg } from 'runes-webkit';
-  import { A } from 'svelte-5-ui-lib';
-  const cardsToExclude = ['Seven Props']
-  const brand = {
-    title: 'Brands, Regular, and Solid Icons',
-    description: '2000+ SVG Icons.',
-    icon: BellActiveAltOutline,
-    icon_class: 'text-green-500'
-  }
-  let filteredCards = $state(insertObjectToArray(excludeByTitle(cards, cardsToExclude), brand, 2))
+  import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo, BellActiveAltOutline, insertObjectToArray, excludeByTitle, cards, info, pkg, BadgeCheckOutline, Accessibility, TruckFastSolid, GlobeOutline } from 'runes-webkit';
+
+  const shields_cards = [
+    {
+      title: 'NpmVersion',
+      description: 'Shields badge for npm version',
+      icon: BadgeCheckOutline,
+      icon_class: 'text-pink-500',
+      href: 'npm-version'
+    },
+    {
+      title: 'NpmDownloads',
+      description: 'Shields badge for npm downloads',
+      icon: Accessibility,
+      icon_class: 'text-green-400',
+      href: 'npm-downloads'
+    },
+    {
+      title:'GitHub',
+      description: 'Shields badge for GitHub release',
+      icon: TruckFastSolid,
+      icon_class: 'text-yellow-500',
+      href: 'github'
+    },
+    {
+      title:'GitHubDownloads',
+      description: 'Shields badge for GitHub downloads',
+      icon: GlobeOutline,
+      icon_class: 'text-amber-500',
+      href: 'github-downloads'
+    },
+  ]
 
   const runaticsVersion = __RUNATICS_VERSION__;
   const runesMetaTagsVersion = __RUNES_METATAGS_VERSION__;
@@ -21,9 +43,8 @@
 </SupportBanner>
 
 <h1 class='flex justify-center my-8'>{removeHyphensAndCapitalize(__NAME__)}</h1>
-<h2 class='flex justify-center my-8'><A href ='/how-to-use' aclass='underline'>This is a demo page. Please read  How to use page.</A> </h2>
-<HomeCards cards={filteredCards}/>
-<h2 class='flex justify-center my-8'>Info</h2>
-<HomeCards cards={info} />
+
+<HomeCards cards={shields_cards}/>
+
 <TechInfo {...newPkg} />
 </div>

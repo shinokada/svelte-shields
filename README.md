@@ -1,24 +1,22 @@
-# Runes Webkit
+# Svelte Shields
 
-A collection of reusable Svelte components for building user interfaces for Svelte Runes web applications.
+## Docs
 
-- CodeWrapper
-- Footer
-- helpers
-- HighlightCompo
-- HomeCards
-- IconPage
-- SupportBanner
-- TechInfo
-
+[Svelte Shields Docs](https://svelte-shields.codewithshin.com)
 
 ## Requirements
 
 - Svelte 5 (Runes)
-- SvelteKit
 
 ## Installation
 
 ```sh
-pnpm i -D runes-webkit svelte-rune-highlight highlight.js
+pnpm i -D svelte-shields
 ```
+
+## Components
+
+- GitHub for GitHub release
+- GitHubDownloads
+- NpmDownloads
+- NpmVersion

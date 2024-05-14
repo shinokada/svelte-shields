@@ -1,0 +1,16 @@
+- user
+- repo
+- include_prereleases
+- sort
+- filter
+- display_name = 'release'
+- style = 'flat'
+- logo
+- logoColor
+- logoSize
+- label=''
+- labelColor
+- color
+- cacheSeconds
+- link
+- ...attributes
