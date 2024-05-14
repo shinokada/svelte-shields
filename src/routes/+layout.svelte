@@ -34,7 +34,7 @@
     name: 'codewithshin.com',
     href: 'https://codewithshin.com',
   }
-  const urlsToIncludeSwitcherAndSidebar =['/no-sidebar']
+  // const urlsToIncludeSwitcherAndSidebar =['/no-sidebar']
   const siteName = removeHyphensAndCapitalize(__NAME__)
   const twitterUrl = 'https://twitter.com/shinokada'
   const githubUrl = `https://github.com/shinokada/${__NAME__}`
@@ -43,18 +43,9 @@
 <RunesMetaTags {...metaTags} />
 <Runatics {analyticsId} />
 
-<Nav {lis} {siteName} {twitterUrl} {githubUrl} urlsToIncludeSwitcher={urlsToIncludeSwitcherAndSidebar}/>
+<Nav {lis} {siteName} {twitterUrl} {githubUrl} />
 <div class="lg:flex">  
-{#if urlsToIncludeSwitcherAndSidebar.some(path => currentUrl.startsWith(path))}
-  <Sidebar 
-  sidebarList={lis}
-  s_b_aside='fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-0 lg:block hidden'
-  s_b_div='fixed top-20 px-2 w-60'
-  />
-  <div class="relative">
-    <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
-  </div>
-{/if}
+
   {@render children()}
 </div>
 <Footer {brand} {lis}/>

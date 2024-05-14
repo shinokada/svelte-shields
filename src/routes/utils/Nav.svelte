@@ -48,8 +48,6 @@
   let currentUrl = $state($page.url.pathname);
 	let nav = uiHelpers();
 
-  let include = $derived(isIncluded(currentUrl, urlsToIncludeSwitcher));
-
 	let navStatus = $state(false);
 	let toggleNav = nav.toggle;
 	let closeNav = nav.close;

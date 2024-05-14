@@ -72,6 +72,13 @@
     color: 'hsla(40, 100%, 50%, 1)' // HSLA (Orange, fully opaque)
   }
 
+  const logo_label: GitHubPropsType = {
+    user: 'sveltejs',
+    repo: 'svelte',
+    logo: 'svelte',
+    label: 'SVELTE'
+  }
+
 
   const linkEx: GitHubPropsType = {
     user: 'shinokada',
@@ -130,7 +137,7 @@
 <HighlightCompo codeLang="ts" code={modules['./md/style.md'] as string} />
 
 
-<H2>Color</H2>
+<H3>Color</H3>
 <p>Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).</p>
 
 <CodeWrapper c_w_div='grid gap-4'>
@@ -142,11 +149,15 @@
   <GitHub {...color6} />
 </CodeWrapper>
 
-<H2>Logo & Label</H2>
+<HighlightCompo codeLang="ts" code={modules['./md/color.md'] as string} />
 
+<H3>Logo & Label</H3>
 
+<CodeWrapper>
+  <GitHub {...logo_label} />
+</CodeWrapper>
 
-<H2>Link</H2>
+<H3>Link</H3>
 <p>Specify what clicking on the left/right of a badge should do.</p>
 <CodeWrapper>
   <GitHub {...linkEx} />
@@ -154,7 +165,7 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/link.md'] as string} />
 
-<H2>Other</H2>
+<H3>Other</H3>
 <p><Code>cacheSeconds</Code> is HTTP cache lifetime (rules are applied to infer a default value on a per-badge basis, any values specified below the default will be ignored).</p>
 <CodeWrapper>
   <GitHub {...otherEx} />
