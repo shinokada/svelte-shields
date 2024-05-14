@@ -33,7 +33,7 @@
     "test:unit": "vitest",
     "gen:exports": "svelte-lib-helpers exports",
     "copy:packagejson": "svelte-lib-helpers package",
-    "gen:docs5": "svelte-lib-helpers docs5FromType",
+    "gen:docs5": "svelte-lib-helpers docs5",
     "lib-helpers": "npm run gen:docs5 && npm run package && npm run gen:exports && npm run copy:packagejson"
   },
   "devDependencies": {
