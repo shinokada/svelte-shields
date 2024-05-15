@@ -157,6 +157,8 @@
   <GitHub {...logo_label} />
 </CodeWrapper>
 
+<HighlightCompo codeLang="ts" code={modules['./md/logo-and-label.md'] as string} />
+
 <H3>Link</H3>
 <p>Specify what clicking on the left/right of a badge should do.</p>
 <CodeWrapper>
