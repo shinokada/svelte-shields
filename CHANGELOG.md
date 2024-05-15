@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.2.0
+
+### Minor Changes
+
+- feat: PypiVersion component ([`f4e270d45e45020edd3aef2d59edf2184e936b3c`](https://github.com/shinokada/svelte-shields/commit/f4e270d45e45020edd3aef2d59edf2184e936b3c))
+
 ## 0.1.1
 
 ### Patch Changes
