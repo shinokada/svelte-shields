@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.1.1
+
+### Patch Changes
+
+- feat: add NpmAuthorDownloads component ([`58316ef9cff0841272830e807b79713fc4194832`](https://github.com/shinokada/svelte-shields/commit/58316ef9cff0841272830e807b79713fc4194832))
+
 ## 0.1.0
 
 ### Minor Changes
