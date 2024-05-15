@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.0.4
+
+### Patch Changes
+
+- fix: styleOpt add style= ([`8d9b5c08d3ae38a8c4c6de8126860e0b1a479f56`](https://github.com/shinokada/svelte-shields/commit/8d9b5c08d3ae38a8c4c6de8126860e0b1a479f56))
+
 ## 0.0.3
 
 ### Patch Changes
