@@ -27,7 +27,7 @@
   const cacheSecondsOpt = cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : ''
   const link1 = link ? `&link=${encodeURIComponent(link[0])}` :  ''
   const link2 = link ? `&link=${encodeURIComponent(link[1])}` : ''
-  let srcData = $state(`https://img.shields.io/npm/v/${packageName}${tagOpt}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`)
+  let srcData = $state(`https://img.shields.io/npm/v/${packageName}${tagOpt}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`)
 </script>
 
 {#if link}
