@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.1.0
+
+### Minor Changes
+
+- fix: remove colorOpt duplicate ([`b62f3337185b697e4280b3b34a9492e17dd42783`](https://github.com/shinokada/svelte-shields/commit/b62f3337185b697e4280b3b34a9492e17dd42783))
+
 ## 0.0.5
 
 ### Patch Changes

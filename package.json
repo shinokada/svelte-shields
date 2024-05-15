@@ -1,6 +1,6 @@
 {
   "name": "svelte-shields",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "A collection of reusable Svelte components for building  user interfaces for Runes.",
   "license": "MIT",
   "homepage": "https://svelte-shields.codewithshin.com/",
