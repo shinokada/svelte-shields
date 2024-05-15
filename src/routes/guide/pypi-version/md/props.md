@@ -1,0 +1,12 @@
+- packageName
+- pypiBaseUrl
+- style
+- logo
+- logoColor
+- logoSize
+- label
+- labelColor
+- color
+- cacheSeconds
+- link
+- ...attributes

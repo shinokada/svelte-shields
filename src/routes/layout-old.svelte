@@ -1,39 +1,24 @@
 <script context="module" lang="ts">
-  export const newSidebarList: ListType[] = [
+  const extra: ListType[] = [
     {
-      name: 'GitHub Version',
+      name: '3 Tabs',
       icon: ExpandOutline as ComponentType,
-      href: '/guide/github'
+      href: '/three-tabs'
     },
     {
-      name: 'GitHub Downloads',
+      name: '3 Tabs Tailwind ',
       icon: CogOutline as ComponentType,
-      href: '/guide/github-downloads'
+      href: '/three-tabs-sizebytailwind'
     },
     {
-      name: 'NPM Author Downloads',
+      name: 'No Tabs',
       icon: GridPlusOutline as ComponentType,
-      href: '/guide/npm-author-downloads'
-    },
-    {
-      name: 'NPM Downloads',
-      icon: GridPlusOutline as ComponentType,
-      href: '/guide/npm-downloads'
-    },
-    {
-      name: 'NPM Version',
-      icon: GridPlusOutline as ComponentType,
-      href: '/guide/npm-version'
-    },
-    {
-      name: 'Pypi Version',
-      icon: GridPlusOutline as ComponentType,
-      href: '/guide/pypi-version'
+      href: '/no-tabs'
     }
   ];
-  // export const newSidebarList: ListType[] = [
-  //   ...sidebarList, ...extra 
-  // ];
+  export const newSidebarList: ListType[] = [
+    ...sidebarList, ...extra 
+  ];
 </script>
 <script lang="ts">
   import '../app.pcss';
@@ -41,8 +26,9 @@
   import type { ComponentType } from 'svelte';
   import type { ListType } from 'runes-webkit';
   import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize, sidebarList, ExpandOutline, GridPlusOutline, CogOutline } from 'runes-webkit'
+
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
-  import Nav from './utils/Nav.svelte';
+  import Nav from './utils/Nav-old.svelte';
   import { Runatics } from 'runatics';
 
   let { children, data } = $props()
@@ -61,14 +47,17 @@
       : data.layoutMetaTags;
   })
   const lis =[
-    {name: 'Guide', href: '/guide/github'},
-    {name: 'Quick start', href: '/quick-start'},
+    {name: 'npm-version', href: '/npm-version'},
+    {name: 'npm-downloads', href: '/npm-downloads'},
+    {name: 'npm-author', href: '/npm-author-downloads'},
+    {name: 'github-release', href: '/github'},
+    {name: 'github-downloads', href: '/github-downloads'},
   ]
   const brand = {
     name: 'codewithshin.com',
     href: 'https://codewithshin.com',
   }
-  const urlsToIncludeSwitcherAndSidebar =['/guide/', '/guide2/', '/how-to-use', '/quick-start']
+  // const urlsToIncludeSwitcherAndSidebar =['/no-sidebar']
   const siteName = removeHyphensAndCapitalize(__NAME__)
   const twitterUrl = 'https://twitter.com/shinokada'
   const githubUrl = `https://github.com/shinokada/${__NAME__}`
@@ -77,18 +66,9 @@
 <RunesMetaTags {...metaTags} />
 <Runatics {analyticsId} />
 
-<Nav {lis} {siteName} {twitterUrl} {githubUrl} urlsToIncludeSwitcher={urlsToIncludeSwitcherAndSidebar}/>
+<Nav {lis} {siteName} {twitterUrl} {githubUrl} />
 <div class="lg:flex">  
-{#if urlsToIncludeSwitcherAndSidebar.some(path => currentUrl.startsWith(path))}
-  <Sidebar 
-  sidebarList={newSidebarList}
-  s_b_aside='fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-0 lg:block hidden'
-  s_b_div='fixed top-20 px-2 w-60'
-  />
-  <div class="relative">
-    <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
-  </div>
-{/if}
+
   {@render children()}
 </div>
 <Footer {brand} {lis}/>
