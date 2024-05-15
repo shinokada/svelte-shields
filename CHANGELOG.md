@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.0.5
+
+### Patch Changes
+
+- fix: add encodeURIComponent to label and update alt ([`f73a54e27368d74e12c733db6bcca15a213b9656`](https://github.com/shinokada/svelte-shields/commit/f73a54e27368d74e12c733db6bcca15a213b9656))
+
 ## 0.0.4
 
 ### Patch Changes
