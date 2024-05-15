@@ -81,6 +81,12 @@
     label: 'SVELTE'
   }
 
+  const logo_label2: NpmVersionPropsType = {
+    packageName: 'flowbite-svelte-icons',
+    logo: 'svelte',
+    label: 'FLOWBITE SVELTE ICONS'
+  }
+
   const link: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
     logo: '',
@@ -156,8 +162,9 @@
 
 <H3>Logo & Label</H3>
 
-<CodeWrapper>
+<CodeWrapper c_w_div='grid gap-4'>
   <NpmVersion {...logo_label} />
+  <NpmVersion {...logo_label2} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/logo_and_label.md'] as string} />

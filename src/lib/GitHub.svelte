@@ -27,7 +27,7 @@
   const logoOpt = logo ? `&logo=${logo}` : ''
   const logoColorOpt = logoColor ? `&logoColor=${logoColor}` : ''
   const logoSizeOpt = logoSize ? `&logoSize=${logoSize}` : ''
-  const labelOpt = label ? `&label=${label}` : ''
+  const labelOpt = label ? `&label=${encodeURIComponent(label)}` : ''
   const labelColorOpt = labelColor ? `&labelColor=${labelColor}` : ''
   const colorOpt = color ? `&color=${color}` : ''
   const cacheSecondsOpt = cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : ''
