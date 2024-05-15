@@ -17,7 +17,7 @@
 	}: NpmDownloadsPropsType = $props();
 
   // const intervalOpt = interval ? `&interval=${interval}` : 'dw'
-  const styleOpt = style ? `style=${style}` : 'flat'
+  const styleOpt = style ? `style=${style}` : 'style=flat'
   const logoOpt = logo ? `&logo=${logo}` : ''
   const logoColorOpt = logoColor ? `&logoColor=${logoColor}` : ''
   const logoSizeOpt = logoSize ? `&logoSize=${logoSize}` : ''

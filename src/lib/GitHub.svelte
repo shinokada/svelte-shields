@@ -20,7 +20,7 @@
 		...attributes
 	}: GitHubPropsType = $props();
 
-  const styleOpt = style ? `style=${style}` : 'flat'
+  const styleOpt = style ? `style=${style}` : 'style=flat'
   const include_prereleasesOpt = include_prereleases ? `&include_prereleases` : ''
   const sortOpt = sort ? `&sort=${sort}` : ''
   const filterOpt = filter ? `&filter=${filter}` : ''

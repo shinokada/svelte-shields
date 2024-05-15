@@ -16,7 +16,7 @@
 		...attributes
 	}: NpmVersionPropsType = $props();
 
-  const styleOpt = style ? `style=${style}` : 'flat'
+  const styleOpt = style ? `style=${style}` : 'style=flat'
   const logoOpt = logo ? `&logo=${logo}` : ''
   const tagOpt = tag ? `/${tag}` : ''
   const logoColorOpt = logoColor ? `&logoColor=${logoColor}` : ''
