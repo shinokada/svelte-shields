@@ -17,6 +17,13 @@
       href: 'npm-downloads'
     },
     {
+      title: 'NpmAuthorDownloads',
+      description: 'Shields badge for npm author downloads',
+      icon: Accessibility,
+      icon_class: 'text-green-400',
+      href: 'npm-author-downloads'
+    },
+    {
       title:'GitHub',
       description: 'Shields badge for GitHub release',
       icon: TruckFastSolid,

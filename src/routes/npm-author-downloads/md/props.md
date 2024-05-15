@@ -1,0 +1,12 @@
+- interval = 'dw'
+- author
+- style = 'flat'
+- logo
+- logoColor
+- logoSize
+- label
+- labelColor
+- color
+- cacheSeconds
+- link
+- ...attributes

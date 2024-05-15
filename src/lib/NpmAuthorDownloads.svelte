@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { NpmDownloadsPropsType } from './types';
+  import type { NpmAuthorDownloadsPropsType } from './types';
 
 	let {
     interval = 'dw',
-		packageName,
+		author,
 		style = 'flat',
 		logo,
     logoColor,
@@ -14,9 +14,8 @@
     cacheSeconds,
     link,
 		...attributes
-	}: NpmDownloadsPropsType = $props();
+	}: NpmAuthorDownloadsPropsType = $props();
 
-  // const intervalOpt = interval ? `&interval=${interval}` : 'dw'
   const styleOpt = style ? `style=${style}` : 'style=flat'
   const logoOpt = logo ? `&logo=${logo}` : ''
   const logoColorOpt = logoColor ? `&logoColor=${logoColor}` : ''
@@ -28,15 +27,15 @@
   const link1 = link ? `&link=${encodeURIComponent(link[0])}` :  ''
   const link2 = link ? `&link=${encodeURIComponent(link[1])}` : ''
 
-  let srcData = $state(`https://img.shields.io/npm/${interval}/${packageName}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`)
+  let srcData = $state(`https://img.shields.io/npm-stat/${interval}/${author}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`)
 
 </script>
 
 {#if link}
-  <object data={srcData} title='NPM {interval} Downloads - {packageName}' {...attributes}>
+  <object data={srcData} title='NPM {interval} Downloads - {author}' {...attributes}>
   </object>
 {:else}
   <img  
-    src={srcData} alt="NPM {interval} Downloads - {packageName}" {...attributes}
+    src={srcData} alt="NPM {interval} Downloads - {author}" {...attributes}
   />
 {/if}

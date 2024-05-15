@@ -27,6 +27,7 @@
   const lis =[
     {name: 'npm-version', href: '/npm-version'},
     {name: 'npm-downloads', href: '/npm-downloads'},
+    {name: 'npm-author', href: '/npm-author-downloads'},
     {name: 'github-release', href: '/github'},
     {name: 'github-downloads', href: '/github-downloads'},
   ]
