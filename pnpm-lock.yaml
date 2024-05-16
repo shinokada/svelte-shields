@@ -95,6 +95,9 @@ devDependencies:
   svelte-rune-highlight:
     specifier: ^0.5.9
     version: 0.5.9(svelte@5.0.0-next.132)
+  svelte-supertiny:
+    specifier: 2.0.0-next.8
+    version: 2.0.0-next.8(svelte@5.0.0-next.132)
   tailwind-merge:
     specifier: ^2.3.0
     version: 2.3.0
@@ -4283,6 +4286,14 @@ packages:
       svelte: ^5.0.0-next.65
     dependencies:
       highlight.js: 11.9.0
+      svelte: 5.0.0-next.132
+    dev: true
+
+  /svelte-supertiny@2.0.0-next.8(svelte@5.0.0-next.132):
+    resolution: {integrity: sha512-bm1HjL/q9lE83yrzYq/GRt9ZQzOcb5j0noXpN1V3ukSw4ZxVEQ0VGIw0kURi9fzmmGZ1cMhSGfltWFnREAwh7w==}
+    peerDependencies:
+      svelte: ^5.0.0
+    dependencies:
       svelte: 5.0.0-next.132
     dev: true
 

@@ -1,41 +1,56 @@
 <script lang="ts">
-  import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo, BellActiveAltOutline, insertObjectToArray, excludeByTitle, cards, info, pkg, BadgeCheckOutline, Accessibility, TruckFastSolid, GlobeOutline } from 'runes-webkit';
+  import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo,   pkg,  ExpandOutline} from 'runes-webkit';
+  import { Npm, Github, Python } from 'svelte-supertiny'
 
   const shields_cards = [
     {
       title: 'NpmVersion',
       description: 'Shields badge for npm version',
-      icon: BadgeCheckOutline,
+      icon: Npm,
       icon_class: 'text-pink-500',
-      href: 'npm-version'
+      href: 'guide/npm-version'
     },
     {
       title: 'NpmDownloads',
       description: 'Shields badge for npm downloads',
-      icon: Accessibility,
+      icon: Npm,
       icon_class: 'text-green-400',
-      href: 'npm-downloads'
+      href: 'guide/npm-downloads'
     },
     {
       title: 'NpmAuthorDownloads',
       description: 'Shields badge for npm author downloads',
-      icon: Accessibility,
+      icon: Npm,
       icon_class: 'text-green-400',
-      href: 'npm-author-downloads'
+      href: 'guide/npm-author-downloads'
     },
     {
       title:'GitHub',
       description: 'Shields badge for GitHub release',
-      icon: TruckFastSolid,
+      icon: Github,
       icon_class: 'text-yellow-500',
-      href: 'github'
+      href: '/guide/github'
     },
     {
       title:'GitHubDownloads',
       description: 'Shields badge for GitHub downloads',
-      icon: GlobeOutline,
+      icon: Github,
       icon_class: 'text-amber-500',
-      href: 'github-downloads'
+      href: '/guide/github-downloads'
+    },
+    {
+      title:'PypiVersion',
+      description: 'Shields badge for Pypi version',
+      icon: Python,
+      icon_class: 'text-amber-500',
+      href: '/guide/pypi-version'
+    },
+    {
+      title:'StaticBadge',
+      description: 'Shields badge for static badges',
+      icon: ExpandOutline,
+      icon_class: 'text-amber-500',
+      href: '/guide/static-badge'
     },
   ]
 
