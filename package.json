@@ -1,6 +1,6 @@
 {
   "name": "svelte-shields",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A collection of reusable Svelte components for building  user interfaces for Runes.",
   "license": "MIT",
   "homepage": "https://svelte-shields.codewithshin.com/",
@@ -126,6 +126,10 @@
     "./PypiVersion.svelte": {
       "types": "./dist/PypiVersion.svelte.d.ts",
       "svelte": "./dist/PypiVersion.svelte"
+    },
+    "./StaticBadge.svelte": {
+      "types": "./dist/StaticBadge.svelte.d.ts",
+      "svelte": "./dist/StaticBadge.svelte"
     },
     "./package.json": "./package.json"
   }

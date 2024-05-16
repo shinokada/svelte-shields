@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.2.1
+
+### Patch Changes
+
+- feat: add StaticBadge component and docs ([`7353b98b9cb4d4ad60513aeff89a871f51b47842`](https://github.com/shinokada/svelte-shields/commit/7353b98b9cb4d4ad60513aeff89a871f51b47842))
+
 ## 0.2.0
 
 ### Minor Changes
