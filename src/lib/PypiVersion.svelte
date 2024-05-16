@@ -36,7 +36,7 @@
 {:else}
   <img  
     src={srcData} 
-    alt={label} 
+    alt="Pypi version of {packageName}" 
     {...attributes}
   />
 {/if}

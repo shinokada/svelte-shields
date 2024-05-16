@@ -1,6 +1,5 @@
-export interface PypiVersionPropsType {
-  packageName: string;
-  pypiBaseUrl?: string;
+export type LinkType =  string[] | [string, string];
+export interface BaseBadgePropsType {
   style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
   logo?: string;
   logoColor?: string;
@@ -10,4 +9,9 @@ export interface PypiVersionPropsType {
   color?: string;
   cacheSeconds?: string;
   link?: LinkType;
+}
+
+export interface PypiVersionPropsType extends BaseBadgePropsType {
+  packageName: string;
+  pypiBaseUrl?: string;
 }

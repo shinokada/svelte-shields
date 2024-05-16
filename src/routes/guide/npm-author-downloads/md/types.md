@@ -1,6 +1,5 @@
-export interface NpmAuthorDownloadsPropsType {
-  interval?: 'dw' | 'dm' | 'dy'| 'd18m';
-  author: string;
+export type LinkType =  string[] | [string, string];
+export interface BaseBadgePropsType {
   style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
   logo?: string;
   logoColor?: string;
@@ -10,4 +9,9 @@ export interface NpmAuthorDownloadsPropsType {
   color?: string;
   cacheSeconds?: string;
   link?: LinkType;
+}
+
+export interface NpmAuthorDownloadsPropsType extends BaseBadgePropsType {
+  interval?: 'dw' | 'dm' | 'dy'| 'd18m';
+  author: string;
 }

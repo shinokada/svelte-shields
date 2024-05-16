@@ -17,30 +17,33 @@
     },
     {
       name: 'NPM Downloads',
-      icon: GridPlusOutline as ComponentType,
+      icon: BellActiveAltOutline as ComponentType,
       href: '/guide/npm-downloads'
     },
     {
       name: 'NPM Version',
-      icon: GridPlusOutline as ComponentType,
+      icon: ChartPieOutline as ComponentType,
       href: '/guide/npm-version'
     },
     {
       name: 'Pypi Version',
-      icon: GridPlusOutline as ComponentType,
+      icon: ClipboardListOutline as ComponentType,
       href: '/guide/pypi-version'
+    },
+    {
+      name: 'Static Badge',
+      icon: DatabaseOutline as ComponentType,
+      href: '/guide/static-badge'
     }
   ];
-  // export const newSidebarList: ListType[] = [
-  //   ...sidebarList, ...extra 
-  // ];
+
 </script>
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
   import type { ComponentType } from 'svelte';
   import type { ListType } from 'runes-webkit';
-  import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize, sidebarList, ExpandOutline, GridPlusOutline, CogOutline } from 'runes-webkit'
+  import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize, ExpandOutline, CogOutline, BellActiveAltOutline, GridPlusOutline, ChartPieOutline, ClipboardListOutline, DatabaseOutline } from 'runes-webkit'
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';

@@ -1,6 +1,5 @@
-export interface GitHubDownloadsPropsType {
-  user: string;
-  repo: string;
+export type LinkType =  string[] | [string, string];
+export interface BaseBadgePropsType {
   style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
   logo?: string;
   logoColor?: string;
@@ -10,4 +9,9 @@ export interface GitHubDownloadsPropsType {
   color?: string;
   cacheSeconds?: string;
   link?: LinkType;
+}
+
+export interface GitHubDownloadsPropsType extends BaseBadgePropsType {
+  user: string;
+  repo: string;
 }

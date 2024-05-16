@@ -1,9 +1,8 @@
 <script lang="ts">
-  import type { NpmVersionPropsType } from './types';
+  import type { StaticBadgePropsType } from './types';
 
 	let {
-		packageName,
-    tag,
+    badgeContent,
 		style,
 		logo = 'svelte',
     logoColor,
@@ -14,11 +13,10 @@
     cacheSeconds,
     link,
 		...attributes
-	}: NpmVersionPropsType = $props();
+	}: StaticBadgePropsType = $props();
 
   const styleOpt = style ? `style=${style}` : 'style=flat'
   const logoOpt = logo ? `&logo=${logo}` : ''
-  const tagOpt = tag ? `/${tag}` : ''
   const logoColorOpt = logoColor ? `&logoColor=${logoColor}` : ''
   const logoSizeOpt = logoSize ? `&logoSize=${logoSize}` : ''
   const labelOpt = label ? `&label=${encodeURIComponent(label)}` : ''
@@ -27,16 +25,16 @@
   const cacheSecondsOpt = cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : ''
   const link1 = link ? `&link=${encodeURIComponent(link[0])}` :  ''
   const link2 = link ? `&link=${encodeURIComponent(link[1])}` : ''
-  let srcData = $state(`https://img.shields.io/npm/v/${packageName}${tagOpt}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`)
+  let srcData = $state(`https://img.shields.io/badge/${encodeURIComponent(badgeContent)}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`)
 </script>
 
 {#if link}
-  <object data={srcData} title={packageName} {...attributes}>
+  <object data={srcData} title={badgeContent} {...attributes}>
   </object>
 {:else}
   <img  
     src={srcData} 
-    alt="NPM version of {packageName}"    
+    alt="Badge for {badgeContent}" 
     {...attributes}
   />
 {/if}

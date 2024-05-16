@@ -1,90 +1,50 @@
-import { NpmDownloads } from "$lib";
-
 export type LinkType =  string[] | [string, string];
-export interface GitHubPropsType {
+export interface BaseBadgePropsType {
+  style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
+  logo?: string;
+  logoColor?: string;
+  logoSize?: string;
+  label?: string;
+  labelColor?: string;
+  color?: string;
+  cacheSeconds?: string;
+  link?: LinkType;
+}
+
+export interface GitHubPropsType extends BaseBadgePropsType {
   user: string;
   repo: string;
   include_prereleases?: boolean;
   sort?: 'date' | 'semver';
   filter?: string;
   display_name?: 'tag' | 'release';
-  style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
-  logo?: string;
-  logoColor?: string;
-  logoSize?: string;
-  label?: string;
-  labelColor?: string;
-  color?: string;
-  cacheSeconds?: string;
-  link?: LinkType;
 }
 
-export interface GitHubDownloadsPropsType {
+export interface GitHubDownloadsPropsType extends BaseBadgePropsType {
   user: string;
   repo: string;
-  style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
-  logo?: string;
-  logoColor?: string;
-  logoSize?: string;
-  label?: string;
-  labelColor?: string;
-  color?: string;
-  cacheSeconds?: string;
-  link?: LinkType;
 }
 
-export interface NpmDownloadsPropsType {
+export interface NpmDownloadsPropsType extends BaseBadgePropsType {
   interval?: 'dw' | 'dm' | 'dy'| 'd18m';
   packageName: string;
-  style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
-  logo?: string;
-  logoColor?: string;
-  logoSize?: string;
-  label?: string;
-  labelColor?: string;
-  color?: string;
-  cacheSeconds?: string;
-  link?: LinkType;
 }
 
-export interface NpmVersionPropsType {
+export interface NpmVersionPropsType extends BaseBadgePropsType {
   packageName: string;
   tag?: string;
-  style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
-  logo?: string;
-  logoColor?: string;
-  logoSize?: string;
-  label?: string;
-  labelColor?: string;
-  color?: string;
-  cacheSeconds?: string;
-  link?: LinkType;
 }
 
-export interface NpmAuthorDownloadsPropsType {
+export interface NpmAuthorDownloadsPropsType extends BaseBadgePropsType {
   interval?: 'dw' | 'dm' | 'dy'| 'd18m';
   author: string;
-  style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
-  logo?: string;
-  logoColor?: string;
-  logoSize?: string;
-  label?: string;
-  labelColor?: string;
-  color?: string;
-  cacheSeconds?: string;
-  link?: LinkType;
 }
 
-export interface PypiVersionPropsType {
+export interface PypiVersionPropsType extends BaseBadgePropsType {
   packageName: string;
   pypiBaseUrl?: string;
-  style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
-  logo?: string;
-  logoColor?: string;
-  logoSize?: string;
-  label?: string;
-  labelColor?: string;
-  color?: string;
-  cacheSeconds?: string;
-  link?: LinkType;
+}
+
+export interface StaticBadgePropsType extends BaseBadgePropsType {
+  badgeContent: string;
 }

@@ -1,10 +1,5 @@
-export interface GitHubPropsType {
-  user: string;
-  repo: string;
-  include_prereleases?: boolean;
-  sort?: 'date' | 'semver';
-  filter?: string;
-  display_name?: 'tag' | 'release';
+export type LinkType =  string[] | [string, string];
+export interface BaseBadgePropsType {
   style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
   logo?: string;
   logoColor?: string;
@@ -14,4 +9,13 @@ export interface GitHubPropsType {
   color?: string;
   cacheSeconds?: string;
   link?: LinkType;
+}
+
+export interface GitHubPropsType extends BaseBadgePropsType {
+  user: string;
+  repo: string;
+  include_prereleases?: boolean;
+  sort?: 'date' | 'semver';
+  filter?: string;
+  display_name?: 'tag' | 'release';
 }

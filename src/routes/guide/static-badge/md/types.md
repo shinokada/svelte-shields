@@ -11,9 +11,6 @@ export interface BaseBadgePropsType {
   link?: LinkType;
 }
 
-export interface NpmDownloadsPropsType extends BaseBadgePropsType {
-  interval?: 'dw' | 'dm' | 'dy'| 'd18m';
-  packageName: string;
+export interface StaticBadgePropsType extends BaseBadgePropsType {
+  badgeContent: string;
 }
-
-
