@@ -98,7 +98,7 @@
   });
 </script>
 
-<h1>NpmDownloads component</h1>
+<h1>NpmDownloads Component - Svelte Shields</h1>
 
 <H2>Props</H2>
 

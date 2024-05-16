@@ -102,7 +102,7 @@
   });
 </script>
 
-<h1>GitHub component</h1>
+<h1>GitHub Component - Svelte Shields</h1>
 
 <H2>Props</H2>
 

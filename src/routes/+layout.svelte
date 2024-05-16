@@ -1,6 +1,11 @@
 <script context="module" lang="ts">
   export const newSidebarList: ListType[] = [
     {
+      name: 'Quickstart',
+      icon: DatabaseOutline as ComponentType,
+      href: '/guide/quickstart'
+    },
+    {
       name: 'GitHub Version',
       icon: ExpandOutline as ComponentType,
       href: '/guide/github'
@@ -65,13 +70,13 @@
   })
   const lis =[
     {name: 'Guide', href: '/guide/github'},
-    {name: 'Quick start', href: '/guide/quick-start'},
+    {name: 'Quickstart', href: '/guide/quickstart'},
   ]
   const brand = {
     name: 'codewithshin.com',
     href: 'https://codewithshin.com',
   }
-  const urlsToIncludeSwitcherAndSidebar =['/guide/', '/guide2/', '/how-to-use', '/quick-start']
+  const urlsToIncludeSwitcherAndSidebar =['/guide/']
   const siteName = removeHyphensAndCapitalize(__NAME__)
   const twitterUrl = 'https://twitter.com/shinokada'
   const githubUrl = `https://github.com/shinokada/${__NAME__}`

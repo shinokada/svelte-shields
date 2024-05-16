@@ -2,15 +2,15 @@ import type { MetaProps } from 'runes-meta-tags';
 
 export const load = () => {
   const pageMetaTags = Object.freeze({
-    title: 'Custom icons example - Runes Webkit',
-    description: 'Custom icons example',
+    title: 'GitHub Component - Svelte Shields',
+    description: 'Svelte Shields GitHub component for Svelte Runes',
     og: {
-      title: 'Custom icons example - Runes Webkit',
-      description: 'Custom icons example',
+      title: 'GitHub Component - Svelte Shields',
+      description: 'Svelte Shields GitHub component for Svelte Runes',
     },
     twitter: {
-      title: 'Custom icons example - Runes Webkit',
-      description: 'Custom icons example',
+      title: 'GitHub Component - Svelte Shields',
+      description: 'Svelte Shields GitHub component for Svelte Runes',
     }
   }) satisfies MetaProps;
   return { pageMetaTags };

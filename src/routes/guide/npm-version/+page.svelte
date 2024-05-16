@@ -108,7 +108,7 @@
   });
 </script>
 
-<h1>NpmVersion component</h1>
+<h1>NpmVersion Component - Svelte Shields</h1>
 
 <H2>Props</H2>
 

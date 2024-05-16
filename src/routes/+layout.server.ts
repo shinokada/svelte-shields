@@ -5,10 +5,10 @@ import { metaTitle, metaDescription, metaImg } from 'runes-meta-tags';
 export const load = ({ url }) => {
   const siteName = metaTitle('/', __NAME__);
   const title = metaTitle(url.pathname, __NAME__);
-  const basicDesc = 'A quick start for a Svelte Runes project.'
+  const basicDesc = 'A collection of Shilds badge components for Svelte Runes.'
   const description = metaDescription(url.pathname, basicDesc);
   const image = metaImg(url.pathname, __NAME__);
-  const keywords = 'svelte, runes, webkit, ui, components';
+  const keywords = 'svelte, runes, shields.io, badge, sveltekit';
 
   const layoutMetaTags: MetaProps = {
     title,

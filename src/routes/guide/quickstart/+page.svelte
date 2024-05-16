@@ -15,7 +15,7 @@
   });
 </script>
 
-<h1>Quick start</h1>
+<h1>Quickstart - Svelte Shields</h1>
 
 <p>Svelte Shields is a collection of Shields badges for Svelte Runes.</p>
 

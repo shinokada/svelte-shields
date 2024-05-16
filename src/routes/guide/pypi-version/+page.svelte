@@ -97,7 +97,7 @@
   });
 </script>
 
-<h1>PypiVersion component</h1>
+<h1>PypiVersion Component - Svelte Shields</h1>
 
 <H2>Props</H2>
 
