@@ -48,3 +48,8 @@ export interface PypiVersionPropsType extends BaseBadgePropsType {
 export interface StaticBadgePropsType extends BaseBadgePropsType {
   badgeContent: string;
 }
+
+export interface JsrVersionPropsType extends BaseBadgePropsType {
+  scope: string;
+  packageName: string;
+}
