@@ -65,7 +65,7 @@
   })
   const lis =[
     {name: 'Guide', href: '/guide/github'},
-    {name: 'Quick start', href: '/quick-start'},
+    {name: 'Quick start', href: '/guide/quick-start'},
   ]
   const brand = {
     name: 'codewithshin.com',
