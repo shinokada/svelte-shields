@@ -52,6 +52,13 @@
       icon_class: 'text-amber-500',
       href: '/guide/static-badge'
     },
+    {
+      title:'JsrVersion',
+      description: 'Shields badge for JSR version',
+      icon: ExpandOutline,
+      icon_class: 'text-amber-500',
+      href: '/guide/jsr-version'
+    },
   ]
 
   const runaticsVersion = __RUNATICS_VERSION__;

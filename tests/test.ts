@@ -16,6 +16,11 @@ test('guide/github-downloads page has expected h1', async ({ page }) => {
   await expect(page.locator('h1')).toHaveText('GitHubDownloads Component - Svelte Shields');
 });
 
+test('guide/jsr-version page has expected h1', async ({ page }) => {
+  await page.goto('/guide/jsr-version');
+  await expect(page.locator('h1')).toHaveText('JsrVersion Component - Svelte Shields');
+});
+
 test('guide/npm-author-downloads page has expected h1', async ({ page }) => {
   await page.goto('/guide/npm-author-downloads');
   await expect(page.locator('h1')).toHaveText('NpmAuthorDownloads Component - Svelte Shields');
