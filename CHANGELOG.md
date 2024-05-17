@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.2.2
+
+### Patch Changes
+
+- feat: add JsrVersion component ([`6824dce371af564f7fcbe5e3a6b3c9a9840ce8e5`](https://github.com/shinokada/svelte-shields/commit/6824dce371af564f7fcbe5e3a6b3c9a9840ce8e5))
+
 ## 0.2.1
 
 ### Patch Changes
