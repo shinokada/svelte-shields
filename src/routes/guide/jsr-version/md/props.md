@@ -1,7 +1,7 @@
+- scope
 - packageName
-- tag
 - style
-- logo = 'svelte'
+- logo
 - logoColor
 - logoSize
 - label

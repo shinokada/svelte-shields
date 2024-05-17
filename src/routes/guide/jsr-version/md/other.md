@@ -1,10 +1,13 @@
 <script>
-  import { NpmVersion } from 'svelte-shields'
-  import type { NpmVersionPropsType } from 'svelte-shields';
-  const other: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+  import { JsrVersion } from 'svelte-shields'
+  import type { JsrVersionPropsType } from 'svelte-shields';
+
+  const other: JsrVersionPropsType = {
+    scope: '@badrap',
+    packageName: 'valita',
+    logo: '',
     cacheSeconds: '86400',
   }
 </script>
 
-<NpmVersion {...other} />
+<JsrVersion {...other} />

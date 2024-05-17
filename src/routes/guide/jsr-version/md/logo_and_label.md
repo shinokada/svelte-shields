@@ -1,11 +1,13 @@
 <script lang="ts">
-  import { NpmVersion } from 'svelte-shields'
-  import type { NpmVersionPropsType } from 'svelte-shields';
-  const logo_label: NpmVersionPropsType = {
+  import { JsrVersion } from 'svelte-shields'
+  import type { JsrVersionPropsType } from 'svelte-shields';
+  
+  const logo_label: JsrVersionPropsType = {
+    scope: '@badrap',
     packageName: 'svelte',
     logo: 'svelte',
     label: 'SVELTE'
   }
 </script>
 
-<NpmVersion {...logo_label} />
+<JsrVersion {...logo_label} />

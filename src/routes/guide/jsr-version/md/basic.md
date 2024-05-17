@@ -1,14 +1,11 @@
 <script lang="ts">
-  import { NpmVersion } from 'svelte-shields'
-  import type { NpmVersionPropsType } from 'svelte-shields';
-  const basic: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
-  }
-  const basic2: NpmVersionPropsType = {
-    packageName: 'flowbite-svelte-icons',
-    tag: 'next'
+  import { JsrVersion } from 'svelte-shields'
+  import type { JsrVersionPropsType } from 'svelte-shields';
+  const basic: JsrVersionPropsType = {
+    scope: '@badrap',
+    packageName: 'valita',
+    logo: '',
   }
 </script>
 
-<NpmVersion {...basic} />
-<NpmVersion {...basic2} />
+<JsrVersion {...basic} />

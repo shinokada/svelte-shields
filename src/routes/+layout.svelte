@@ -16,6 +16,11 @@
       href: '/guide/github-downloads'
     },
     {
+      name: 'Jsr Version',
+      icon: ClipboardListOutline as ComponentType,
+      href: '/guide/jsr-version'
+    },
+    {
       name: 'NPM Author Downloads',
       icon: GridPlusOutline as ComponentType,
       href: '/guide/npm-author-downloads'

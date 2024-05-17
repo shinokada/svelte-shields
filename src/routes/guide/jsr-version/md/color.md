@@ -1,41 +1,53 @@
 <script lang="ts">
-  import { NpmVersion } from 'svelte-shields'
-  import type { NpmVersionPropsType } from 'svelte-shields';
+  import { JsrVersion } from 'svelte-shields'
+  import type { JsrVersionPropsType } from 'svelte-shields';
 
-  const color1: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+  const color1: JsrVersionPropsType = {
+    scope: '@badrap',
+    packageName: 'valita',
+    logo: '',
     color: 'green'
   }
 
-  const color2: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+  const color2: JsrVersionPropsType = {
+    scope: '@badrap',
+    packageName: 'valita',
+    logo: '',
     color: '00FF00' 
   }
 
-  const color3: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+  const color3: JsrVersionPropsType = {
+    scope: '@badrap',
+    packageName: 'valita',
+    logo: '',
     color: 'rgb(0, 255, 0)' 
   }
 
-  const color4: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+  const color4: JsrVersionPropsType = {
+    scope: '@badrap',
+    packageName: 'valita',
+    logo: '',
     color: 'rgba(0, 255, 0, 1)' 
   }
 
-  const color5: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+  const color5: JsrVersionPropsType = {
+    scope: '@badrap',
+    packageName: 'valita',
+    logo: '',
     color: 'hsl(120, 100%, 50%)' 
   }
 
-  const color6: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+  const color6: JsrVersionPropsType = {
+    scope: '@badrap',
+    packageName: 'valita',
+    logo: '',
     color: 'hsla(120, 100%, 50%, 1)' 
   }
 </script>
 
-<NpmVersion {...color1} />
-<NpmVersion {...color2} />
-<NpmVersion {...color3} />
-<NpmVersion {...color4} />
-<NpmVersion {...color5} />
-<NpmVersion {...color6} />
+<JsrVersion {...color1} />
+<JsrVersion {...color2} />
+<JsrVersion {...color3} />
+<JsrVersion {...color4} />
+<JsrVersion {...color5} />
+<JsrVersion {...color6} />

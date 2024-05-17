@@ -1,31 +1,41 @@
 <script>
-  import { NpmVersion } from 'svelte-shields'
-  import type { NpmVersionPropsType } from 'svelte-shields';
+  import { JsrVersion } from 'svelte-shields'
+  import type { JsrVersionPropsType } from 'svelte-shields';
 
-  const style1: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+  const style1: JsrVersionPropsType = {
+    scope: '@badrap',
+    packageName: 'valita',
+    logo: '',
     style: 'flat',
   }
-  const style2: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+  const style2: JsrVersionPropsType = {
+    scope: '@badrap',
+    packageName: 'valita',
+    logo: '',
     style: 'flat-square',
   }
-  const style3: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+  const style3: JsrVersionPropsType = {
+    scope: '@badrap',
+    packageName: 'valita',
+    logo: '',
     style: 'for-the-badge',
   }
-  const style4: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+  const style4: JsrVersionPropsType = {
+    scope: '@badrap',
+    packageName: 'valita',
+    logo: '',
     style: 'plastic',
   }
-  const style5: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+  const style5: JsrVersionPropsType = {
+    scope: '@badrap',
+    packageName: 'valita',
+    logo: '',
     style: 'social',
-  } 
+  }
 </script>
 
-<NpmVersion {...style1} />
-<NpmVersion {...style2} />
-<NpmVersion {...style3} />
-<NpmVersion {...style4} />
-<NpmVersion {...style5} />
+<JsrVersion {...style1} />
+<JsrVersion {...style2} />
+<JsrVersion {...style3} />
+<JsrVersion {...style4} />
+<JsrVersion {...style5} />

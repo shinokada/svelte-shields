@@ -4,95 +4,105 @@
   import type { JsrVersionPropsType } from '$lib';
   
   const basic: JsrVersionPropsType = {
-    scope: '@luca',
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
   }
 
   const style1: JsrVersionPropsType = {
-    scope: '@luca',
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
     style: 'flat',
   }
   const style2: JsrVersionPropsType = {
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
     style: 'flat-square',
   }
   const style3: JsrVersionPropsType = {
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
     style: 'for-the-badge',
   }
   const style4: JsrVersionPropsType = {
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
     style: 'plastic',
   }
   const style5: JsrVersionPropsType = {
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
     style: 'social',
   }
 
   const color1: JsrVersionPropsType = {
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
     color: 'green'
   }
 
   const color2: JsrVersionPropsType = {
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
     color: '00FF00' 
   }
 
   const color3: JsrVersionPropsType = {
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
     color: 'rgb(0, 255, 0)' 
   }
 
   const color4: JsrVersionPropsType = {
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
     color: 'rgba(0, 255, 0, 1)' 
   }
 
   const color5: JsrVersionPropsType = {
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
     color: 'hsl(120, 100%, 50%)' 
   }
 
   const color6: JsrVersionPropsType = {
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
     color: 'hsla(120, 100%, 50%, 1)' 
   }
 
   const logo_label: JsrVersionPropsType = {
+    scope: '@badrap',
     packageName: 'svelte',
     logo: 'svelte',
     label: 'SVELTE'
   }
 
-
-
   const link: JsrVersionPropsType = {
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
     label: 'Svelte 5 UI Library',
-    link: ['https://flag.codewithshin.com', 'https://github.com/shinokada/flag']
+    link: ['https://valita.codewithshin.com', 'https://github.com/shinokada/valita']
   }
   
   const other: JsrVersionPropsType = {
-    packageName: 'flag',
+    scope: '@badrap',
+    packageName: 'valita',
     logo: '',
     cacheSeconds: '86400',
   }
-
 
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
@@ -119,7 +129,6 @@
 
 <CodeWrapper c_w_div='grid gap-4'>
   <JsrVersion {...basic} />
-  <JsrVersion {...basic2} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/basic.md'] as string} />
@@ -157,7 +166,6 @@
 
 <CodeWrapper c_w_div='grid gap-4'>
   <JsrVersion {...logo_label} />
-  <JsrVersion {...logo_label2} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/logo_and_label.md'] as string} />

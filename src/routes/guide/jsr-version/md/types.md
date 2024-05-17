@@ -11,9 +11,7 @@ export interface BaseBadgePropsType {
   link?: LinkType;
 }
 
-export interface NpmVersionPropsType extends BaseBadgePropsType {
+export interface JsrVersionPropsType extends BaseBadgePropsType {
+  scope: string;
   packageName: string;
-  tag?: string;
 }
-
-
