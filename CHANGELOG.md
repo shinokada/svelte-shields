@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.2.3
+
+### Patch Changes
+
+- feat: add class={classname} ([`10570f97b1fcd60bd868d28e68c670d5eb9b6641`](https://github.com/shinokada/svelte-shields/commit/10570f97b1fcd60bd868d28e68c670d5eb9b6641))
+
 ## 0.2.2
 
 ### Patch Changes
