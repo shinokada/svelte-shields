@@ -1,5 +1,7 @@
 # Svelte Shields
 
+Shields badge components for Svelte.
+
 ## Docs
 
 [Svelte Shields Docs](https://svelte-shields.codewithshin.com)
@@ -18,5 +20,9 @@ pnpm i -D svelte-shields
 
 - GitHub for GitHub release
 - GitHubDownloads
+- JsrVersion
+- NpmAuthorDownloads
 - NpmDownloads
 - NpmVersion
+- PypiVersion
+- StaticBadge
