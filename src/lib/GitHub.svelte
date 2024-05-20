@@ -17,6 +17,7 @@
 		color,
     cacheSeconds,
     link,
+    class: classname,
 		...attributes
 	}: GitHubPropsType = $props();
 
@@ -38,10 +39,11 @@
 </script>
 
 {#if link}
-  <object data={srcData} title='GitHub {display_name} - {user}/{repo}' {...attributes}>
+  <object data={srcData} title='GitHub {display_name} - {user}/{repo}' class={classname} {...attributes}>
   </object>
 {:else}
   <img  
-    src={srcData} alt="GitHub {display_name} - {user}/{repo}" {...attributes}
+    src={srcData} alt="GitHub {display_name} - {user}/{repo}" 
+    class={classname} {...attributes}
   />
 {/if}

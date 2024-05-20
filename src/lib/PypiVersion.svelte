@@ -13,6 +13,7 @@
 		color,
     cacheSeconds,
     link,
+    class: classname,
 		...attributes
 	}: PypiVersionPropsType = $props();
 
@@ -31,12 +32,15 @@
 </script>
 
 {#if link}
-  <object data={srcData} title={packageName} {...attributes}>
+  <object data={srcData} title={packageName} 
+  class={classname}
+  {...attributes}>
   </object>
 {:else}
   <img  
     src={srcData} 
     alt="Pypi version of {packageName}" 
+    class={classname}
     {...attributes}
   />
 {/if}

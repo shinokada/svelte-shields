@@ -13,6 +13,7 @@
 		color,
     cacheSeconds,
     link,
+    class:classname,
 		...attributes
   }: JsrVersionPropsType = $props()
 
@@ -32,10 +33,14 @@
 </script>
 
 {#if link}
-  <object data={srcData} title='JSR version - {scope}/{packageName}' {...attributes}>
+  <object data={srcData} title='JSR version - {scope}/{packageName}' 
+  class={classname}
+  {...attributes}>
   </object>
 {:else}
   <img  
-    src={srcData} alt="JSR version - {scope}/{packageName}" {...attributes}
+    src={srcData} alt="JSR version - {scope}/{packageName}" 
+    class={classname}
+    {...attributes}
   />
 {/if}

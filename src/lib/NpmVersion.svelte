@@ -13,6 +13,7 @@
 		color,
     cacheSeconds,
     link,
+    class: classname,
 		...attributes
 	}: NpmVersionPropsType = $props();
 
@@ -31,12 +32,15 @@
 </script>
 
 {#if link}
-  <object data={srcData} title={packageName} {...attributes}>
+  <object data={srcData} title={packageName} 
+  class={classname}
+  {...attributes}>
   </object>
 {:else}
   <img  
     src={srcData} 
-    alt="NPM version of {packageName}"    
+    alt="NPM version of {packageName}"  
+    class={classname}  
     {...attributes}
   />
 {/if}

@@ -13,6 +13,7 @@
 		color,
     cacheSeconds,
     link,
+    class: classname,
 		...attributes
 	}: NpmAuthorDownloadsPropsType = $props();
 
@@ -32,10 +33,14 @@
 </script>
 
 {#if link}
-  <object data={srcData} title='NPM {interval} Downloads - {author}' {...attributes}>
+  <object data={srcData} title='NPM {interval} Downloads - {author}' 
+  class={classname}
+  {...attributes}>
   </object>
 {:else}
   <img  
-    src={srcData} alt="NPM {interval} Downloads - {author}" {...attributes}
+    src={srcData} alt="NPM {interval} Downloads - {author}" 
+    class={classname}
+    {...attributes}
   />
 {/if}

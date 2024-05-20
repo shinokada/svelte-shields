@@ -9,6 +9,7 @@ export interface BaseBadgePropsType {
   color?: string;
   cacheSeconds?: string;
   link?: LinkType;
+  class?: string;
 }
 
 export interface GitHubPropsType extends BaseBadgePropsType {

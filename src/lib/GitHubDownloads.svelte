@@ -13,6 +13,7 @@
 		color,
     cacheSeconds,
     link,
+    class: classname,
 		...attributes
 	}: GitHubDownloadsPropsType = $props();
 
@@ -32,10 +33,14 @@
 </script>
 
 {#if link}
-  <object data={srcData} title='GitHub Downloads - {user}/{repo}' {...attributes}>
+  <object data={srcData} title='GitHub Downloads - {user}/{repo}' 
+  class={classname}
+  {...attributes}>
   </object>
 {:else}
   <img  
-    src={srcData} alt="GitHub Downloads - {user}/{repo}" {...attributes}
+    src={srcData} alt="GitHub Downloads - {user}/{repo}" 
+    class={classname}
+    {...attributes}
   />
 {/if}

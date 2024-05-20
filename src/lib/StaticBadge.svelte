@@ -12,6 +12,7 @@
 		color,
     cacheSeconds,
     link,
+    class: classname,
 		...attributes
 	}: StaticBadgePropsType = $props();
 
@@ -29,12 +30,15 @@
 </script>
 
 {#if link}
-  <object data={srcData} title={badgeContent} {...attributes}>
+  <object data={srcData} title={badgeContent}
+  class={classname}
+  {...attributes}>
   </object>
 {:else}
   <img  
     src={srcData} 
     alt="Badge for {badgeContent}" 
+    class={classname}
     {...attributes}
   />
 {/if}
