@@ -16,6 +16,11 @@
       href: '/guide/github-downloads'
     },
     {
+      name: 'GitHub Sponsors',
+      icon: CogOutline as Component,
+      href: '/guide/github-sponsors'
+    },
+    {
       name: 'Jsr Version',
       icon: ClipboardListOutline as Component,
       href: '/guide/jsr-version'

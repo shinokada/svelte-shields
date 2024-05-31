@@ -63,5 +63,7 @@ export interface LicensePropsType extends BaseBadgePropsType {
   registry_uri?: string;
 }
 
-
+export interface GitHubSponsorsPropsType extends BaseBadgePropsType {
+  user: string;
+}
 
