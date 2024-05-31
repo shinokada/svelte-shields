@@ -1,6 +1,6 @@
 {
   "name": "svelte-shields",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "A collection of Shilds badge components for Svelte Runes",
   "license": "MIT",
   "homepage": "https://svelte-shields.codewithshin.com/",
@@ -115,6 +115,10 @@
     "./JsrVersion.svelte": {
       "types": "./dist/JsrVersion.svelte.d.ts",
       "svelte": "./dist/JsrVersion.svelte"
+    },
+    "./License.svelte": {
+      "types": "./dist/License.svelte.d.ts",
+      "svelte": "./dist/License.svelte"
     },
     "./NpmAuthorDownloads.svelte": {
       "types": "./dist/NpmAuthorDownloads.svelte.d.ts",

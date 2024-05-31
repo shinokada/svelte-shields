@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.3.0
+
+### Minor Changes
+
+- feat: add License component ([`228334f920c5a74fc544d0a216ec2744ee32d450`](https://github.com/shinokada/svelte-shields/commit/228334f920c5a74fc544d0a216ec2744ee32d450))
+
 ## 0.2.3
 
 ### Patch Changes
