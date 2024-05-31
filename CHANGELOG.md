@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.3.1
+
+### Patch Changes
+
+- feat: add GitHubSponsors component ([`3ca31451486f1b8a6048f48a9e06412e5c630003`](https://github.com/shinokada/svelte-shields/commit/3ca31451486f1b8a6048f48a9e06412e5c630003))
+
 ## 0.3.0
 
 ### Minor Changes
