@@ -1,0 +1,16 @@
+- licenseType
+- user
+- repo
+- packageName
+- registry_uri
+- style = 'flat'
+- logo
+- logoColor
+- logoSize
+- label
+- labelColor
+- color
+- cacheSeconds
+- link
+- class: classname
+- ...attributes

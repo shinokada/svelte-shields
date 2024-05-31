@@ -1,6 +1,7 @@
 export { default as GitHub } from './GitHub.svelte'
 export { default as GitHubDownloads } from './GitHubDownloads.svelte'
 export { default as JsrVersion } from './JsrVersion.svelte'
+export { default as License } from './License.svelte'
 export { default as NpmAuthorDownloads } from './NpmAuthorDownloads.svelte'
 export { default as NpmDownloads } from './NpmDownloads.svelte'
 export { default as NpmVersion } from './NpmVersion.svelte'

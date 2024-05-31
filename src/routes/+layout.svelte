@@ -2,47 +2,52 @@
   export const newSidebarList: ListType[] = [
     {
       name: 'Quickstart',
-      icon: DatabaseOutline as ComponentType,
+      icon: DatabaseOutline as Component,
       href: '/guide/quickstart'
     },
     {
       name: 'GitHub Version',
-      icon: ExpandOutline as ComponentType,
+      icon: ExpandOutline as Component,
       href: '/guide/github'
     },
     {
       name: 'GitHub Downloads',
-      icon: CogOutline as ComponentType,
+      icon: CogOutline as Component,
       href: '/guide/github-downloads'
     },
     {
       name: 'Jsr Version',
-      icon: ClipboardListOutline as ComponentType,
+      icon: ClipboardListOutline as Component,
       href: '/guide/jsr-version'
     },
     {
       name: 'NPM Author Downloads',
-      icon: GridPlusOutline as ComponentType,
+      icon: GridPlusOutline as Component,
       href: '/guide/npm-author-downloads'
     },
     {
       name: 'NPM Downloads',
-      icon: BellActiveAltOutline as ComponentType,
+      icon: BellActiveAltOutline as Component,
       href: '/guide/npm-downloads'
     },
     {
+      name: 'License Component',
+      icon: BellActiveAltOutline as Component,
+      href: '/guide/license'
+    },
+    {
       name: 'NPM Version',
-      icon: ChartPieOutline as ComponentType,
+      icon: ChartPieOutline as Component,
       href: '/guide/npm-version'
     },
     {
       name: 'Pypi Version',
-      icon: ClipboardListOutline as ComponentType,
+      icon: ClipboardListOutline as Component,
       href: '/guide/pypi-version'
     },
     {
       name: 'Static Badge',
-      icon: DatabaseOutline as ComponentType,
+      icon: DatabaseOutline as Component,
       href: '/guide/static-badge'
     }
   ];
@@ -51,7 +56,7 @@
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
   import type { ListType } from 'runes-webkit';
   import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize, ExpandOutline, CogOutline, BellActiveAltOutline, GridPlusOutline, ChartPieOutline, ClipboardListOutline, DatabaseOutline } from 'runes-webkit'
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
