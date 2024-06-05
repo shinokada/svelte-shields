@@ -3,37 +3,37 @@
   import type { LicensePropsType } from 'svelte-shields';
 
   const color1: LicensePropsType = {
-    licenseType: 'github',
+    license: 'github',
     user: 'shinokada',
     repo: 'svelte-shields',
     color: 'indigo',
   }
   const color2: LicensePropsType = {
-    licenseType: 'github',
+    license: 'github',
     user: 'shinokada',
     repo: 'svelte-shields',
     color: '4B0082',
   }
   const color3: LicensePropsType = {
-    licenseType: 'github',
+    license: 'github',
     user: 'shinokada',
     repo: 'svelte-shields',
     color: 'rgb(75, 0, 130)',
   }
   const color4: LicensePropsType = {
-    licenseType: 'github',
+    license: 'github',
     user: 'shinokada',
     repo: 'svelte-shields',
     color: 'rgba(75, 0, 130, 1)',
   }
   const color5: LicensePropsType = {
-    licenseType: 'github',
+    license: 'github',
     user: 'shinokada',
     repo: 'svelte-shields',
     color: 'hsl(275, 100%, 25%)',
   }
   const color6: LicensePropsType = {
-    licenseType: 'github',
+    license: 'github',
     user: 'shinokada',
     repo: 'svelte-shields',
     color: 'hsla(275, 100%, 25%, 1)',

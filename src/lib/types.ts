@@ -56,14 +56,21 @@ export interface JsrVersionPropsType extends BaseBadgePropsType {
 }
 
 export interface LicensePropsType extends BaseBadgePropsType {
-  licenseType: 'github' | 'npm';
-  user?: string;
-  repo?: string;
-  packageName?: string;
-  registry_uri?: string;
+  license: 'github' | 'npm';
+  github_user?: string;
+  github_repo?: string;
+  npm_packageName?: string;
+  npm_registry_uri?: string;
 }
 
 export interface GitHubSponsorsPropsType extends BaseBadgePropsType {
   user: string;
 }
 
+export interface VersionPropsType extends BaseBadgePropsType {
+  version: 'jsr' | 'npm' | 'pypi';
+  packageName: string;
+  jsr_scope?: string;
+  npm_tag?: string;
+  pypiBaseUrl?: string;
+}

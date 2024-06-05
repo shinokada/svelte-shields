@@ -12,7 +12,7 @@ export interface BaseBadgePropsType {
 }
 
 export interface LicensePropsType extends BaseBadgePropsType {
-  licenseType: 'github' | 'npm';
+  license: 'github' | 'npm';
   user?: string;
   repo?: string;
   packageName?: string;

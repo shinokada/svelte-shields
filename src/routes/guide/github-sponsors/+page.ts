@@ -3,7 +3,7 @@ const title = 'GitHubSponsors Component - Svelte Shields';
 const description = 'Svelte Shields GitHubSponsors component for Svelte Runes';
 
 export const load = () => {
-  const pageMetaTags = Object.freeze({
+  const pageMetaTags: MetaProps = {
     title,
     description,
     og: {
@@ -14,6 +14,6 @@ export const load = () => {
       title,
       description,
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };

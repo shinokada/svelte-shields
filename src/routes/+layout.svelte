@@ -2,59 +2,117 @@
   export const newSidebarList: ListType[] = [
     {
       name: 'Quickstart',
-      icon: DatabaseOutline as Component,
+      icon: BikeLineMap as Component,
       href: '/guide/quickstart'
     },
     {
-      name: 'GitHub Version',
-      icon: ExpandOutline as Component,
-      href: '/guide/github'
+      name: 'Static Badge',
+      icon: BellLineOthers as Component,
+      href: '/guide/static-badge'
     },
     {
-      name: 'GitHub Downloads',
-      icon: CogOutline as Component,
-      href: '/guide/github-downloads'
+      name: 'Version',
+      icon: BellActiveAltOutline as Component,
+      children: [
+        {
+          name: 'All in one',
+          icon: BeerLineFood as Component,
+          href: '/guide/version'
+        },
+        {
+          name: 'NPM Version',
+          icon: NpmjsLineLogos as Component,
+          href: '/guide/npm-version'
+        },
+        {
+          name: 'Jsr Version',
+          icon: ClipboardListOutline as Component,
+          href: '/guide/jsr-version'
+        },
+        {
+          name: 'Pypi Version',
+          icon: ClipboardListOutline as Component,
+          href: '/guide/pypi-version'
+        },
+      ]
     },
     {
-      name: 'GitHub Sponsors',
-      icon: CogOutline as Component,
-      href: '/guide/github-sponsors'
+      name: 'Download',
+      icon: DownloadLineSystem as Component,
+      children: [
+        {
+          name: 'All in one',
+          icon: BeerLineFood as Component,
+          href: '/guide/downloads'
+        },
+        {
+          name: 'GitHub Downloads',
+          icon: GithubFillLogos as Component,
+          href: '/guide/github-downloads'
+        },
+        {
+          name: 'NPM Downloads',
+          icon: NpmjsLineLogos as Component,
+          href: '/guide/npm-downloads'
+        },
+
+      ]
+    },
+    {
+      name: 'GitHub',
+      icon: GithubFillLogos as Component,
+      children: [
+        {
+          name: 'GitHub Version',
+          icon: GithubFillLogos as Component,
+          href: '/guide/github'
+        },
+        {
+          name: 'GitHub Downloads',
+          icon: GithubFillLogos as Component,
+          href: '/guide/github-downloads'
+        },
+        {
+          name: 'GitHub Sponsors',
+          icon: GithubFillLogos as Component,
+          href: '/guide/github-sponsors'
+        },
+      ]
+    },
+    {
+      name: 'NPM',
+      icon: NpmjsLineLogos as Component,
+      children: [
+        {
+          name: 'NPM Author Downloads',
+          icon: NpmjsLineLogos as Component,
+          href: '/guide/npm-author-downloads'
+        },
+        {
+          name: 'NPM Downloads',
+          icon: NpmjsLineLogos as Component,
+          href: '/guide/npm-downloads'
+        },
+      
+        {
+          name: 'NPM Version',
+          icon: NpmjsLineLogos as Component,
+          href: '/guide/npm-version'
+        },
+      ]
     },
     {
       name: 'Jsr Version',
       icon: ClipboardListOutline as Component,
       href: '/guide/jsr-version'
     },
-    {
-      name: 'NPM Author Downloads',
-      icon: GridPlusOutline as Component,
-      href: '/guide/npm-author-downloads'
-    },
-    {
-      name: 'NPM Downloads',
-      icon: BellActiveAltOutline as Component,
-      href: '/guide/npm-downloads'
-    },
-    {
-      name: 'License Component',
-      icon: BellActiveAltOutline as Component,
-      href: '/guide/license'
-    },
-    {
-      name: 'NPM Version',
-      icon: ChartPieOutline as Component,
-      href: '/guide/npm-version'
-    },
+    
     {
       name: 'Pypi Version',
       icon: ClipboardListOutline as Component,
       href: '/guide/pypi-version'
     },
-    {
-      name: 'Static Badge',
-      icon: DatabaseOutline as Component,
-      href: '/guide/static-badge'
-    }
+    
   ];
 
 </script>
@@ -67,6 +125,7 @@
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';
+  import { BikeLineMap, BellLineOthers, BeerLineFood, NpmjsLineLogos, CupLineFood, DownloadLineSystem, PlayReverseLargeFillMedia, GithubFillLogos } from 'svelte-remix';
 
   let { children, data } = $props()
   const analyticsId = data.ANALYTICS_ID

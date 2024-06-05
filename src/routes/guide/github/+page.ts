@@ -1,7 +1,7 @@
 import type { MetaProps } from 'runes-meta-tags';
 
 export const load = () => {
-  const pageMetaTags = Object.freeze({
+  const pageMetaTags: MetaProps = {
     title: 'GitHub Component - Svelte Shields',
     description: 'Svelte Shields GitHub component for Svelte Runes',
     og: {
@@ -12,6 +12,6 @@ export const load = () => {
       title: 'GitHub Component - Svelte Shields',
       description: 'Svelte Shields GitHub component for Svelte Runes',
     }
-  }) satisfies MetaProps;
+  };
   return { pageMetaTags };
 };

@@ -4,102 +4,102 @@
   import type { JsrVersionPropsType } from '$lib';
   
   const basic: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
   }
 
   const style1: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     style: 'flat',
   }
   const style2: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     style: 'flat-square',
   }
   const style3: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     style: 'for-the-badge',
   }
   const style4: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     style: 'plastic',
   }
   const style5: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     style: 'social',
   }
 
   const color1: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     color: 'green'
   }
 
   const color2: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     color: '00FF00' 
   }
 
   const color3: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     color: 'rgb(0, 255, 0)' 
   }
 
   const color4: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     color: 'rgba(0, 255, 0, 1)' 
   }
 
   const color5: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     color: 'hsl(120, 100%, 50%)' 
   }
 
   const color6: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     color: 'hsla(120, 100%, 50%, 1)' 
   }
 
   const logo_label: JsrVersionPropsType = {
-    scope: '@badrap',
+    scope: '@hono',
     packageName: 'svelte',
     logo: 'svelte',
     label: 'SVELTE'
   }
 
   const link: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     label: 'Svelte 5 UI Library',
-    link: ['https://valita.codewithshin.com', 'https://github.com/shinokada/valita']
+    link: ['https://hono.codewithshin.com', 'https://github.com/shinokada/hono']
   }
   
   const other: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     cacheSeconds: '86400',
   }

@@ -3,13 +3,13 @@
   import type { LicensePropsType } from 'svelte-shields';
 
   const basic: LicensePropsType = {
-    licenseType: 'github',
+    license: 'github',
     user: 'shinokada',
     repo: 'svelte-shields',
   }
 
   const basic2: LicensePropsType = {
-    licenseType: 'npm',
+    license: 'npm',
     packageName: 'svelte-shields',
   }
 </script>

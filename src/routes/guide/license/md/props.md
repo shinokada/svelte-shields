@@ -1,4 +1,4 @@
-- licenseType
+- license
 - user
 - repo
 - packageName
