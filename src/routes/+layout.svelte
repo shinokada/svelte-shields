@@ -133,7 +133,7 @@
   import { BikeLineMap, BellLineOthers, BeerLineFood, NpmjsLineLogos, CupLineFood, DownloadLineSystem, PlayReverseLargeFillMedia, GithubFillLogos } from 'svelte-remix';
 
   let { children, data } = $props()
-  const analyticsId = data.ANALYTICS_ID
+  const analyticsId = data.ANALYTICS_ID_RUNES_LIB
   let metaTags = $state(
     $page.data.pageMetaTags
       ? deepMerge($page.data.layoutMetaTags, $page.data.pageMetaTags)
