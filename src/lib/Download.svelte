@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { DownloadsPropsType } from './types';
+  import type { DownloadPropsType } from './types';
 
   let {
     source,
@@ -18,7 +18,7 @@
     link,
     class: classname,
 		...attributes
-	}: DownloadsPropsType = $props();
+	}: DownloadPropsType = $props();
 
   // common
   const styleOpt = style ? `style=${style}` : 'style=flat'

@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { NpmDownloads } from 'svelte-shields'
-  import type { NpmDownloadsPropsType } from 'svelte-shields';
+  import { NpmDownload } from 'svelte-shields'
+  import type { NpmDownloadPropsType } from 'svelte-shields';
   
-  const basic: NpmDownloadsPropsType = {
+  const basic: NpmDownloadPropsType = {
     packageName: 'flowbite-svelte-icons',
   }
 
-  const basic2: NpmDownloadsPropsType = {
+  const basic2: NpmDownloadPropsType = {
     packageName: 'flowbite-svelte-icons',
     interval: 'dm',
   }
 </script>
 
-<NpmDownloads {...basic} />
-<NpmDownloads {...basic2} />
+<NpmDownload {...basic} />
+<NpmDownload {...basic2} />

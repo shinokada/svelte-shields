@@ -1,8 +1,8 @@
 <script>
-  import { NpmDownloads } from 'svelte-shields'
-  import type { NpmDownloadsPropsType } from 'svelte-shields';
+  import { NpmDownload } from 'svelte-shields'
+  import type { NpmDownloadPropsType } from 'svelte-shields';
 
-  const other: NpmDownloadsPropsType = {
+  const other: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: 'svelte',
     label: 'Svelte Awesome Icons',
@@ -10,4 +10,4 @@
   }
 </script>
 
-<NpmDownloads {...other} />
+<NpmDownload {...other} />

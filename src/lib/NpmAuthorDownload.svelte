@@ -1,20 +1,21 @@
 <script lang="ts">
-  import type { GitHubSponsorsPropsType } from './types';
-  
+  import type { NpmAuthorDownloadPropsType } from './types';
+
 	let {
-		user,
+    interval = 'dw',
+		author,
 		style = 'flat',
 		logo,
     logoColor,
     logoSize,
-    label='',
+    label,
     labelColor,
 		color,
     cacheSeconds,
     link,
     class: classname,
 		...attributes
-	}: GitHubSponsorsPropsType = $props();
+	}: NpmAuthorDownloadPropsType = $props();
 
   const styleOpt = style ? `style=${style}` : 'style=flat'
   const logoOpt = logo ? `&logo=${logo}` : ''
@@ -26,16 +27,20 @@
   const cacheSecondsOpt = cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : ''
   const link1 = link ? `&link=${encodeURIComponent(link[0])}` :  ''
   const link2 = link ? `&link=${encodeURIComponent(link[1])}` : ''
-  let srcData = $state(`https://img.shields.io/github/sponsors/${user}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`)
+
+  let srcData = $state(`https://img.shields.io/npm-stat/${interval}/${author}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`)
 
 </script>
 
 {#if link}
-  <object data={srcData} title='GitHub Sponsors - {user}' class={classname} {...attributes}>
+  <object data={srcData} title='NPM {interval} Downloads - {author}' 
+  class={classname}
+  {...attributes}>
   </object>
 {:else}
   <img  
-    src={srcData} alt="GitHub Sponsors - {user}" 
-    class={classname} {...attributes}
+    src={srcData} alt="NPM {interval} Downloads - {author}" 
+    class={classname}
+    {...attributes}
   />
 {/if}

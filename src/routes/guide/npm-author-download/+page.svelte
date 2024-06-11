@@ -1,89 +1,89 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
-  import { NpmAuthorDownloads } from '$lib'
-  import type { NpmAuthorDownloadsPropsType } from '$lib';
+  import { NpmAuthorDownload } from '$lib'
+  import type { NpmAuthorDownloadPropsType } from '$lib';
 
-  const basic: NpmAuthorDownloadsPropsType = {
+  const basic: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
   }
 
-  const basic2: NpmAuthorDownloadsPropsType = {
+  const basic2: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     interval: 'dm',
   }
 
-  const style1: NpmAuthorDownloadsPropsType = {
+  const style1: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: '',
     style: 'flat',
   }
-  const style2: NpmAuthorDownloadsPropsType = {
+  const style2: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: '',
     style: 'flat-square',
   }
-  const style3: NpmAuthorDownloadsPropsType = {
+  const style3: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: '',
     style: 'for-the-badge',
   }
-  const style4: NpmAuthorDownloadsPropsType = {
+  const style4: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: '',
     style: 'plastic',
   }
-  const style5: NpmAuthorDownloadsPropsType = {
+  const style5: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: '',
     style: 'social',
   }
 
-  const color1: NpmAuthorDownloadsPropsType = {
+  const color1: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: '',
     color: 'indigo',
   }
-  const color2: NpmAuthorDownloadsPropsType = {
+  const color2: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: '',
     color: '4B0082',
   }
-  const color3: NpmAuthorDownloadsPropsType = {
+  const color3: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: '',
     color: 'rgb(75, 0, 130)',
   }
-  const color4: NpmAuthorDownloadsPropsType = {
+  const color4: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: '',
     color: 'rgba(75, 0, 130, 1)',
   }
 
-  const color5: NpmAuthorDownloadsPropsType = {
+  const color5: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: '',
     color: 'hsl(275, 100%, 25%)',
   }
 
-  const color6: NpmAuthorDownloadsPropsType = {
+  const color6: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: '',
     color: 'hsla(275, 100%, 25%, 1)',
   }
 
-  const logo_label: NpmAuthorDownloadsPropsType = {
+  const logo_label: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: 'svelte',
     label: 'Shinichi Okada',
   }
 
-  const link: NpmAuthorDownloadsPropsType = {
+  const link: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: 'svelte',
     link: ['https://github.com/shinokada/svelte-awesome-icons', 'https://svelte-awesome-icons.codewithshin.com'],
   }
 
-  const other: NpmAuthorDownloadsPropsType = {
+  const other: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
     logo: 'svelte',
     label: 'Svelte Awesome Icons',
@@ -98,7 +98,7 @@
   });
 </script>
 
-<h1>NpmAuthorDownloads Component - Svelte Shields</h1>
+<h1>NpmAuthorDownload Component - Svelte Shields</h1>
 
 <H2>Props</H2>
 
@@ -116,8 +116,8 @@
 <p><Code>tag</Code> can be <Code>next, v1, v2, beta</Code>, etc.</p>
 
 <CodeWrapper c_w_div='grid gap-4'>
-  <NpmAuthorDownloads {...basic} />
-  <NpmAuthorDownloads {...basic2} />
+  <NpmAuthorDownload {...basic} />
+  <NpmAuthorDownload {...basic2} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/basic.md'] as string} />
@@ -127,11 +127,11 @@
   If not specified, the default style for this badge is "flat".</p>
 
 <CodeWrapper c_w_div='grid gap-4'>
-  <NpmAuthorDownloads {...style1} />
-  <NpmAuthorDownloads {...style2} />
-  <NpmAuthorDownloads {...style3} />
-  <NpmAuthorDownloads {...style4} />
-  <NpmAuthorDownloads {...style5} />
+  <NpmAuthorDownload {...style1} />
+  <NpmAuthorDownload {...style2} />
+  <NpmAuthorDownload {...style3} />
+  <NpmAuthorDownload {...style4} />
+  <NpmAuthorDownload {...style5} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/style.md'] as string} />
@@ -141,12 +141,12 @@
 <p>Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).</p>
 
 <CodeWrapper c_w_div='grid gap-4'>
-  <NpmAuthorDownloads {...color1} />
-  <NpmAuthorDownloads {...color2} />
-  <NpmAuthorDownloads {...color3} />
-  <NpmAuthorDownloads {...color4} />
-  <NpmAuthorDownloads {...color5} />
-  <NpmAuthorDownloads {...color6} />
+  <NpmAuthorDownload {...color1} />
+  <NpmAuthorDownload {...color2} />
+  <NpmAuthorDownload {...color3} />
+  <NpmAuthorDownload {...color4} />
+  <NpmAuthorDownload {...color5} />
+  <NpmAuthorDownload {...color6} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/color.md'] as string} />
@@ -154,7 +154,7 @@
 <H3>Logo & Label</H3>
 
 <CodeWrapper>
-  <NpmAuthorDownloads {...logo_label} />
+  <NpmAuthorDownload {...logo_label} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/logo_and_label.md'] as string} />
@@ -162,7 +162,7 @@
 <H3>Link</H3>
 <p>Specify what clicking on the left/right of a badge should do.</p>
 <CodeWrapper>
-  <NpmAuthorDownloads {...link} />
+  <NpmAuthorDownload {...link} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/link.md'] as string} />
@@ -170,7 +170,7 @@
 <H3>Other</H3>
 <p><Code>cacheSeconds</Code> is HTTP cache lifetime (rules are applied to infer a default value on a per-badge basis, any values specified below the default will be ignored).</p>
 <CodeWrapper>
-  <NpmAuthorDownloads {...other} />
+  <NpmAuthorDownload {...other} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/other.md'] as string} />

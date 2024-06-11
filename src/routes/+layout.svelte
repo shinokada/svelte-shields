@@ -11,6 +11,11 @@
       href: '/guide/static-badge'
     },
     {
+      name: 'License',
+      icon: ExpandOutline as Component,
+      href: '/guide/license'
+    },
+    {
       name: 'Version',
       icon: BellActiveAltOutline as Component,
       children: [
@@ -31,7 +36,7 @@
         },
         {
           name: 'Pypi Version',
-          icon: ClipboardListOutline as Component,
+          icon: GridPlusOutline as Component,
           href: '/guide/pypi-version'
         },
       ]
@@ -43,15 +48,15 @@
         {
           name: 'All in one',
           icon: BeerLineFood as Component,
-          href: '/guide/downloads'
+          href: '/guide/download'
         },
         {
-          name: 'GitHub Downloads',
+          name: 'GitHub Download',
           icon: GithubFillLogos as Component,
           href: '/guide/github-download'
         },
         {
-          name: 'NPM Downloads',
+          name: 'NPM Download',
           icon: NpmjsLineLogos as Component,
           href: '/guide/npm-download'
         },
@@ -68,14 +73,14 @@
           href: '/guide/github'
         },
         {
-          name: 'GitHub Downloads',
+          name: 'GitHub Download',
           icon: GithubFillLogos as Component,
           href: '/guide/github-download'
         },
         {
-          name: 'GitHub Sponsors',
+          name: 'GitHub Sponsor',
           icon: GithubFillLogos as Component,
-          href: '/guide/github-sponsors'
+          href: '/guide/github-sponsor'
         },
       ]
     },
@@ -84,12 +89,12 @@
       icon: NpmjsLineLogos as Component,
       children: [
         {
-          name: 'NPM Author Downloads',
+          name: 'NPM Author Download',
           icon: NpmjsLineLogos as Component,
-          href: '/guide/npm-author-downloads'
+          href: '/guide/npm-author-download'
         },
         {
-          name: 'NPM Downloads',
+          name: 'NPM Download',
           icon: NpmjsLineLogos as Component,
           href: '/guide/npm-download'
         },
@@ -109,7 +114,7 @@
     
     {
       name: 'Pypi Version',
-      icon: ClipboardListOutline as Component,
+      icon: GridPlusOutline as Component,
       href: '/guide/pypi-version'
     },
     

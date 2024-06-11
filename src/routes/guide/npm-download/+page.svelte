@@ -1,89 +1,89 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
-  import { NpmDownloads } from '$lib'
-  import type { NpmDownloadsPropsType } from '$lib';
+  import { NpmDownload } from '$lib'
+  import type { NpmDownloadPropsType } from '$lib';
 
-  const basic: NpmDownloadsPropsType = {
+  const basic: NpmDownloadPropsType = {
     packageName: 'flowbite-svelte-icons',
   }
 
-  const basic2: NpmDownloadsPropsType = {
+  const basic2: NpmDownloadPropsType = {
     packageName: 'flowbite-svelte-icons',
     interval: 'dm',
   }
 
-  const style1: NpmDownloadsPropsType = {
+  const style1: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     style: 'flat',
   }
-  const style2: NpmDownloadsPropsType = {
+  const style2: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     style: 'flat-square',
   }
-  const style3: NpmDownloadsPropsType = {
+  const style3: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     style: 'for-the-badge',
   }
-  const style4: NpmDownloadsPropsType = {
+  const style4: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     style: 'plastic',
   }
-  const style5: NpmDownloadsPropsType = {
+  const style5: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     style: 'social',
   }
 
-  const color1: NpmDownloadsPropsType = {
+  const color1: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     color: 'indigo',
   }
-  const color2: NpmDownloadsPropsType = {
+  const color2: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     color: '4B0082',
   }
-  const color3: NpmDownloadsPropsType = {
+  const color3: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     color: 'rgb(75, 0, 130)',
   }
-  const color4: NpmDownloadsPropsType = {
+  const color4: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     color: 'rgba(75, 0, 130, 1)',
   }
 
-  const color5: NpmDownloadsPropsType = {
+  const color5: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     color: 'hsl(275, 100%, 25%)',
   }
 
-  const color6: NpmDownloadsPropsType = {
+  const color6: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     color: 'hsla(275, 100%, 25%, 1)',
   }
 
-  const logo_label: NpmDownloadsPropsType = {
+  const logo_label: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: 'svelte',
     label: 'Svelte Awesome Icons',
   }
 
-  const link: NpmDownloadsPropsType = {
+  const link: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: 'svelte',
     link: ['https://github.com/shinokada/svelte-awesome-icons', 'https://svelte-awesome-icons.codewithshin.com'],
   }
 
-  const other: NpmDownloadsPropsType = {
+  const other: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: 'svelte',
     label: 'Svelte Awesome Icons',
@@ -98,7 +98,7 @@
   });
 </script>
 
-<h1>NpmDownloads Component - Svelte Shields</h1>
+<h1>NpmDownload Component - Svelte Shields</h1>
 
 <H2>Props</H2>
 
@@ -116,8 +116,8 @@
 <p><Code>tag</Code> can be <Code>next, v1, v2, beta</Code>, etc.</p>
 
 <CodeWrapper c_w_div='grid gap-4'>
-  <NpmDownloads {...basic} />
-  <NpmDownloads {...basic2} />
+  <NpmDownload {...basic} />
+  <NpmDownload {...basic2} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/basic.md'] as string} />
@@ -127,11 +127,11 @@
   If not specified, the default style for this badge is "flat".</p>
 
 <CodeWrapper c_w_div='grid gap-4'>
-  <NpmDownloads {...style1} />
-  <NpmDownloads {...style2} />
-  <NpmDownloads {...style3} />
-  <NpmDownloads {...style4} />
-  <NpmDownloads {...style5} />
+  <NpmDownload {...style1} />
+  <NpmDownload {...style2} />
+  <NpmDownload {...style3} />
+  <NpmDownload {...style4} />
+  <NpmDownload {...style5} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/style.md'] as string} />
@@ -141,12 +141,12 @@
 <p>Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).</p>
 
 <CodeWrapper c_w_div='grid gap-4'>
-  <NpmDownloads {...color1} />
-  <NpmDownloads {...color2} />
-  <NpmDownloads {...color3} />
-  <NpmDownloads {...color4} />
-  <NpmDownloads {...color5} />
-  <NpmDownloads {...color6} />
+  <NpmDownload {...color1} />
+  <NpmDownload {...color2} />
+  <NpmDownload {...color3} />
+  <NpmDownload {...color4} />
+  <NpmDownload {...color5} />
+  <NpmDownload {...color6} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/color.md'] as string} />
@@ -154,7 +154,7 @@
 <H3>Logo & Label</H3>
 
 <CodeWrapper>
-  <NpmDownloads {...logo_label} />
+  <NpmDownload {...logo_label} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/logo_and_label.md'] as string} />
@@ -162,7 +162,7 @@
 <H3>Link</H3>
 <p>Specify what clicking on the left/right of a badge should do.</p>
 <CodeWrapper>
-  <NpmDownloads {...link} />
+  <NpmDownload {...link} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/link.md'] as string} />
@@ -170,7 +170,7 @@
 <H3>Other</H3>
 <p><Code>cacheSeconds</Code> is HTTP cache lifetime (rules are applied to infer a default value on a per-badge basis, any values specified below the default will be ignored).</p>
 <CodeWrapper>
-  <NpmDownloads {...other} />
+  <NpmDownload {...other} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/other.md'] as string} />

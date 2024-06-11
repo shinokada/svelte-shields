@@ -1,80 +1,80 @@
 <script lang="ts">
-  import { GitHubSponsors } from '$lib'
-  import type { GitHubSponsorsPropsType } from '$lib';
+  import { GitHubSponsor } from '$lib'
+  import type { GitHubSponsorPropsType } from '$lib';
   
-  const sponsor: GitHubSponsorsPropsType = {
+  const sponsor: GitHubSponsorPropsType = {
     user: 'shinokada',
   }
 
-  const style: GitHubSponsorsPropsType = {
+  const style: GitHubSponsorPropsType = {
     user: 'shinokada',
     style: 'flat'
   }
 
-  const style2: GitHubSponsorsPropsType = {
+  const style2: GitHubSponsorPropsType = {
     user: 'shinokada',
     style: 'flat-square'
   }
 
-  const style3: GitHubSponsorsPropsType = {
+  const style3: GitHubSponsorPropsType = {
     user: 'shinokada',
     style: 'for-the-badge'
   }
 
-  const style4: GitHubSponsorsPropsType = {
+  const style4: GitHubSponsorPropsType = {
     user: 'shinokada',
     style: 'plastic'
   }
 
-  const style5: GitHubSponsorsPropsType = {
+  const style5: GitHubSponsorPropsType = {
     user: 'shinokada',
     style: 'social'
   }
 
-  const color1: GitHubSponsorsPropsType = {
+  const color1: GitHubSponsorPropsType = {
     user: 'shinokada',
     color: 'orange'
   }
 
-  const color2: GitHubSponsorsPropsType = {
+  const color2: GitHubSponsorPropsType = {
     user: 'shinokada',
     color: 'FF7F00' // Hex (Orange)
   }
 
-  const color3: GitHubSponsorsPropsType = {
+  const color3: GitHubSponsorPropsType = {
     user: 'shinokada',
     color: 'rgb(255, 127, 0)' // RGB (Orange)
   }
 
-  const color4: GitHubSponsorsPropsType = {
+  const color4: GitHubSponsorPropsType = {
     user: 'shinokada',
     color: 'rgba(255, 127, 0, 1)' // RGBA (Orange, fully opaque)
   }
 
-  const color5: GitHubSponsorsPropsType = {
+  const color5: GitHubSponsorPropsType = {
     user: 'shinokada',
     color: 'hsl(40, 100%, 50%)' // HSL (Orange)
   }
 
-  const color6: GitHubSponsorsPropsType = {
+  const color6: GitHubSponsorPropsType = {
     user: 'shinokada',
     color: 'hsla(40, 100%, 50%, 1)' // HSLA (Orange, fully opaque)
   }
 
-  const logo_label: GitHubSponsorsPropsType = {
+  const logo_label: GitHubSponsorPropsType = {
     user: 'sveltejs',
     logo: 'svelte',
     label: 'SVELTE'
   }
 
 
-  const linkEx: GitHubSponsorsPropsType = {
+  const linkEx: GitHubSponsorPropsType = {
     user: 'shinokada',
     label: 'TERA',
     link: ['https://tera.codewithshin.com', 'https://github.com/shinokada/tera']
   }
 
-  const otherEx: GitHubSponsorsPropsType = {
+  const otherEx: GitHubSponsorPropsType = {
     user: 'shinokada',
     cacheSeconds: '86400',
   }
@@ -88,7 +88,7 @@
   });
 </script>
 
-<h1>GitHubSponsors Component - Svelte Shields</h1>
+<h1>GitHubSponsor Component - Svelte Shields</h1>
 
 <H2>Props</H2>
 
@@ -103,7 +103,7 @@
 <H3>Basic usage</H3>
 
 <CodeWrapper>
-  <GitHubSponsors {...sponsor} />
+  <GitHubSponsor {...sponsor} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/basic.md'] as string} />
@@ -113,10 +113,10 @@
   If not specified, the default style for this badge is "flat".</p>
 
   <CodeWrapper c_w_div='grid gap-4'>
-  <GitHubSponsors {...style2} />
-  <GitHubSponsors {...style3} />
-  <GitHubSponsors {...style4} />
-  <GitHubSponsors {...style5} />
+  <GitHubSponsor {...style2} />
+  <GitHubSponsor {...style3} />
+  <GitHubSponsor {...style4} />
+  <GitHubSponsor {...style5} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/style.md'] as string} />
@@ -126,12 +126,12 @@
 <p>Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).</p>
 
 <CodeWrapper c_w_div='grid gap-4'>
-  <GitHubSponsors {...color1} />
-  <GitHubSponsors {...color2} />
-  <GitHubSponsors {...color3} />
-  <GitHubSponsors {...color4} />
-  <GitHubSponsors {...color5} />
-  <GitHubSponsors {...color6} />
+  <GitHubSponsor {...color1} />
+  <GitHubSponsor {...color2} />
+  <GitHubSponsor {...color3} />
+  <GitHubSponsor {...color4} />
+  <GitHubSponsor {...color5} />
+  <GitHubSponsor {...color6} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/color.md'] as string} />
@@ -139,7 +139,7 @@
 <H3>Logo & Label</H3>
 
 <CodeWrapper>
-  <GitHubSponsors {...logo_label} />
+  <GitHubSponsor {...logo_label} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/logo-and-label.md'] as string} />
@@ -147,7 +147,7 @@
 <H3>Link</H3>
 <p>Specify what clicking on the left/right of a badge should do.</p>
 <CodeWrapper>
-  <GitHubSponsors {...linkEx} />
+  <GitHubSponsor {...linkEx} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/link.md'] as string} />
@@ -155,7 +155,7 @@
 <H3>Other</H3>
 <p><Code>cacheSeconds</Code> is HTTP cache lifetime (rules are applied to infer a default value on a per-badge basis, any values specified below the default will be ignored).</p>
 <CodeWrapper>
-  <GitHubSponsors {...otherEx} />
+  <GitHubSponsor {...otherEx} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/other.md'] as string} />

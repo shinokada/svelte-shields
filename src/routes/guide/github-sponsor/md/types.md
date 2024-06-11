@@ -11,7 +11,6 @@ export interface BaseBadgePropsType {
   link?: LinkType;
 }
 
-export interface NpmAuthorDownloadsPropsType extends BaseBadgePropsType {
-  interval?: 'dw' | 'dm' | 'dy'| 'd18m';
-  author: string;
+export interface GitHubSponsorPropsType extends BaseBadgePropsType {
+  user: string;
 }

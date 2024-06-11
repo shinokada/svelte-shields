@@ -1,10 +1,10 @@
 <script lang="ts">
-  import type { NpmAuthorDownloadsPropsType } from './types';
-
+  import type { GitHubDownloadPropsType } from './types';
+  
 	let {
-    interval = 'dw',
-		author,
-		style = 'flat',
+    user,
+		repo,
+		style,
 		logo,
     logoColor,
     logoSize,
@@ -15,7 +15,7 @@
     link,
     class: classname,
 		...attributes
-	}: NpmAuthorDownloadsPropsType = $props();
+	}: GitHubDownloadPropsType = $props();
 
   const styleOpt = style ? `style=${style}` : 'style=flat'
   const logoOpt = logo ? `&logo=${logo}` : ''
@@ -28,18 +28,18 @@
   const link1 = link ? `&link=${encodeURIComponent(link[0])}` :  ''
   const link2 = link ? `&link=${encodeURIComponent(link[1])}` : ''
 
-  let srcData = $state(`https://img.shields.io/npm-stat/${interval}/${author}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`)
+  let srcData = $state(`https://img.shields.io/github/download/${user}/${repo}/total?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`)
 
 </script>
 
 {#if link}
-  <object data={srcData} title='NPM {interval} Downloads - {author}' 
+  <object data={srcData} title='GitHub Download - {user}/{repo}' 
   class={classname}
   {...attributes}>
   </object>
 {:else}
   <img  
-    src={srcData} alt="NPM {interval} Downloads - {author}" 
+    src={srcData} alt="GitHub Download - {user}/{repo}" 
     class={classname}
     {...attributes}
   />

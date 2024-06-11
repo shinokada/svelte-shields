@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { NpmDownloads } from 'svelte-shields'
-  import type { NpmDownloadsPropsType } from 'svelte-shields';
+  import { NpmDownload } from 'svelte-shields'
+  import type { NpmDownloadPropsType } from 'svelte-shields';
 
-  const logo_label: NpmDownloadsPropsType = {
+  const logo_label: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: 'svelte',
     label: 'Svelte Awesome Icons',
   }
 </script>
 
-<NpmDownloads {...logo_label} />
+<NpmDownload {...logo_label} />

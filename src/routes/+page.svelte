@@ -10,16 +10,16 @@
       href: 'guide/npm-version'
     },
     {
-      title: 'NpmDownloads',
-      description: 'Shields badge for npm downloads',
+      title: 'NpmDownload',
+      description: 'Shields badge for npm download',
       icon: Npm,
       href: 'guide/npm-download'
     },
     {
-      title: 'NpmAuthorDownloads',
-      description: 'Shields badge for npm author downloads',
+      title: 'NpmAuthorDownload',
+      description: 'Shields badge for npm author download',
       icon: Npm,
-      href: 'guide/npm-author-downloads'
+      href: 'guide/npm-author-download'
     },
     {
       title:'GitHub',
@@ -28,8 +28,8 @@
       href: '/guide/github'
     },
     {
-      title:'GitHubDownloads',
-      description: 'Shields badge for GitHub downloads',
+      title:'GitHubDownload',
+      description: 'Shields badge for GitHub download',
       icon: Github,
       href: '/guide/github-download'
     },

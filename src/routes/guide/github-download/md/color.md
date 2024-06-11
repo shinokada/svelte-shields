@@ -1,44 +1,44 @@
 <script lang="ts">
-  import { NpmDownloads } from 'svelte-shields'
-  import type { NpmDownloadsPropsType } from 'svelte-shields';
+  import { NpmDownload } from 'svelte-shields'
+  import type { NpmDownloadPropsType } from 'svelte-shields';
 
-  const color1: NpmDownloadsPropsType = {
+  const color1: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     color: 'indigo',
   }
-  const color2: NpmDownloadsPropsType = {
+  const color2: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     color: '4B0082',
   }
-  const color3: NpmDownloadsPropsType = {
+  const color3: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     color: 'rgb(75, 0, 130)',
   }
-  const color4: NpmDownloadsPropsType = {
+  const color4: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     color: 'rgba(75, 0, 130, 1)',
   }
 
-  const color5: NpmDownloadsPropsType = {
+  const color5: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     color: 'hsl(275, 100%, 25%)',
   }
 
-  const color6: NpmDownloadsPropsType = {
+  const color6: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
     logo: '',
     color: 'hsla(275, 100%, 25%, 1)',
   }
 </script>
 
-<NpmDownloads {...color1} />
-<NpmDownloads {...color2} />
-<NpmDownloads {...color3} />
-<NpmDownloads {...color4} />
-<NpmDownloads {...color5} />
-<NpmDownloads {...color6} />
+<NpmDownload {...color1} />
+<NpmDownload {...color2} />
+<NpmDownload {...color3} />
+<NpmDownload {...color4} />
+<NpmDownload {...color5} />
+<NpmDownload {...color6} />

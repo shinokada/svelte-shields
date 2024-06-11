@@ -21,12 +21,12 @@ export interface GitHubPropsType extends BaseBadgePropsType {
   display_name?: 'tag' | 'release';
 }
 
-export interface GitHubDownloadsPropsType extends BaseBadgePropsType {
+export interface GitHubDownloadPropsType extends BaseBadgePropsType {
   user: string;
   repo: string;
 }
 
-export interface NpmDownloadsPropsType extends BaseBadgePropsType {
+export interface NpmDownloadPropsType extends BaseBadgePropsType {
   interval?: 'dw' | 'dm' | 'dy'| 'd18m';
   packageName: string;
 }
@@ -36,7 +36,7 @@ export interface NpmVersionPropsType extends BaseBadgePropsType {
   tag?: string;
 }
 
-export interface NpmAuthorDownloadsPropsType extends BaseBadgePropsType {
+export interface NpmAuthorDownloadPropsType extends BaseBadgePropsType {
   interval?: 'dw' | 'dm' | 'dy'| 'd18m';
   author: string;
 }
@@ -63,7 +63,7 @@ export interface LicensePropsType extends BaseBadgePropsType {
   npm_registry_uri?: string;
 }
 
-export interface GitHubSponsorsPropsType extends BaseBadgePropsType {
+export interface GitHubSponsorPropsType extends BaseBadgePropsType {
   user: string;
 }
 
@@ -75,7 +75,7 @@ export interface VersionPropsType extends BaseBadgePropsType {
   pypiBaseUrl?: string;
 }
 
-export interface DownloadsPropsType extends BaseBadgePropsType {
+export interface DownloadPropsType extends BaseBadgePropsType {
   source: 'npm' | 'github';
   user?: string;
   repo?: string;

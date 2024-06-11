@@ -18,11 +18,15 @@ pnpm i -D svelte-shields
 
 ## Components
 
+- Download (All in one)
 - GitHub for GitHub release
-- GitHubDownloads
+- GitHubDownload
+- GitHubSponsor
 - JsrVersion
-- NpmAuthorDownloads
-- NpmDownloads
+- License
+- NpmAuthorDownload
+- NpmDownload
 - NpmVersion
 - PypiVersion
 - StaticBadge
+- Version (All in one)

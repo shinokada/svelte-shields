@@ -11,7 +11,7 @@ export interface BaseBadgePropsType {
   link?: LinkType;
 }
 
-export interface GitHubDownloadsPropsType extends BaseBadgePropsType {
+export interface GitHubDownloadPropsType extends BaseBadgePropsType {
   user: string;
   repo: string;
 }

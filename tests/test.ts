@@ -13,12 +13,12 @@ test('guide/github page has expected h1', async ({ page }) => {
 
 test('guide/github-download page has expected h1', async ({ page }) => {
   await page.goto('/guide/github-download');
-  await expect(page.locator('h1')).toHaveText('GitHubDownloads Component - Svelte Shields');
+  await expect(page.locator('h1')).toHaveText('GitHubDownload Component - Svelte Shields');
 });
 
-test('guide/github-sponsors page has expected h1', async ({ page }) => {
-  await page.goto('/guide/github-sponsors');
-  await expect(page.locator('h1')).toHaveText('GitHubSponsors Component - Svelte Shields');
+test('guide/github-sponsor page has expected h1', async ({ page }) => {
+  await page.goto('/guide/github-sponsor');
+  await expect(page.locator('h1')).toHaveText('GitHubSponsor Component - Svelte Shields');
 });
 
 
@@ -32,14 +32,14 @@ test('guide/license page has expected h1', async ({ page }) => {
   await expect(page.locator('h1')).toHaveText('License Component - Svelte Shields');
 });
 
-test('guide/npm-author-downloads page has expected h1', async ({ page }) => {
-  await page.goto('/guide/npm-author-downloads');
-  await expect(page.locator('h1')).toHaveText('NpmAuthorDownloads Component - Svelte Shields');
+test('guide/npm-author-download page has expected h1', async ({ page }) => {
+  await page.goto('/guide/npm-author-download');
+  await expect(page.locator('h1')).toHaveText('NpmAuthorDownload Component - Svelte Shields');
 });
 
 test('guide/npm-download page has expected h1', async ({ page }) => {
   await page.goto('/guide/npm-download');
-  await expect(page.locator('h1')).toHaveText('NpmDownloads Component - Svelte Shields');
+  await expect(page.locator('h1')).toHaveText('NpmDownload Component - Svelte Shields');
 });
 
 test('guide/npm-version page has expected h1', async ({ page }) => {
