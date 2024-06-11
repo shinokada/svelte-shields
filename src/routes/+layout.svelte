@@ -48,12 +48,12 @@
         {
           name: 'GitHub Downloads',
           icon: GithubFillLogos as Component,
-          href: '/guide/github-downloads'
+          href: '/guide/github-download'
         },
         {
           name: 'NPM Downloads',
           icon: NpmjsLineLogos as Component,
-          href: '/guide/npm-downloads'
+          href: '/guide/npm-download'
         },
 
       ]
@@ -70,7 +70,7 @@
         {
           name: 'GitHub Downloads',
           icon: GithubFillLogos as Component,
-          href: '/guide/github-downloads'
+          href: '/guide/github-download'
         },
         {
           name: 'GitHub Sponsors',
@@ -91,7 +91,7 @@
         {
           name: 'NPM Downloads',
           icon: NpmjsLineLogos as Component,
-          href: '/guide/npm-downloads'
+          href: '/guide/npm-download'
         },
       
         {

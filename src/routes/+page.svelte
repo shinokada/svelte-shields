@@ -13,7 +13,7 @@
       title: 'NpmDownloads',
       description: 'Shields badge for npm downloads',
       icon: Npm,
-      href: 'guide/npm-downloads'
+      href: 'guide/npm-download'
     },
     {
       title: 'NpmAuthorDownloads',
@@ -31,7 +31,7 @@
       title:'GitHubDownloads',
       description: 'Shields badge for GitHub downloads',
       icon: Github,
-      href: '/guide/github-downloads'
+      href: '/guide/github-download'
     },
     {
       title:'License Component',
