@@ -1,0 +1,16 @@
+- source
+- user
+- repo
+- interval
+- packageName
+- style = 'flat'
+- logo
+- logoColor
+- logoSize
+- label
+- labelColor
+- color
+- cacheSeconds
+- link
+- class: classname
+- ...attributes

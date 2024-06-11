@@ -2,7 +2,7 @@
   import type { VersionPropsType } from './types';
 
   let {
-    version,
+    source,
     packageName,
     jsr_scope,
     npm_tag,
@@ -46,13 +46,13 @@
 
 
 {#if link}
-  {#if version === 'npm'}
+  {#if source === 'npm'}
     <!-- NPM -->
     <object data={npmSrcData} title='NPM version of {packageName}' 
     class={classname}
     {...attributes}>
     </object>
-  {:else if version === 'pypi'}
+  {:else if source === 'pypi'}
     <!-- Pypi -->
     <object data={pypiSrcData} title='Pypi version of {packageName}' 
     class={classname}
@@ -66,14 +66,14 @@
     </object>
   {/if}
 {:else}
-  {#if version === 'npm'}
+  {#if source === 'npm'}
     <!-- NPM -->
     <img  
     src={npmSrcData} alt="NPM version of {packageName}" 
     class={classname}
     {...attributes}
   />
-  {:else if version === 'pypi'}
+  {:else if source === 'pypi'}
     <!-- Pypi -->
     <img  
     src={pypiSrcData} alt="Pypi version of {packageName}" 

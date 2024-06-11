@@ -68,9 +68,17 @@ export interface GitHubSponsorsPropsType extends BaseBadgePropsType {
 }
 
 export interface VersionPropsType extends BaseBadgePropsType {
-  version: 'jsr' | 'npm' | 'pypi';
+  source: 'jsr' | 'npm' | 'pypi';
   packageName: string;
   jsr_scope?: string;
   npm_tag?: string;
   pypiBaseUrl?: string;
+}
+
+export interface DownloadsPropsType extends BaseBadgePropsType {
+  source: 'npm' | 'github';
+  user?: string;
+  repo?: string;
+  interval?: 'dw' | 'dm' | 'dy' | 'd18m';
+  packageName?: string;
 }

@@ -1,0 +1,16 @@
+- version
+- packageName
+- jsr_scope
+- npm_tag
+- pypiBaseUrl
+- style = 'flat'
+- logo
+- logoColor
+- logoSize
+- label
+- labelColor
+- color
+- cacheSeconds
+- link
+- class: classname
+- ...attributes

@@ -1,3 +1,4 @@
+export { default as Download } from './Download.svelte'
 export { default as GitHub } from './GitHub.svelte'
 export { default as GitHubDownloads } from './GitHubDownloads.svelte'
 export { default as GitHubSponsors } from './GitHubSponsors.svelte'

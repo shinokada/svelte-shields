@@ -1,21 +1,18 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
-  import { Version } from '$lib';
-  import type { VersionPropsType } from '$lib';
-  const basic: VersionPropsType = {
+  import { Download } from '$lib';
+  import type { DownloadsPropsType } from '$lib';
+
+  const npmdownload: DownloadsPropsType = {
     source: 'npm',
     packageName: 'svelte-shields',
+    interval: 'dw',
     color: 'red'
   }
-  const basic2: VersionPropsType = {
-    source: 'jsr',
-    jsr_scope: '@hono',
-    packageName: 'hono',
-    color: 'red'
-  }
-  const basic3: VersionPropsType = {
-    source: 'pypi',
-    packageName: 'vennfig',
+  const githubdownload: DownloadsPropsType = {
+    source: 'github',
+    user: 'shinokada',
+    repo: 'tera',
     color: 'red'
   }
 
@@ -26,7 +23,7 @@
   });
 </script>
 
-<h1>Version Component - Svelte Shields</h1>
+<h1>Downloads Component - Svelte Shields</h1>
 
 <H2>Props</H2>
 
@@ -39,9 +36,8 @@
 <H2>Examples</H2>
 
 <CodeWrapper c_w_div='grid gap-4'>
-  <Version {...basic} />
-  <Version {...basic2} />
-  <Version {...basic3} />
+  <Download {...npmdownload} />
+  <Download {...githubdownload} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/examples.md'] as string} />
