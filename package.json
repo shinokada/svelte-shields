@@ -102,17 +102,21 @@
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
     },
+    "./Download.svelte": {
+      "types": "./dist/Download.svelte.d.ts",
+      "svelte": "./dist/Download.svelte"
+    },
     "./GitHub.svelte": {
       "types": "./dist/GitHub.svelte.d.ts",
       "svelte": "./dist/GitHub.svelte"
     },
-    "./GitHubDownloads.svelte": {
-      "types": "./dist/GitHubDownloads.svelte.d.ts",
-      "svelte": "./dist/GitHubDownloads.svelte"
+    "./GitHubDownload.svelte": {
+      "types": "./dist/GitHubDownload.svelte.d.ts",
+      "svelte": "./dist/GitHubDownload.svelte"
     },
-    "./GitHubSponsors.svelte": {
-      "types": "./dist/GitHubSponsors.svelte.d.ts",
-      "svelte": "./dist/GitHubSponsors.svelte"
+    "./GitHubSponsor.svelte": {
+      "types": "./dist/GitHubSponsor.svelte.d.ts",
+      "svelte": "./dist/GitHubSponsor.svelte"
     },
     "./JsrVersion.svelte": {
       "types": "./dist/JsrVersion.svelte.d.ts",
@@ -122,13 +126,13 @@
       "types": "./dist/License.svelte.d.ts",
       "svelte": "./dist/License.svelte"
     },
-    "./NpmAuthorDownloads.svelte": {
-      "types": "./dist/NpmAuthorDownloads.svelte.d.ts",
-      "svelte": "./dist/NpmAuthorDownloads.svelte"
+    "./NpmAuthorDownload.svelte": {
+      "types": "./dist/NpmAuthorDownload.svelte.d.ts",
+      "svelte": "./dist/NpmAuthorDownload.svelte"
     },
-    "./NpmDownloads.svelte": {
-      "types": "./dist/NpmDownloads.svelte.d.ts",
-      "svelte": "./dist/NpmDownloads.svelte"
+    "./NpmDownload.svelte": {
+      "types": "./dist/NpmDownload.svelte.d.ts",
+      "svelte": "./dist/NpmDownload.svelte"
     },
     "./NpmVersion.svelte": {
       "types": "./dist/NpmVersion.svelte.d.ts",
@@ -141,6 +145,10 @@
     "./StaticBadge.svelte": {
       "types": "./dist/StaticBadge.svelte.d.ts",
       "svelte": "./dist/StaticBadge.svelte"
+    },
+    "./Version.svelte": {
+      "types": "./dist/Version.svelte.d.ts",
+      "svelte": "./dist/Version.svelte"
     },
     "./package.json": "./package.json"
   }
