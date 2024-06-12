@@ -1,5 +1,5 @@
 export { default as Download } from './Download.svelte'
-export { default as GitHub } from './GitHub.svelte'
+export { default as GitHubVersion } from './GitHubVersion.svelte'
 export { default as GitHubDownload } from './GitHubDownload.svelte'
 export { default as GitHubSponsor } from './GitHubSponsor.svelte'
 export { default as JsrVersion } from './JsrVersion.svelte'

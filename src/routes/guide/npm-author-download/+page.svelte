@@ -98,7 +98,7 @@
   });
 </script>
 
-<h1>NpmAuthorDownload Component - Svelte Shields</h1>
+<h1>NPM Author Download Badge - Svelte Shields</h1>
 
 <H2>Props</H2>
 

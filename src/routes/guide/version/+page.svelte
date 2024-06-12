@@ -26,7 +26,7 @@
   });
 </script>
 
-<h1>Version Component - Svelte Shields</h1>
+<h1>Version Badge - Svelte Shields</h1>
 
 <H2>Props</H2>
 

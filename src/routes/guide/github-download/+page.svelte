@@ -90,7 +90,7 @@
   });
 </script>
 
-<h1>GitHubDownload Component - Svelte Shields</h1>
+<h1>GitHub Download Badge - Svelte Shields</h1>
 
 <H2>Props</H2>
 

@@ -11,7 +11,7 @@ export interface BaseBadgePropsType {
   link?: LinkType;
 }
 
-export interface GitHubPropsType extends BaseBadgePropsType {
+export interface GitHubVersionPropsType extends BaseBadgePropsType {
   user: string;
   repo: string;
   include_prereleases?: boolean;

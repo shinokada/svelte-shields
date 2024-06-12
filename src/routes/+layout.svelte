@@ -25,6 +25,11 @@
           href: '/guide/version'
         },
         {
+          name: 'GitHub Version',
+          icon: GithubFillLogos as Component,
+          href: '/guide/github-version'
+        },
+        {
           name: 'NPM Version',
           icon: NpmjsLineLogos as Component,
           href: '/guide/npm-version'
@@ -67,16 +72,7 @@
       name: 'GitHub',
       icon: GithubFillLogos as Component,
       children: [
-        {
-          name: 'GitHub Version',
-          icon: GithubFillLogos as Component,
-          href: '/guide/github'
-        },
-        {
-          name: 'GitHub Download',
-          icon: GithubFillLogos as Component,
-          href: '/guide/github-download'
-        },
+
         {
           name: 'GitHub Sponsor',
           icon: GithubFillLogos as Component,
@@ -92,32 +88,9 @@
           name: 'NPM Author Download',
           icon: NpmjsLineLogos as Component,
           href: '/guide/npm-author-download'
-        },
-        {
-          name: 'NPM Download',
-          icon: NpmjsLineLogos as Component,
-          href: '/guide/npm-download'
-        },
-      
-        {
-          name: 'NPM Version',
-          icon: NpmjsLineLogos as Component,
-          href: '/guide/npm-version'
-        },
+        }
       ]
-    },
-    {
-      name: 'Jsr Version',
-      icon: ClipboardListOutline as Component,
-      href: '/guide/jsr-version'
-    },
-    
-    {
-      name: 'Pypi Version',
-      icon: GridPlusOutline as Component,
-      href: '/guide/pypi-version'
-    },
-    
+    }
   ];
 
 </script>
@@ -148,7 +121,7 @@
       : data.layoutMetaTags;
   })
   const lis =[
-    {name: 'Guide', href: '/guide/github'},
+    {name: 'Guide', href: '/guide/github-version'},
     {name: 'Quickstart', href: '/guide/quickstart'},
   ]
   const brand = {
@@ -170,7 +143,7 @@
   <Sidebar 
   sidebarList={newSidebarList}
   s_b_aside='fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-0 lg:block hidden'
-  s_b_div='fixed top-20 px-2 w-60'
+  s_b_div='fixed top-20 px-2 w-60 h-full'
   />
   <div class="relative">
     <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />

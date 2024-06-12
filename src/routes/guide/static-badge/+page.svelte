@@ -102,7 +102,7 @@
   });
 </script>
 
-<h1>StaticBadge Component - Svelte Shields</h1>
+<h1>Static Badge - Svelte Shields</h1>
 
 <H2>Props</H2>
 

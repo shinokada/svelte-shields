@@ -1,7 +1,7 @@
 <script lang="ts">
   import { GitHub } from 'svelte-shields'
-  import type { GitHubPropsType } from 'svelte-shields';
-  const logo_label: GitHubPropsType = {
+  import type { GitHubVersionPropsType } from 'svelte-shields';
+  const logo_label: GitHubVersionPropsType = {
     user: 'sveltejs',
     repo: 'svelte',
     logo: 'svelte',

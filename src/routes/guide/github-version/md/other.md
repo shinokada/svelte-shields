@@ -1,7 +1,7 @@
 <script>
   import { GitHub } from 'svelte-shields'
-  import type { GitHubPropsType } from 'svelte-shields';
-  const otherEx: GitHubPropsType = {
+  import type { GitHubVersionPropsType } from 'svelte-shields';
+  const otherEx: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     cacheSeconds: '86400',

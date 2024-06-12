@@ -1,18 +1,23 @@
 import type { MetaProps } from 'runes-meta-tags';
-const title = 'License Component - Svelte Shields';
-const description = 'Svelte Shields License component for Svelte Runes';
 
-export const load = () => {
+const title = 'License Badge - Svelte Shields';
+const description = 'License badge component for Svelte Runes';
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-shields';
+
+export const load = ({ url }) => {
   const pageMetaTags: MetaProps = {
     title,
     description,
     og: {
       title,
       description,
+      image: imgUrl,
+      url: url.href
     },
     twitter: {
       title,
       description,
+      image: imgUrl
     }
   };
   return { pageMetaTags };

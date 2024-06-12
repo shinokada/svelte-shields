@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.0
+
+### Minor Changes
+
+- fix: GitHub to GitHubVersion name change
+
 ## 0.3.1
 
 ### Patch Changes

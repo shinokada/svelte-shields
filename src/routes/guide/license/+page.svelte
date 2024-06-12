@@ -5,160 +5,160 @@
 
   const basic: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
   }
 
   const basic2: LicensePropsType = {
     license: 'npm',
-    packageName: 'svelte-shields',
+    npm_packageName: 'svelte-shields',
   }
 
   const style1: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     style: 'flat',
   }
   const style2: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     style: 'flat-square',
   }
   const style3: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     style: 'for-the-badge',
   }
   const style4: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     style: 'plastic',
   }
   const style5: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     style: 'social',
   }
 
   const style6: LicensePropsType = {
     license: 'npm',
-    packageName: 'svelte-shields',
+    npm_packageName: 'svelte-shields',
     style: 'flat',
   }
   const style7: LicensePropsType = {
     license: 'npm',
-    packageName: 'svelte-shields',
+    npm_packageName: 'svelte-shields',
     style: 'flat-square',
   }
   const style8: LicensePropsType = {
     license: 'npm',
-    packageName: 'svelte-shields',
+    npm_packageName: 'svelte-shields',
     style: 'for-the-badge',
   }
   const style9: LicensePropsType = {
     license: 'npm',
-    packageName: 'svelte-shields',
+    npm_packageName: 'svelte-shields',
     style: 'plastic',
   }
   const style10: LicensePropsType = {
     license: 'npm',
-    packageName: 'svelte-shields',
+    npm_packageName: 'svelte-shields',
     style: 'social',
   }
 
   const color1: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     color: 'indigo',
   }
   const color2: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     color: '4B0082',
   }
   const color3: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     color: 'rgb(75, 0, 130)',
   }
   const color4: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     color: 'rgba(75, 0, 130, 1)',
   }
   const color5: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     color: 'hsl(275, 100%, 25%)',
   }
   const color6: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     color: 'hsla(275, 100%, 25%, 1)',
   }
 
   const color7: LicensePropsType = {
     license: 'npm',
-    packageName: 'svelte-shields',
+    npm_packageName: 'svelte-shields',
     color: 'indigo',
   }
   const color8: LicensePropsType = {
     license: 'npm',
-    packageName: 'svelte-shields',
+    npm_packageName: 'svelte-shields',
     color: '4B0082',
   }
   const color9: LicensePropsType = {
     license: 'npm',
-    packageName: 'svelte-shields',
+    npm_packageName: 'svelte-shields',
     color: 'rgb(75, 0, 130)',
   }
   const color10: LicensePropsType = {
     license: 'npm',
-    packageName: 'svelte-shields',
+    npm_packageName: 'svelte-shields',
     color: 'rgba(75, 0, 130, 1)',
   }
   const color11: LicensePropsType = {
     license: 'npm',
-    packageName: 'svelte-shields',
+    npm_packageName: 'svelte-shields',
     color: 'hsl(275, 100%, 25%)',
   }
   const color12: LicensePropsType = {
     license: 'npm',
-    packageName: 'svelte-shields',
+    npm_packageName: 'svelte-shields',
     color: 'hsla(275, 100%, 25%, 1)',
   }
 
   const logo_label: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     logo: 'svelte',
     label: 'LICENSE',
   }
 
   const link: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     logo: 'svelte',
     link: ['https://github.com/shinokada/svelte-shields', 'https://svelte-shields.codewithshin.com'],
   }
 
   const other: LicensePropsType = {
     license: 'github',
-    user: 'shinokada',
-    repo: 'svelte-shields',
+    github_user: 'shinokada',
+    github_repo: 'svelte-shields',
     logo: 'svelte',
     label: 'Svelte Shields',
     cacheSeconds: '86400',
@@ -172,7 +172,7 @@
   });
 </script>
 
-<h1>License Component - Svelte Shields</h1>
+<h1>License Badge - Svelte Shields</h1>
 
 <H2>Props</H2>
 
@@ -185,7 +185,7 @@
 <H2>Examples</H2>
 
 <H3>Basic usage</H3>
-<p>Use <Code>npm</Code> or <Code>github</Code> for <Code>license</Code>. For <Code>github</Code>, <Code>user</Code> and <Code>repo</Code> are required. For <Code>npm</Code>, <Code>packageName</Code> is required.</p>
+<p>Use <Code>npm</Code> or <Code>github</Code> for <Code>license</Code>. For <Code>github</Code>, <Code>github_user</Code> and <Code>github_repo</Code> are required. For <Code>npm</Code>, <Code>npm_packageName</Code> is required.</p>
 
 <CodeWrapper c_w_div='grid gap-4'>
   <License {...basic} />

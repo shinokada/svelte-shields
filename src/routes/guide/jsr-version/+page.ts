@@ -1,7 +1,7 @@
 import type { MetaProps } from 'runes-meta-tags';
 
-const title = 'GitHub Download Badge - Svelte Shields';
-const description = 'GitHub download badge component for Svelte Runes';
+const title = 'JSR Version Badge - Svelte Shields';
+const description = 'JSR version badge component for Svelte Runes';
 const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-shields';
 
 export const load = ({ url }) => {

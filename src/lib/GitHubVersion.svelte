@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { GitHubPropsType } from './types';
+  import type { GitHubVersionPropsType } from './types';
   
 	let {
 		user,
@@ -19,7 +19,7 @@
     link,
     class: classname,
 		...attributes
-	}: GitHubPropsType = $props();
+	}: GitHubVersionPropsType = $props();
 
   const styleOpt = style ? `style=${style}` : 'style=flat'
   const include_prereleasesOpt = include_prereleases ? `&include_prereleases` : ''

@@ -1,78 +1,78 @@
 <script lang="ts">
-  import { GitHub } from '$lib'
-  import type { GitHubPropsType } from '$lib';
-  const release: GitHubPropsType = {
+  import { GitHubVersion } from '$lib'
+  import type { GitHubVersionPropsType } from '$lib';
+  const release: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
   }
 
-  const release2: GitHubPropsType = {
+  const release2: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     style: 'flat'
   }
 
-  const release3: GitHubPropsType = {
+  const release3: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     style: 'flat-square'
   }
 
-  const release4: GitHubPropsType = {
+  const release4: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     style: 'for-the-badge'
   }
 
-  const release5: GitHubPropsType = {
+  const release5: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     style: 'plastic'
   }
 
-  const release6: GitHubPropsType = {
+  const release6: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     style: 'social'
   }
 
-  const color1: GitHubPropsType = {
+  const color1: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     color: 'orange'
   }
 
-  const color2: GitHubPropsType = {
+  const color2: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     color: 'FF7F00' // Hex (Orange)
   }
 
-  const color3: GitHubPropsType = {
+  const color3: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     color: 'rgb(255, 127, 0)' // RGB (Orange)
   }
 
-  const color4: GitHubPropsType = {
+  const color4: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     color: 'rgba(255, 127, 0, 1)' // RGBA (Orange, fully opaque)
   }
 
-  const color5: GitHubPropsType = {
+  const color5: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     color: 'hsl(40, 100%, 50%)' // HSL (Orange)
   }
 
-  const color6: GitHubPropsType = {
+  const color6: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     color: 'hsla(40, 100%, 50%, 1)' // HSLA (Orange, fully opaque)
   }
 
-  const logo_label: GitHubPropsType = {
+  const logo_label: GitHubVersionPropsType = {
     user: 'sveltejs',
     repo: 'svelte',
     logo: 'svelte',
@@ -80,14 +80,14 @@
   }
 
 
-  const linkEx: GitHubPropsType = {
+  const linkEx: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     label: 'TERA',
     link: ['https://tera.codewithshin.com', 'https://github.com/shinokada/tera']
   }
 
-  const otherEx: GitHubPropsType = {
+  const otherEx: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     cacheSeconds: '86400',
@@ -102,7 +102,7 @@
   });
 </script>
 
-<h1>GitHub Component - Svelte Shields</h1>
+<h1>GitHub Version Badge - Svelte Shields</h1>
 
 <H2>Props</H2>
 
@@ -117,7 +117,7 @@
 <H3>Basic usage</H3>
 
 <CodeWrapper>
-  <GitHub {...release} />
+  <GitHubVersion {...release} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/basic.md'] as string} />
@@ -127,11 +127,11 @@
   If not specified, the default style for this badge is "flat".</p>
 
   <CodeWrapper c_w_div='grid gap-4'>
-  <GitHub {...release2} />
-  <GitHub {...release3} />
-  <GitHub {...release4} />
-  <GitHub {...release5} />
-  <GitHub {...release6} />
+  <GitHubVersion {...release2} />
+  <GitHubVersion {...release3} />
+  <GitHubVersion {...release4} />
+  <GitHubVersion {...release5} />
+  <GitHubVersion {...release6} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/style.md'] as string} />
@@ -141,12 +141,12 @@
 <p>Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).</p>
 
 <CodeWrapper c_w_div='grid gap-4'>
-  <GitHub {...color1} />
-  <GitHub {...color2} />
-  <GitHub {...color3} />
-  <GitHub {...color4} />
-  <GitHub {...color5} />
-  <GitHub {...color6} />
+  <GitHubVersion {...color1} />
+  <GitHubVersion {...color2} />
+  <GitHubVersion {...color3} />
+  <GitHubVersion {...color4} />
+  <GitHubVersion {...color5} />
+  <GitHubVersion {...color6} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/color.md'] as string} />
@@ -154,7 +154,7 @@
 <H3>Logo & Label</H3>
 
 <CodeWrapper>
-  <GitHub {...logo_label} />
+  <GitHubVersion {...logo_label} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/logo-and-label.md'] as string} />
@@ -162,7 +162,7 @@
 <H3>Link</H3>
 <p>Specify what clicking on the left/right of a badge should do.</p>
 <CodeWrapper>
-  <GitHub {...linkEx} />
+  <GitHubVersion {...linkEx} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/link.md'] as string} />
@@ -170,7 +170,7 @@
 <H3>Other</H3>
 <p><Code>cacheSeconds</Code> is HTTP cache lifetime (rules are applied to infer a default value on a per-badge basis, any values specified below the default will be ignored).</p>
 <CodeWrapper>
-  <GitHub {...otherEx} />
+  <GitHubVersion {...otherEx} />
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/other.md'] as string} />

@@ -1,31 +1,31 @@
 <script>
   import { GitHub } from 'svelte-shields'
-  import type { GitHubPropsType } from 'svelte-shields';
-  const release2: GitHubPropsType = {
+  import type { GitHubVersionPropsType } from 'svelte-shields';
+  const release2: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     style: 'flat'
   }
 
-  const release3: GitHubPropsType = {
+  const release3: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     style: 'flat-square'
   }
 
-  const release4: GitHubPropsType = {
+  const release4: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     style: 'for-the-badge'
   }
 
-  const release5: GitHubPropsType = {
+  const release5: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     style: 'plastic'
   }
 
-  const release6: GitHubPropsType = {
+  const release6: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',
     style: 'social'
