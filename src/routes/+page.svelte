@@ -22,7 +22,7 @@
       href: 'guide/npm-author-download'
     },
     {
-      title:'GitHub',
+      title:'GitHubVersion',
       description: 'Shields badge for GitHub release',
       icon: Github,
       href: '/guide/github'
