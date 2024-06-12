@@ -2,7 +2,7 @@
   import type { LicensePropsType } from './types';
 
   let {
-    license,
+    source,
     github_user,
     github_repo,
 		npm_packageName,
@@ -40,31 +40,31 @@
 </script>
 
 {#if link}
-  {#if license === 'npm'}
+  {#if source === 'npm'}
     <!-- NPM -->
-    <object data={npmSrcData} title='{license} License' 
+    <object data={npmSrcData} title='{source} License' 
     class={classname}
     {...attributes}>
     </object>
   {:else}
     <!-- GitHub -->
-    <object data={githubSrcData} title='{license} License' 
+    <object data={githubSrcData} title='{source} License' 
     class={classname}
     {...attributes}>
     </object>
   {/if}
 {:else}
-  {#if license === 'npm'}
+  {#if source === 'npm'}
     <!-- NPM -->
     <img  
-    src={npmSrcData} alt="{license} License" 
+    src={npmSrcData} alt="{source} License" 
     class={classname}
     {...attributes}
   />
   {:else}
     <!-- GitHub -->
     <img  
-    src={githubSrcData} alt="{license} License" 
+    src={githubSrcData} alt="{source} License" 
     class={classname}
     {...attributes}
   />

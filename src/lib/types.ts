@@ -56,7 +56,7 @@ export interface JsrVersionPropsType extends BaseBadgePropsType {
 }
 
 export interface LicensePropsType extends BaseBadgePropsType {
-  license: 'github' | 'npm';
+  source: 'github' | 'npm';
   github_user?: string;
   github_repo?: string;
   npm_packageName?: string;
