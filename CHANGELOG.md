@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.1
+
+### Patch Changes
+
+- fix: prop name change from license to source ([`0ba45ec7f4fdb3fe5acc4257dc67bdf11c39c9b0`](https://github.com/shinokada/svelte-shields/commit/0ba45ec7f4fdb3fe5acc4257dc67bdf11c39c9b0))
+
 ## 0.4.0
 
 ### Minor Changes
