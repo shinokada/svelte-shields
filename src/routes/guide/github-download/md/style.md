@@ -1,36 +1,36 @@
 <script>
-  import { NpmDownload } from 'svelte-shields'
-  import type { NpmDownloadPropsType } from 'svelte-shields';
+  import { GitHubDownload } from 'svelte-shields'
+  import type { GitHubDownloadPropsType } from 'svelte-shields';
 
-  const style1: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons',
-    logo: '',
+  const style1: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
     style: 'flat',
   }
-  const style2: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons',
-    logo: '',
+  const style2: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
     style: 'flat-square',
   }
-  const style3: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons',
-    logo: '',
+  const style3: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
     style: 'for-the-badge',
   }
-  const style4: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons',
-    logo: '',
+  const style4: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
     style: 'plastic',
   }
-  const style5: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons',
-    logo: '',
+  const style5: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
     style: 'social',
   }
 </script>
 
-<NpmDownload {...style1} />
-<NpmDownload {...style2} />
-<NpmDownload {...style3} />
-<NpmDownload {...style4} />
-<NpmDownload {...style5} />
+<GitHubDownload {...style1} />
+<GitHubDownload {...style2} />
+<GitHubDownload {...style3} />
+<GitHubDownload {...style4} />
+<GitHubDownload {...style5} />

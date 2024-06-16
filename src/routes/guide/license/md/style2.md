@@ -3,27 +3,27 @@
   import type { LicensePropsType } from 'svelte-shields';
 
   const style6: LicensePropsType = {
-    license: 'npm',
+    source: 'npm',
     packageName: 'svelte-shields',
     style: 'flat',
   }
   const style7: LicensePropsType = {
-    license: 'npm',
+    source: 'npm',
     packageName: 'svelte-shields',
     style: 'flat-square',
   }
   const style8: LicensePropsType = {
-    license: 'npm',
+    source: 'npm',
     packageName: 'svelte-shields',
     style: 'for-the-badge',
   }
   const style9: LicensePropsType = {
-    license: 'npm',
+    source: 'npm',
     packageName: 'svelte-shields',
     style: 'plastic',
   }
   const style10: LicensePropsType = {
-    license: 'npm',
+    source: 'npm',
     packageName: 'svelte-shields',
     style: 'social',
   }

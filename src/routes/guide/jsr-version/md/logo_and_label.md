@@ -3,7 +3,7 @@
   import type { JsrVersionPropsType } from 'svelte-shields';
   
   const logo_label: JsrVersionPropsType = {
-    scope: '@badrap',
+    scope: '@hono',
     packageName: 'svelte',
     logo: 'svelte',
     label: 'SVELTE'

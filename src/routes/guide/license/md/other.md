@@ -3,7 +3,7 @@
   import type { LicensePropsType } from 'svelte-shields';
 
   const other: LicensePropsType = {
-    license: 'github',
+    source: 'github',
     user: 'shinokada',
     repo: 'svelte-shields',
     logo: 'svelte',

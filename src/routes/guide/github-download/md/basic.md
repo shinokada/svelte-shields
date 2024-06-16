@@ -1,16 +1,12 @@
 <script lang="ts">
-  import { NpmDownload } from 'svelte-shields'
-  import type { NpmDownloadPropsType } from 'svelte-shields';
+  import { GitHubDownload } from 'svelte-shields'
+  import type { GitHubDownloadPropsType } from 'svelte-shields';
   
-  const basic: NpmDownloadPropsType = {
-    packageName: 'flowbite-svelte-icons',
+  const basic: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
   }
 
-  const basic2: NpmDownloadPropsType = {
-    packageName: 'flowbite-svelte-icons',
-    interval: 'dm',
-  }
 </script>
 
-<NpmDownload {...basic} />
-<NpmDownload {...basic2} />
+<GitHubDownload {...basic} />

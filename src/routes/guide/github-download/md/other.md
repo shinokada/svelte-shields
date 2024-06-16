@@ -1,13 +1,12 @@
 <script>
-  import { NpmDownload } from 'svelte-shields'
-  import type { NpmDownloadPropsType } from 'svelte-shields';
+  import { GitHubDownload } from 'svelte-shields'
+  import type { GitHubDownloadPropsType } from 'svelte-shields';
 
-  const other: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons',
-    logo: 'svelte',
-    label: 'Svelte Awesome Icons',
+  const other: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
     cacheSeconds: '86400',
   }
 </script>
 
-<NpmDownload {...other} />
+<GitHubDownload {...other} />

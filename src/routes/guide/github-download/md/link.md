@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { NpmDownload } from 'svelte-shields'
-  import type { NpmDownloadPropsType } from 'svelte-shields';
+  import { GitHubDownload } from 'svelte-shields'
+  import type { GitHubDownloadPropsType } from 'svelte-shields';
 
-  const link: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons',
-    logo: 'svelte',
-    link: ['https://github.com/shinokada/svelte-awesome-icons', 'https://svelte-awesome-icons.codewithshin.com'],
+  const link: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
+    link: ['https://teffects.codewithshin.com', 'https://github.com/shinokada/teffects']
   }
 </script>
 
-<NpmDownload {...link} />
+<GitHubDownload {...link} />

@@ -3,32 +3,32 @@
   import type { JsrVersionPropsType } from 'svelte-shields';
 
   const style1: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     style: 'flat',
   }
   const style2: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     style: 'flat-square',
   }
   const style3: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     style: 'for-the-badge',
   }
   const style4: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     style: 'plastic',
   }
   const style5: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     style: 'social',
   }

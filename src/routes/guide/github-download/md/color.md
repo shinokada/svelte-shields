@@ -1,44 +1,42 @@
 <script lang="ts">
-  import { NpmDownload } from 'svelte-shields'
-  import type { NpmDownloadPropsType } from 'svelte-shields';
+  import { GitHubDownload } from 'svelte-shields'
+  import type { GitHubDownloadPropsType } from 'svelte-shields';
 
-  const color1: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons',
-    logo: '',
-    color: 'indigo',
+  const color1: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
+    color: 'red',
   }
-  const color2: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons',
-    logo: '',
-    color: '4B0082',
+  const color2: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
+    color: 'FF0000',
   }
-  const color3: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons',
-    logo: '',
-    color: 'rgb(75, 0, 130)',
+  const color3: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
+    color: 'rgb(255, 0, 0)',
   }
-  const color4: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons',
-    logo: '',
-    color: 'rgba(75, 0, 130, 1)',
+  const color4: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
+    color: 'rgba(255, 0, 0, 1) ',
   }
-
-  const color5: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons',
-    logo: '',
-    color: 'hsl(275, 100%, 25%)',
+  const color5: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
+    color: 'hsl(0, 100%, 50%)',
   }
-
-  const color6: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons',
-    logo: '',
-    color: 'hsla(275, 100%, 25%, 1)',
+  const color6: GitHubDownloadPropsType = {
+    user: 'shinokada',
+    repo: 'teffects',
+    color: 'hsla(0, 100%, 50%, 1)',
   }
 </script>
 
-<NpmDownload {...color1} />
-<NpmDownload {...color2} />
-<NpmDownload {...color3} />
-<NpmDownload {...color4} />
-<NpmDownload {...color5} />
-<NpmDownload {...color6} />
+<GitHubDownload {...color1} />
+<GitHubDownload {...color2} />
+<GitHubDownload {...color3} />
+<GitHubDownload {...color4} />
+<GitHubDownload {...color5} />
+<GitHubDownload {...color6} />

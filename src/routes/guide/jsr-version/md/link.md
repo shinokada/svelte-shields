@@ -3,11 +3,11 @@
   import type { JsrVersionPropsType } from 'svelte-shields';
 
   const link: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     label: 'Svelte 5 UI Library',
-    link: ['https://jsr.io/@badrap/valita', 'https://github.com/badrap/valita']
+    link: ['https://jsr.io/@hono/hono', 'https://github.com/badrap/hono']
   }
 </script>
 

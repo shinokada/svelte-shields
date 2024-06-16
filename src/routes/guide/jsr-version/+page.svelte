@@ -84,16 +84,16 @@
 
   const logo_label: JsrVersionPropsType = {
     scope: '@hono',
-    packageName: 'svelte',
-    logo: 'svelte',
-    label: 'SVELTE'
+    packageName: 'hono',
+    logo: 'hono',
+    label: 'HONO'
   }
 
   const link: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
     logo: '',
-    label: 'Svelte 5 UI Library',
+    label: 'HONO',
     link: ['https://hono.codewithshin.com', 'https://github.com/shinokada/hono']
   }
   

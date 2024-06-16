@@ -3,43 +3,43 @@
   import type { JsrVersionPropsType } from 'svelte-shields';
 
   const color1: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     color: 'green'
   }
 
   const color2: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     color: '00FF00' 
   }
 
   const color3: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     color: 'rgb(0, 255, 0)' 
   }
 
   const color4: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     color: 'rgba(0, 255, 0, 1)' 
   }
 
   const color5: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     color: 'hsl(120, 100%, 50%)' 
   }
 
   const color6: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     color: 'hsla(120, 100%, 50%, 1)' 
   }

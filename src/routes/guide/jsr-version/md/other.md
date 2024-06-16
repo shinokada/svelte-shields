@@ -3,8 +3,8 @@
   import type { JsrVersionPropsType } from 'svelte-shields';
 
   const other: JsrVersionPropsType = {
-    scope: '@badrap',
-    packageName: 'valita',
+    scope: '@hono',
+    packageName: 'hono',
     logo: '',
     cacheSeconds: '86400',
   }
