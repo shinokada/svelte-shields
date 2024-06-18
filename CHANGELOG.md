@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.4.2
+
+### Patch Changes
+
+- fix: set empty string to logo and color ([`d2197f4b82a83a5295242b1d5189122decdf7761`](https://github.com/shinokada/svelte-shields/commit/d2197f4b82a83a5295242b1d5189122decdf7761))
+
 ## 0.4.1
 
 ### Patch Changes
