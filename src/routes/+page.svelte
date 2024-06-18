@@ -25,7 +25,7 @@
       title:'GitHubVersion',
       description: 'Shields badge for GitHub release',
       icon: Github,
-      href: '/guide/github'
+      href: '/guide/github-version'
     },
     {
       title:'GitHubDownload',
