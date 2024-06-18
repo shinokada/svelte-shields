@@ -4,34 +4,34 @@
 
   const color1: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada'
-    logo: '',
+    ,
     color: 'indigo',
   }
   const color2: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada'
-    logo: '',
+    ,
     color: '4B0082',
   }
   const color3: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada'
-    logo: '',
+    ,
     color: 'rgb(75, 0, 130)',
   }
   const color4: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada'
-    logo: '',
+    ,
     color: 'rgba(75, 0, 130, 1)',
   }
 
   const color5: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada'
-    logo: '',
+    ,
     color: 'hsl(275, 100%, 25%)',
   }
 
   const color6: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada'
-    logo: '',
+    ,
     color: 'hsla(275, 100%, 25%, 1)',
   }
 </script>

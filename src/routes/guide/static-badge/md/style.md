@@ -4,27 +4,22 @@
 
   const style1: StaticBadgePropsType = {
     badgeContent: 'any_text-you_like-blue',
-    logo: '',
     style: 'flat',
   }
   const style2: StaticBadgePropsType = {
     badgeContent: 'any_text-you_like-blue',
-    logo: '',
     style: 'flat-square',
   }
   const style3: StaticBadgePropsType = {
     badgeContent: 'any_text-you_like-blue',
-    logo: '',
     style: 'for-the-badge',
   }
   const style4: StaticBadgePropsType = {
     badgeContent: 'any_text-you_like-blue',
-    logo: '',
     style: 'plastic',
   }
   const style5: StaticBadgePropsType = {
     badgeContent: 'any_text-you_like-blue',
-    logo: '',
     style: 'social',
   }
 </script>

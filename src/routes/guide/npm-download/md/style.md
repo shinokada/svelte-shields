@@ -4,27 +4,22 @@
 
   const style1: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
     style: 'flat',
   }
   const style2: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
     style: 'flat-square',
   }
   const style3: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
     style: 'for-the-badge',
   }
   const style4: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
     style: 'plastic',
   }
   const style5: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
     style: 'social',
   }
 </script>

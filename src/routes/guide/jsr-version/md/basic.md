@@ -4,7 +4,6 @@
   const basic: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
   }
 </script>
 

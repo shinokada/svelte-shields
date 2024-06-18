@@ -4,7 +4,6 @@
 
   const other: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     cacheSeconds: '86400',
   }
 </script>

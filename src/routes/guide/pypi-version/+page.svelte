@@ -4,69 +4,57 @@
   import type { PypiVersionPropsType } from '$lib';
   
   const basic: PypiVersionPropsType = {
-    packageName: 'vennfig',
-    logo: '',
+    packageName: 'vennfig' 
   }
 
   const style1: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     style: 'flat',
   }
   const style2: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     style: 'flat-square',
   }
   const style3: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     style: 'for-the-badge',
   }
   const style4: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     style: 'plastic',
   }
   const style5: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     style: 'social',
   }
 
   const color1: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     color: 'green'
   }
 
   const color2: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     color: '00FF00' 
   }
 
   const color3: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     color: 'rgb(0, 255, 0)' 
   }
 
   const color4: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     color: 'rgba(0, 255, 0, 1)' 
   }
 
   const color5: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     color: 'hsl(120, 100%, 50%)' 
   }
 
   const color6: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     color: 'hsla(120, 100%, 50%, 1)' 
   }
 
@@ -78,14 +66,13 @@
 
   const link: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
+    
     label: 'VENNFIG',
     link: ['https://vennfig.codewithshin.com', 'https://github.com/shinokada/vennfig']
   }
   
   const other: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     cacheSeconds: '86400',
   }
 

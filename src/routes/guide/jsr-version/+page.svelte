@@ -6,79 +6,67 @@
   const basic: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
   }
 
   const style1: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     style: 'flat',
   }
   const style2: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     style: 'flat-square',
   }
   const style3: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     style: 'for-the-badge',
   }
   const style4: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     style: 'plastic',
   }
   const style5: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     style: 'social',
   }
 
   const color1: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     color: 'green'
   }
 
   const color2: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     color: '00FF00' 
   }
 
   const color3: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     color: 'rgb(0, 255, 0)' 
   }
 
   const color4: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     color: 'rgba(0, 255, 0, 1)' 
   }
 
   const color5: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     color: 'hsl(120, 100%, 50%)' 
   }
 
   const color6: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     color: 'hsla(120, 100%, 50%, 1)' 
   }
 
@@ -92,7 +80,6 @@
   const link: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     label: 'HONO',
     link: ['https://hono.codewithshin.com', 'https://github.com/shinokada/hono']
   }
@@ -100,7 +87,6 @@
   const other: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     cacheSeconds: '86400',
   }
 

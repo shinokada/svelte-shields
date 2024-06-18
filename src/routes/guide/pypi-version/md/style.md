@@ -4,27 +4,22 @@
 
   const style1: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     style: 'flat',
   }
   const style2: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     style: 'flat-square',
   }
   const style3: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     style: 'for-the-badge',
   }
   const style4: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     style: 'plastic',
   }
   const style5: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
     style: 'social',
   }
 </script>

@@ -5,7 +5,6 @@
   const other: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     cacheSeconds: '86400',
   }
 </script>

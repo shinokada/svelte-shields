@@ -5,7 +5,7 @@
 
   const link: PypiVersionPropsType = {
     packageName: 'vennfig',
-    logo: '',
+    
     label: 'VENNFIG',
     link: ['https://vennfig.codewithshin.com', 'https://github.com/shinokada/vennfig']
   }

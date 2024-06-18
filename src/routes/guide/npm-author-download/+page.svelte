@@ -14,60 +14,49 @@
 
   const style1: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
-    logo: '',
     style: 'flat',
   }
   const style2: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
-    logo: '',
     style: 'flat-square',
   }
   const style3: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
-    logo: '',
     style: 'for-the-badge',
   }
   const style4: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
-    logo: '',
     style: 'plastic',
   }
   const style5: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
-    logo: '',
     style: 'social',
   }
 
   const color1: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
-    logo: '',
     color: 'indigo',
   }
   const color2: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
-    logo: '',
     color: '4B0082',
   }
   const color3: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
-    logo: '',
     color: 'rgb(75, 0, 130)',
   }
   const color4: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
-    logo: '',
     color: 'rgba(75, 0, 130, 1)',
   }
 
   const color5: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
-    logo: '',
     color: 'hsl(275, 100%, 25%)',
   }
 
   const color6: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada',
-    logo: '',
     color: 'hsla(275, 100%, 25%, 1)',
   }
 

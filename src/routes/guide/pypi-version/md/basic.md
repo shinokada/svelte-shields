@@ -2,8 +2,7 @@
   import { PypiVersion } from 'svelte-shields'
   import type { PypiVersionPropsType } from 'svelte-shields';
   const basic: PypiVersionPropsType = {
-    packageName: 'vennfig',
-    logo: '',
+    packageName: 'vennfig' 
   }
 </script>
 

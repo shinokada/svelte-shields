@@ -14,61 +14,50 @@
 
   const style1: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
-    style: 'flat',
+     style: 'flat',
   }
   const style2: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
-    style: 'flat-square',
+     style: 'flat-square',
   }
   const style3: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
-    style: 'for-the-badge',
+     style: 'for-the-badge',
   }
   const style4: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
-    style: 'plastic',
+     style: 'plastic',
   }
   const style5: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
-    style: 'social',
+     style: 'social',
   }
 
   const color1: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
-    color: 'indigo',
+     color: 'indigo',
   }
   const color2: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
-    color: '4B0082',
+     color: '4B0082',
   }
   const color3: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
-    color: 'rgb(75, 0, 130)',
+     color: 'rgb(75, 0, 130)',
   }
   const color4: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
-    color: 'rgba(75, 0, 130, 1)',
+     color: 'rgba(75, 0, 130, 1)',
   }
 
   const color5: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
-    color: 'hsl(275, 100%, 25%)',
+     color: 'hsl(275, 100%, 25%)',
   }
 
   const color6: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    logo: '',
-    color: 'hsla(275, 100%, 25%, 1)',
+     color: 'hsla(275, 100%, 25%, 1)',
   }
 
   const logo_label: NpmDownloadPropsType = {

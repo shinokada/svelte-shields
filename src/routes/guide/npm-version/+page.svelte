@@ -4,74 +4,62 @@
   import type { NpmVersionPropsType } from '$lib';
   
   const basic: NpmVersionPropsType = {
-    packageName: 'flowbite-svelte-icons',
-    logo: '',
+    packageName: 'flowbite-svelte-icons' 
   }
   const basic2: NpmVersionPropsType = {
     packageName: 'flowbite-svelte-icons',
-    logo: '',
+    
     tag: 'next'
   }
 
   const style1: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
-    logo: '',
     style: 'flat',
   }
   const style2: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
-    logo: '',
     style: 'flat-square',
   }
   const style3: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
-    logo: '',
     style: 'for-the-badge',
   }
   const style4: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
-    logo: '',
     style: 'plastic',
   }
   const style5: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
-    logo: '',
     style: 'social',
   }
 
   const color1: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
-    logo: '',
     color: 'green'
   }
 
   const color2: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
-    logo: '',
     color: '00FF00' 
   }
 
   const color3: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
-    logo: '',
     color: 'rgb(0, 255, 0)' 
   }
 
   const color4: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
-    logo: '',
     color: 'rgba(0, 255, 0, 1)' 
   }
 
   const color5: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
-    logo: '',
     color: 'hsl(120, 100%, 50%)' 
   }
 
   const color6: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
-    logo: '',
     color: 'hsla(120, 100%, 50%, 1)' 
   }
 
@@ -89,14 +77,13 @@
 
   const link: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
-    logo: '',
+    
     label: 'Svelte 5 UI Library',
     link: ['https://svelte-5-ui-lib.codewithshin.com', 'https://github.com/shinokada/svelte-5-ui-lib']
   }
   
   const other: NpmVersionPropsType = {
     packageName: 'svelte-5-ui-lib',
-    logo: '',
     cacheSeconds: '86400',
   }
 

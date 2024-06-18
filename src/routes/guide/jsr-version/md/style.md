@@ -5,31 +5,26 @@
   const style1: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     style: 'flat',
   }
   const style2: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     style: 'flat-square',
   }
   const style3: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     style: 'for-the-badge',
   }
   const style4: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     style: 'plastic',
   }
   const style5: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    logo: '',
     style: 'social',
   }
 </script>
