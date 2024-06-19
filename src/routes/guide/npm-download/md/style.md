@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { NpmDownload } from 'svelte-shields'
   import type { NpmDownloadPropsType } from 'svelte-shields';
 

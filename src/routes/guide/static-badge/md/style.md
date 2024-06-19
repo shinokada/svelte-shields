@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { StaticBadge } from 'svelte-shields'
   import type { StaticBadgePropsType } from 'svelte-shields';
 

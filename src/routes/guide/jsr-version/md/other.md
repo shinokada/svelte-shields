@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { JsrVersion } from 'svelte-shields'
   import type { JsrVersionPropsType } from 'svelte-shields';
 

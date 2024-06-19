@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { GitHubDownload } from 'svelte-shields'
   import type { GitHubDownloadPropsType } from 'svelte-shields';
 
