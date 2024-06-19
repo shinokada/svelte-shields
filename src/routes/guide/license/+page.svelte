@@ -44,7 +44,6 @@
     github_repo: 'svelte-shields',
     style: 'social',
   }
-
   const style6: LicensePropsType = {
     source: 'npm',
     npm_packageName: 'svelte-shields',
@@ -107,7 +106,6 @@
     github_repo: 'svelte-shields',
     color: 'hsla(275, 100%, 25%, 1)',
   }
-
   const color7: LicensePropsType = {
     source: 'npm',
     npm_packageName: 'svelte-shields',

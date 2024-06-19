@@ -3,9 +3,9 @@
   import type { NpmAuthorDownloadPropsType } from 'svelte-shields';
 
   const link: NpmAuthorDownloadPropsType = {
-    author: 'shinichiokada'
+    author: 'shinichiokada',
     logo: 'svelte',
-    link: ['https://github.com/shinokada', 'https://codewithshin.com'],
+    link: ['https://github.com/shinokada', 'https://codewithshin.com']
   }
 </script>
 

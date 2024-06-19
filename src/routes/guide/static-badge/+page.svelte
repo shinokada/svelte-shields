@@ -10,7 +10,6 @@
     badgeContent: 'just the message-8a2be2' 
   }
 
-
   const style1: StaticBadgePropsType = {
     badgeContent: 'any_text-you_like-blue',
     style: 'flat',
@@ -36,27 +35,22 @@
     badgeContent: 'any_text-you_like-blue',
     color: 'green'
   }
-
   const color2: StaticBadgePropsType = {
     badgeContent: 'any_text-you_like-blue',
     color: '00FF00' 
   }
-
   const color3: StaticBadgePropsType = {
     badgeContent: 'any_text-you_like-blue',
     color: 'rgb(0, 255, 0)' 
   }
-
   const color4: StaticBadgePropsType = {
     badgeContent: 'any_text-you_like-blue',
     color: 'rgba(0, 255, 0, 1)' 
   }
-
   const color5: StaticBadgePropsType = {
     badgeContent: 'any_text-you_like-blue',
     color: 'hsl(120, 100%, 50%)' 
   }
-
   const color6: StaticBadgePropsType = {
     badgeContent: 'any_text-you_like-blue',
     color: 'hsla(120, 100%, 50%, 1)' 
@@ -71,7 +65,6 @@
 
   const link: StaticBadgePropsType = {
     badgeContent: 'link_1-link_2-blue',
-    
     link: ['https://codewithshin.com', 'https://github.com/shinokada']
   }
   

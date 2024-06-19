@@ -8,7 +8,7 @@
     repo: 'svelte-shields',
     logo: 'svelte',
     label: 'Svelte Shields',
-    cacheSeconds: '86400',
+    cacheSeconds: '86400'
   }
 
 </script>

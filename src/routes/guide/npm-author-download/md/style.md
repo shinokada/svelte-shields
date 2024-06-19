@@ -3,29 +3,24 @@
   import type { NpmAuthorDownloadPropsType } from 'svelte-shields';
 
   const style1: NpmAuthorDownloadPropsType = {
-    author: 'shinichiokada'
-    ,
-    style: 'flat',
+    author: 'shinichiokada',
+    style: 'flat'
   }
   const style2: NpmAuthorDownloadPropsType = {
-    author: 'shinichiokada'
-    ,
-    style: 'flat-square',
+    author: 'shinichiokada',
+    style: 'flat-square'
   }
   const style3: NpmAuthorDownloadPropsType = {
-    author: 'shinichiokada'
-    ,
-    style: 'for-the-badge',
+    author: 'shinichiokada',
+    style: 'for-the-badge'
   }
   const style4: NpmAuthorDownloadPropsType = {
-    author: 'shinichiokada'
-    ,
-    style: 'plastic',
+    author: 'shinichiokada',
+    style: 'plastic'
   }
   const style5: NpmAuthorDownloadPropsType = {
-    author: 'shinichiokada'
-    ,
-    style: 'social',
+    author: 'shinichiokada',
+    style: 'social'
   }
 </script>
 

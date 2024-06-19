@@ -7,7 +7,7 @@
     user: 'shinokada',
     repo: 'svelte-shields',
     logo: 'svelte',
-    link: ['https://github.com/shinokada/svelte-shields', 'https://svelte-shields.codewithshin.com'],
+    link: ['https://github.com/shinokada/svelte-shields', 'https://svelte-shields.codewithshin.com']
   }
 </script>
 

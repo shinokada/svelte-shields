@@ -1,6 +1,7 @@
 <script>
   import { GitHub } from 'svelte-shields'
   import type { GitHubVersionPropsType } from 'svelte-shields';
+  
   const release2: GitHubVersionPropsType = {
     user: 'shinokada',
     repo: 'tera',

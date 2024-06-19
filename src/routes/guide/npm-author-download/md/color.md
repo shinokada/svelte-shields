@@ -3,35 +3,29 @@
   import type { NpmAuthorDownloadPropsType } from 'svelte-shields';
 
   const color1: NpmAuthorDownloadPropsType = {
-    author: 'shinichiokada'
-    ,
-    color: 'indigo',
+    author: 'shinichiokada',
+    color: 'indigo'
   }
   const color2: NpmAuthorDownloadPropsType = {
-    author: 'shinichiokada'
-    ,
-    color: '4B0082',
+    author: 'shinichiokada',
+    color: '4B0082'
   }
   const color3: NpmAuthorDownloadPropsType = {
-    author: 'shinichiokada'
-    ,
-    color: 'rgb(75, 0, 130)',
+    author: 'shinichiokada',
+    color: 'rgb(75, 0, 130)'
   }
   const color4: NpmAuthorDownloadPropsType = {
-    author: 'shinichiokada'
-    ,
-    color: 'rgba(75, 0, 130, 1)',
+    author: 'shinichiokada',
+    color: 'rgba(75, 0, 130, 1)'
   }
 
   const color5: NpmAuthorDownloadPropsType = {
-    author: 'shinichiokada'
-    ,
-    color: 'hsl(275, 100%, 25%)',
+    author: 'shinichiokada',
+    color: 'hsl(275, 100%, 25%)'
   }
 
   const color6: NpmAuthorDownloadPropsType = {
-    author: 'shinichiokada'
-    ,
+    author: 'shinichiokada',
     color: 'hsla(275, 100%, 25%, 1)',
   }
 </script>

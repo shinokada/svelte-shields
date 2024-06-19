@@ -5,32 +5,32 @@
   const color7: LicensePropsType = {
     source: 'npm',
     packageName: 'svelte-shields',
-    color: 'indigo',
+    color: 'indigo'
   }
   const color8: LicensePropsType = {
     source: 'npm',
     packageName: 'svelte-shields',
-    color: '4B0082',
+    color: '4B0082'
   }
   const color9: LicensePropsType = {
     source: 'npm',
     packageName: 'svelte-shields',
-    color: 'rgb(75, 0, 130)',
+    color: 'rgb(75, 0, 130)'
   }
   const color10: LicensePropsType = {
     source: 'npm',
     packageName: 'svelte-shields',
-    color: 'rgba(75, 0, 130, 1)',
+    color: 'rgba(75, 0, 130, 1)'
   }
   const color11: LicensePropsType = {
     source: 'npm',
     packageName: 'svelte-shields',
-    color: 'hsl(275, 100%, 25%)',
+    color: 'hsl(275, 100%, 25%)'
   }
   const color12: LicensePropsType = {
     source: 'npm',
     packageName: 'svelte-shields',
-    color: 'hsla(275, 100%, 25%, 1)',
+    color: 'hsla(275, 100%, 25%, 1)'
   }
 </script>
 

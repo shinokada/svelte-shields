@@ -5,7 +5,7 @@
   const link: JsrVersionPropsType = {
     scope: '@hono',
     packageName: 'hono',
-    label: 'Svelte 5 UI Library',
+    label: 'HONO',
     link: ['https://jsr.io/@hono/hono', 'https://github.com/badrap/hono']
   }
 </script>

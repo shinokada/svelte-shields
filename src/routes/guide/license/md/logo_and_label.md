@@ -7,7 +7,7 @@
     user: 'shinokada',
     repo: 'svelte-shields',
     logo: 'svelte',
-    label: 'LICENSE',
+    label: 'LICENSE'
   }
 </script>
 

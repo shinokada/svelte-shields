@@ -4,9 +4,9 @@
   
   const logo_label: JsrVersionPropsType = {
     scope: '@hono',
-    packageName: 'svelte',
-    logo: 'svelte',
-    label: 'SVELTE'
+    packageName: 'hono',
+    logo: 'hono',
+    label: 'HONO'
   }
 </script>
 

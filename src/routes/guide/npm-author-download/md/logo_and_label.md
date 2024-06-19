@@ -5,7 +5,7 @@
   const logo_label: NpmAuthorDownloadPropsType = {
     author: 'shinichiokada'
     logo: 'svelte',
-    label: 'Shinichi Okada',
+    label: 'Shinichi Okada'
   }
 </script>
 

@@ -7,8 +7,8 @@
   }
 
   const basic2: NpmAuthorDownloadPropsType = {
-    author: 'shinichiokada'
-    interval: 'dm',
+    author: 'shinichiokada',
+    interval: 'dm'
   }
 </script>
 
