@@ -44,6 +44,7 @@
     github_repo: 'svelte-shields',
     style: 'social',
   }
+
   const style6: LicensePropsType = {
     source: 'npm',
     npm_packageName: 'svelte-shields',
@@ -106,6 +107,7 @@
     github_repo: 'svelte-shields',
     color: 'hsla(275, 100%, 25%, 1)',
   }
+
   const color7: LicensePropsType = {
     source: 'npm',
     npm_packageName: 'svelte-shields',
@@ -193,7 +195,7 @@
 <HighlightCompo codeLang="ts" code={modules['./md/basic.md'] as string} />
 
 <H3>Style</H3>
-
+<p>GitHub</p>
 <CodeWrapper c_w_div='grid gap-4'>
   <License {...style1} />
   <License {...style2} />
@@ -203,7 +205,7 @@
 </CodeWrapper>
 
 <HighlightCompo codeLang="ts" code={modules['./md/style1.md'] as string} />
-
+<p>NPM</p>
 <CodeWrapper c_w_div='grid gap-4'>
   <License {...style6} />
   <License {...style7} />
@@ -216,6 +218,7 @@
 
 <H3>Color</H3>
 
+<p>GitHub</p>
 <CodeWrapper c_w_div='grid gap-4'>
   <License {...color1} />
   <License {...color2} />
@@ -227,6 +230,7 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/color1.md'] as string} />
 
+<p>NPM</p>
 <CodeWrapper c_w_div='grid gap-4'>
   <License {...color7} />
   <License {...color8} />

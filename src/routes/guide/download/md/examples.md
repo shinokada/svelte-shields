@@ -1,14 +1,14 @@
 <script lang="ts">
   import { Download } from 'svelte-shields';
-  import type { DownloadsPropsType } from 'svelte-shields';
+  import type { DownloadPropsType } from 'svelte-shields';
 
-  const npmdownload: DownloadsPropsType = {
+  const npmdownload: DownloadPropsType = {
     source: 'npm',
     packageName: 'svelte-shields',
     interval: 'dw',
     color: 'red'
   }
-  const githubdownload: DownloadsPropsType = {
+  const githubdownload: DownloadPropsType = {
     source: 'github',
     user: 'shinokada',
     repo: 'tera',

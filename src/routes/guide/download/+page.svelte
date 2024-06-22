@@ -1,15 +1,15 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
   import { Download } from '$lib';
-  import type { DownloadsPropsType } from '$lib';
+  import type { DownloadPropsType } from '$lib';
 
-  const npmdownload: DownloadsPropsType = {
+  const npmdownload: DownloadPropsType = {
     source: 'npm',
     packageName: 'svelte-shields',
     interval: 'dw',
     color: 'red'
   }
-  const githubdownload: DownloadsPropsType = {
+  const githubdownload: DownloadPropsType = {
     source: 'github',
     user: 'shinokada',
     repo: 'tera',

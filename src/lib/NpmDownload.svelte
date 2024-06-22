@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { NpmDownloadsPropsType } from './types';
+  import type { NpmDownloadPropsType } from './types';
 
 	let {
     interval = 'dw',
@@ -15,16 +15,16 @@
     link,
     class: classname,
 		...attributes
-	}: NpmDownloadsPropsType = $props();
+	}: NpmDownloadPropsType = $props();
 
   // const intervalOpt = interval ? `&interval=${interval}` : 'dw'
   const styleOpt = style ? `style=${style}` : 'style=flat'
-  const logoOpt = logo ? `&logo=${logo}` : '&logo=""'
+  const logoOpt = logo ? `&logo=${logo}` : ''
   const logoColorOpt = logoColor ? `&logoColor=${logoColor}` : ''
   const logoSizeOpt = logoSize ? `&logoSize=${logoSize}` : ''
   const labelOpt = label ? `&label=${encodeURIComponent(label)}` : ''
   const labelColorOpt = labelColor ? `&labelColor=${labelColor}` : ''
-  const colorOpt = color ? `&color=${color}` : '&color=""'
+  const colorOpt = color ? `&color=${color}` : ''
   const cacheSecondsOpt = cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : ''
   const link1 = link ? `&link=${encodeURIComponent(link[0])}` :  ''
   const link2 = link ? `&link=${encodeURIComponent(link[1])}` : ''
