@@ -31,8 +31,7 @@
 
 {#if link}
   <object data={srcData} title={badgeContent}
-  class={classname}
-  {...attributes}>
+  class={classname}>
   </object>
 {:else}
   <img  

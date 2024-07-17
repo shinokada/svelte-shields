@@ -35,8 +35,7 @@
 
 {#if link}
   <object data={srcData} title='NPM {interval} Downloads - {packageName}' 
-  class={classname}
-  {...attributes}>
+  class={classname}>
   </object>
 {:else}
   <img  

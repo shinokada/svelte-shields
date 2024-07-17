@@ -43,14 +43,12 @@
   {#if source === 'npm'}
     <!-- NPM -->
     <object data={npmSrcData} title='NPM downloads' 
-    class={classname}
-    {...attributes}>
+    class={classname}>
     </object>
   {:else}
     <!-- GitHub -->
     <object data={githubSrcData} title='GitHub downloads' 
-    class={classname}
-    {...attributes}>
+    class={classname}>
     </object>
   {/if}
 {:else}

@@ -1,18 +1,24 @@
-export type LinkType =  string[] | [string, string];
+import type { HTMLImgAttributes } from 'svelte/elements';
+
+
+export type LinkType = string[] | [string, string];
 export interface BaseBadgePropsType {
   style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
-  logo?: string;
-  logoColor?: string;
-  logoSize?: string;
-  label?: string;
-  labelColor?: string;
-  color?: string;
-  cacheSeconds?: string;
+  logo?: string | undefined | null;
+  logoColor?: string | undefined | null;
+  logoSize?: string | undefined | null;
+  label?: string | undefined | null;
+  labelColor?: string | undefined | null;
+  color?: string | undefined | null;
+  cacheSeconds?: string | undefined | null;
   link?: LinkType;
-  class?: string;
+  class?: string | undefined | null;
+}
+interface ExtendedStyle extends BaseBadgePropsType, HTMLImgAttributes {
+  style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
 }
 
-export interface GitHubVersionPropsType extends BaseBadgePropsType {
+export interface GitHubVersionPropsType extends ExtendedStyle {
   user: string;
   repo: string;
   include_prereleases?: boolean;
@@ -21,41 +27,41 @@ export interface GitHubVersionPropsType extends BaseBadgePropsType {
   display_name?: 'tag' | 'release';
 }
 
-export interface GitHubDownloadPropsType extends BaseBadgePropsType {
+export interface GitHubDownloadPropsType extends ExtendedStyle {
   user: string;
   repo: string;
 }
 
-export interface NpmDownloadPropsType extends BaseBadgePropsType {
+export interface NpmDownloadPropsType extends ExtendedStyle {
   interval?: 'dw' | 'dm' | 'dy'| 'd18m';
   packageName: string;
 }
 
-export interface NpmVersionPropsType extends BaseBadgePropsType {
+export interface NpmVersionPropsType extends ExtendedStyle {
   packageName: string;
   tag?: string;
 }
 
-export interface NpmAuthorDownloadPropsType extends BaseBadgePropsType {
+export interface NpmAuthorDownloadPropsType extends ExtendedStyle {
   interval?: 'dw' | 'dm' | 'dy'| 'd18m';
   author: string;
 }
 
-export interface PypiVersionPropsType extends BaseBadgePropsType {
+export interface PypiVersionPropsType extends ExtendedStyle {
   packageName: string;
   pypiBaseUrl?: string;
 }
 
-export interface StaticBadgePropsType extends BaseBadgePropsType {
+export interface StaticBadgePropsType extends ExtendedStyle {
   badgeContent: string;
 }
 
-export interface JsrVersionPropsType extends BaseBadgePropsType {
+export interface JsrVersionPropsType extends ExtendedStyle {
   scope: string;
   packageName: string;
 }
 
-export interface LicensePropsType extends BaseBadgePropsType {
+export interface LicensePropsType extends ExtendedStyle {
   source: 'github' | 'npm';
   github_user?: string;
   github_repo?: string;
@@ -63,11 +69,11 @@ export interface LicensePropsType extends BaseBadgePropsType {
   npm_registry_uri?: string;
 }
 
-export interface GitHubSponsorPropsType extends BaseBadgePropsType {
+export interface GitHubSponsorPropsType extends ExtendedStyle {
   user: string;
 }
 
-export interface VersionPropsType extends BaseBadgePropsType {
+export interface VersionPropsType extends ExtendedStyle {
   source: 'jsr' | 'npm' | 'pypi';
   packageName: string;
   jsr_scope?: string;
@@ -75,7 +81,7 @@ export interface VersionPropsType extends BaseBadgePropsType {
   pypiBaseUrl?: string;
 }
 
-export interface DownloadPropsType extends BaseBadgePropsType {
+export interface DownloadPropsType extends ExtendedStyle {
   source: 'npm' | 'github';
   user?: string;
   repo?: string;

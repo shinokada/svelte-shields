@@ -31,7 +31,7 @@
 </script>
 
 {#if link}
-  <object data={srcData} title='GitHub Sponsor - {user}' class={classname} {...attributes}>
+  <object data={srcData} title='GitHub Sponsor - {user}' class={classname}>
   </object>
 {:else}
   <img  

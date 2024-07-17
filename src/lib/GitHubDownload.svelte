@@ -34,8 +34,7 @@
 
 {#if link}
   <object data={srcData} title='GitHub Download - {user}/{repo}' 
-  class={classname}
-  {...attributes}>
+  class={classname}>
   </object>
 {:else}
   <img  

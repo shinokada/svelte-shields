@@ -49,20 +49,17 @@
   {#if source === 'npm'}
     <!-- NPM -->
     <object data={npmSrcData} title='NPM version of {packageName}' 
-    class={classname}
-    {...attributes}>
+    class={classname}>
     </object>
   {:else if source === 'pypi'}
     <!-- Pypi -->
     <object data={pypiSrcData} title='Pypi version of {packageName}' 
-    class={classname}
-    {...attributes}>
+    class={classname}>
     </object>
   {:else}
     <!-- JSR -->
     <object data={jsrSrcData} title='JSR version of {packageName}' 
-    class={classname}
-    {...attributes}>
+    class={classname}>
     </object>
   {/if}
 {:else}

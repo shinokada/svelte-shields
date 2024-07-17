@@ -1,8 +1,12 @@
 <script lang="ts">
   import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo,  ExpandOutline} from 'runes-webkit';
-  import { Npm, Github, Python } from 'svelte-supertiny'
+  import type { Component } from 'svelte';
+  import Python from './utils/icons/Python.svelte';
+  import Npm from './utils/Npm.svelte';
+  import Github from './utils/Github.svelte';
+  import type { CardType } from 'runes-webkit';
 
-  const shields_cards = [
+  const shields_cards: CardType[] = [
     {
       title: 'NpmVersion',
       description: 'Shields badge for npm version',

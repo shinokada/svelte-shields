@@ -33,8 +33,7 @@
 
 {#if link}
   <object data={srcData} title={packageName} 
-  class={classname}
-  {...attributes}>
+  class={classname}>
   </object>
 {:else}
   <img  

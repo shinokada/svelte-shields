@@ -112,7 +112,7 @@
 <p>Possible values: flat, flat-square, plastic, for-the-badge, social.
   If not specified, the default style for this badge is "flat".</p>
 
-  <CodeWrapper c_w_div='grid gap-4'>
+  <CodeWrapper divClass='grid gap-4'>
   <GitHubSponsor {...style2} />
   <GitHubSponsor {...style3} />
   <GitHubSponsor {...style4} />
@@ -125,7 +125,7 @@
 <H3>Color</H3>
 <p>Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).</p>
 
-<CodeWrapper c_w_div='grid gap-4'>
+<CodeWrapper divClass='grid gap-4'>
   <GitHubSponsor {...color1} />
   <GitHubSponsor {...color2} />
   <GitHubSponsor {...color3} />

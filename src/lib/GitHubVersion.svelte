@@ -39,7 +39,7 @@
 </script>
 
 {#if link}
-  <object data={srcData} title='GitHub {display_name} - {user}/{repo}' class={classname} {...attributes}>
+  <object data={srcData} title='GitHub {display_name} - {user}/{repo}' class={classname}>
   </object>
 {:else}
   <img  

@@ -35,7 +35,7 @@
 
 <H2>Examples</H2>
 
-<CodeWrapper c_w_div='grid gap-4'>
+<CodeWrapper divClass='grid gap-4'>
   <Download {...npmdownload} />
   <Download {...githubdownload} />
 </CodeWrapper>

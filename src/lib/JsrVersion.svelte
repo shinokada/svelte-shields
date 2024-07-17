@@ -34,8 +34,7 @@
 
 {#if link}
   <object data={srcData} title='JSR version - {scope}/{packageName}' 
-  class={classname}
-  {...attributes}>
+  class={classname}>
   </object>
 {:else}
   <img  

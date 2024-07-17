@@ -106,7 +106,7 @@
 <p><Code>packageName</Code> may be the name of an unscoped package like <Code>package-name</Code> or a scoped package like <Code>@author/package-name</Code>.</p>
 <p><Code>tag</Code> can be <Code>next, v1, v2, beta</Code>, etc.</p>
 
-<CodeWrapper c_w_div='grid gap-4'>
+<CodeWrapper divClass='grid gap-4'>
   <GitHubDownload {...basic} />
 </CodeWrapper>
 
@@ -116,7 +116,7 @@
 <p>Possible values: flat, flat-square, plastic, for-the-badge, social.
   If not specified, the default style for this badge is "flat".</p>
 
-<CodeWrapper c_w_div='grid gap-4'>
+<CodeWrapper divClass='grid gap-4'>
   <GitHubDownload {...style1} />
   <GitHubDownload {...style2} />
   <GitHubDownload {...style3} />
@@ -130,7 +130,7 @@
 <H3>Color</H3>
 <p>Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).</p>
 
-<CodeWrapper c_w_div='grid gap-4'>
+<CodeWrapper divClass='grid gap-4'>
   <GitHubDownload {...color1} />
   <GitHubDownload {...color2} />
   <GitHubDownload {...color3} />
