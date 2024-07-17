@@ -169,7 +169,7 @@
     <Sidebar
       sidebarList={newSidebarList}
       asideClass="fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-0 lg:block hidden"
-      divClass="w-64 fixed top-20 w-64 h-full dark_bg_theme"
+      divClass="w-60 fixed top-20 dark_bg_theme"
     />
     <div class="relative">
       <OnThisPage {extract} headingSelector="#mainContent > :where(h2, h3)" />
