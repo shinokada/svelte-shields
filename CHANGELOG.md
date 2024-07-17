@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.5.0
+
+### Minor Changes
+
+- feat: extends Svelte types ([`066e8f66b18faf0e4883801ff35e52995f40f462`](https://github.com/shinokada/svelte-shields/commit/066e8f66b18faf0e4883801ff35e52995f40f462))
+
 ## 0.4.2
 
 ### Patch Changes

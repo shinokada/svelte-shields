@@ -1,5 +1,11 @@
 <script lang="ts">
-  import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo,  ExpandOutline} from 'runes-webkit';
+  import {
+    removeHyphensAndCapitalize,
+    HomeCards,
+    SupportBanner,
+    TechInfo,
+    ExpandOutline
+  } from 'runes-webkit';
   import type { Component } from 'svelte';
   import Python from './utils/icons/Python.svelte';
   import Npm from './utils/Npm.svelte';
@@ -26,45 +32,45 @@
       href: 'guide/npm-author-download'
     },
     {
-      title:'GitHubVersion',
+      title: 'GitHubVersion',
       description: 'Shields badge for GitHub release',
       icon: Github,
       href: '/guide/github-version'
     },
     {
-      title:'GitHubDownload',
+      title: 'GitHubDownload',
       description: 'Shields badge for GitHub download',
       icon: Github,
       href: '/guide/github-download'
     },
     {
-      title:'License Component',
+      title: 'License Component',
       description: 'Shields badge for GitHub and NPM license',
       icon: ExpandOutline,
       icon_class: 'text-green-500',
       href: '/guide/license'
     },
     {
-      title:'PypiVersion',
+      title: 'PypiVersion',
       description: 'Shields badge for Pypi version',
       icon: Python,
       href: '/guide/pypi-version'
     },
     {
-      title:'StaticBadge',
+      title: 'StaticBadge',
       description: 'Shields badge for static badges',
       icon: ExpandOutline,
       icon_class: 'text-amber-500',
       href: '/guide/static-badge'
     },
     {
-      title:'JsrVersion',
+      title: 'JsrVersion',
       description: 'Shields badge for JSR version',
       icon: ExpandOutline,
       icon_class: 'text-red-500',
       href: '/guide/jsr-version'
-    },
-  ]
+    }
+  ];
 
   const pkg = {
     pkgName: __NAME__,
@@ -80,14 +86,21 @@
   };
 </script>
 
-<div class="relative h-full max-w-7xl mx-auto overflow-y-auto px-8 pb-20">
-<SupportBanner>
-    To Keep It Going, Please Show Your Love.<a href='https://ko-fi.com/Z8Z2CHALG' target='_blank'><img height='40' style='border:0px;height:40px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' alt='Buy Me a Coffee at ko-fi.com' /></a>
-</SupportBanner>
+<div class="relative mx-auto h-full max-w-7xl overflow-y-auto px-8 pb-20">
+  <SupportBanner>
+    To Keep It Going, Please Show Your Love.<a href="https://ko-fi.com/Z8Z2CHALG" target="_blank"
+      ><img
+        height="40"
+        style="border:0px;height:40px;"
+        src="https://storage.ko-fi.com/cdn/kofi3.png?v=3"
+        alt="Buy Me a Coffee at ko-fi.com"
+      /></a
+    >
+  </SupportBanner>
 
-<h1 class='flex justify-center my-8'>Svelte Shields</h1>
+  <h1 class="my-8 flex justify-center">Svelte Shields</h1>
 
-<HomeCards cards={shields_cards}/>
+  <HomeCards cards={shields_cards} />
 
-<TechInfo {...pkg} />
+  <TechInfo {...pkg} />
 </div>

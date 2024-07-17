@@ -10,7 +10,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('Download all in one page has expected h1', async ({ page }) => {
-	await expect(page.getByRole('heading', { name: title, level: 1 })).toBeVisible();
+  await expect(page.getByRole('heading', { name: title, level: 1 })).toBeVisible();
 });
 
 test('Download all in one page has expected meta title', async ({ page }) => {

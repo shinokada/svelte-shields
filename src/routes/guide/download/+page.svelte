@@ -8,13 +8,13 @@
     packageName: 'svelte-shields',
     interval: 'dw',
     color: 'red'
-  }
+  };
   const githubdownload: DownloadPropsType = {
     source: 'github',
     user: 'shinokada',
     repo: 'tera',
     color: 'red'
-  }
+  };
 
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
@@ -35,7 +35,7 @@
 
 <H2>Examples</H2>
 
-<CodeWrapper divClass='grid gap-4'>
+<CodeWrapper divClass="grid gap-4">
   <Download {...npmdownload} />
   <Download {...githubdownload} />
 </CodeWrapper>

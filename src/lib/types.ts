@@ -1,9 +1,8 @@
 import type { HTMLImgAttributes } from 'svelte/elements';
 
-
 export type LinkType = string[] | [string, string];
 export interface BaseBadgePropsType {
-  style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
+  style?: 'flat' | 'flat-square' | 'for-the-badge' | 'plastic' | 'social';
   logo?: string | undefined | null;
   logoColor?: string | undefined | null;
   logoSize?: string | undefined | null;
@@ -15,7 +14,7 @@ export interface BaseBadgePropsType {
   class?: string | undefined | null;
 }
 interface ExtendedStyle extends BaseBadgePropsType, HTMLImgAttributes {
-  style?: "flat" | "flat-square" | "for-the-badge" | "plastic" | "social";
+  style?: 'flat' | 'flat-square' | 'for-the-badge' | 'plastic' | 'social';
 }
 
 export interface GitHubVersionPropsType extends ExtendedStyle {
@@ -33,7 +32,7 @@ export interface GitHubDownloadPropsType extends ExtendedStyle {
 }
 
 export interface NpmDownloadPropsType extends ExtendedStyle {
-  interval?: 'dw' | 'dm' | 'dy'| 'd18m';
+  interval?: 'dw' | 'dm' | 'dy' | 'd18m';
   packageName: string;
 }
 
@@ -43,7 +42,7 @@ export interface NpmVersionPropsType extends ExtendedStyle {
 }
 
 export interface NpmAuthorDownloadPropsType extends ExtendedStyle {
-  interval?: 'dw' | 'dm' | 'dy'| 'd18m';
+  interval?: 'dw' | 'dm' | 'dy' | 'd18m';
   author: string;
 }
 

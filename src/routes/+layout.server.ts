@@ -1,13 +1,12 @@
 import type { MetaProps } from 'runes-meta-tags';
 import { ANALYTICS_ID_RUNES_LIB } from '$env/static/private';
 
-const title = 'Svelte Shields'
-const description = 'A collection of Shilds badge components for Svelte Runes'
-const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-shields'
-const keywords = 'svelte, runes, sveltekit, shields.io, badges'
+const title = 'Svelte Shields';
+const description = 'A collection of Shilds badge components for Svelte Runes';
+const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-shields';
+const keywords = 'svelte, runes, sveltekit, shields.io, badges';
 
 export const load = ({ url }) => {
-
   const layoutMetaTags: MetaProps = {
     title,
     description,
@@ -19,7 +18,7 @@ export const load = ({ url }) => {
       title,
       description,
       image: imgUrl,
-      imageAlt: title,
+      imageAlt: title
     },
     og: {
       type: 'website',

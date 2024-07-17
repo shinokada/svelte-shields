@@ -6,18 +6,18 @@
     source: 'npm',
     packageName: 'svelte-shields',
     color: 'red'
-  }
+  };
   const basic2: VersionPropsType = {
     source: 'jsr',
     jsr_scope: '@hono',
     packageName: 'hono',
     color: 'red'
-  }
+  };
   const basic3: VersionPropsType = {
     source: 'pypi',
     packageName: 'vennfig',
     color: 'red'
-  }
+  };
 
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
@@ -38,7 +38,7 @@
 
 <H2>Examples</H2>
 
-<CodeWrapper divClass='grid gap-4'>
+<CodeWrapper divClass="grid gap-4">
   <Version {...basic} />
   <Version {...basic2} />
   <Version {...basic3} />

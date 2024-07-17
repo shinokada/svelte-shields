@@ -81,8 +81,8 @@ importers:
         specifier: ^3.8.4
         version: 3.8.4(postcss-load-config@4.0.2(postcss@8.4.39))(postcss@8.4.39)(svelte@5.0.0-next.188)
       svelte-lib-helpers:
-        specifier: ^0.4.6
-        version: 0.4.6
+        specifier: ^0.4.7
+        version: 0.4.7
       svelte-preprocess:
         specifier: ^6.0.2
         version: 6.0.2(postcss-load-config@4.0.2(postcss@8.4.39))(postcss@8.4.39)(svelte@5.0.0-next.188)(typescript@5.5.3)
@@ -1868,8 +1868,8 @@ packages:
     peerDependencies:
       svelte: ^3.19.0 || ^4.0.0
 
-  svelte-lib-helpers@0.4.6:
-    resolution: {integrity: sha512-Q20fZg0QTc746x4ZztruslLuNnQhTQ26ICQGNHoOY+nbmv8XmTW8JJHmQk2pG6m0+kzvGVvXK8gVkPIieWwKNw==}
+  svelte-lib-helpers@0.4.7:
+    resolution: {integrity: sha512-xrsxflmV88C18G/QbsRHqnVEspG8W6IUdo1TP4e1XAlDU0J+Vn1/50qZXOhtM8UAKKvfIvXpDznGiul5S6AfvQ==}
     hasBin: true
 
   svelte-preprocess@5.1.4:
@@ -3948,7 +3948,7 @@ snapshots:
     dependencies:
       svelte: 5.0.0-next.188
 
-  svelte-lib-helpers@0.4.6:
+  svelte-lib-helpers@0.4.7:
     dependencies:
       yargs: 17.7.2
 

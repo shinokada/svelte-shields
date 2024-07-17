@@ -1,83 +1,82 @@
 <script lang="ts">
-  import { GitHubSponsor } from '$lib'
+  import { GitHubSponsor } from '$lib';
   import type { GitHubSponsorPropsType } from '$lib';
-  
+
   const sponsor: GitHubSponsorPropsType = {
-    user: 'shinokada',
-  }
+    user: 'shinokada'
+  };
 
   const style: GitHubSponsorPropsType = {
     user: 'shinokada',
     style: 'flat'
-  }
+  };
 
   const style2: GitHubSponsorPropsType = {
     user: 'shinokada',
     style: 'flat-square'
-  }
+  };
 
   const style3: GitHubSponsorPropsType = {
     user: 'shinokada',
     style: 'for-the-badge'
-  }
+  };
 
   const style4: GitHubSponsorPropsType = {
     user: 'shinokada',
     style: 'plastic'
-  }
+  };
 
   const style5: GitHubSponsorPropsType = {
     user: 'shinokada',
     style: 'social'
-  }
+  };
 
   const color1: GitHubSponsorPropsType = {
     user: 'shinokada',
     color: 'orange'
-  }
+  };
 
   const color2: GitHubSponsorPropsType = {
     user: 'shinokada',
     color: 'FF7F00' // Hex (Orange)
-  }
+  };
 
   const color3: GitHubSponsorPropsType = {
     user: 'shinokada',
     color: 'rgb(255, 127, 0)' // RGB (Orange)
-  }
+  };
 
   const color4: GitHubSponsorPropsType = {
     user: 'shinokada',
     color: 'rgba(255, 127, 0, 1)' // RGBA (Orange, fully opaque)
-  }
+  };
 
   const color5: GitHubSponsorPropsType = {
     user: 'shinokada',
     color: 'hsl(40, 100%, 50%)' // HSL (Orange)
-  }
+  };
 
   const color6: GitHubSponsorPropsType = {
     user: 'shinokada',
     color: 'hsla(40, 100%, 50%, 1)' // HSLA (Orange, fully opaque)
-  }
+  };
 
   const logo_label: GitHubSponsorPropsType = {
     user: 'sveltejs',
     logo: 'svelte',
     label: 'SVELTE'
-  }
-
+  };
 
   const linkEx: GitHubSponsorPropsType = {
     user: 'shinokada',
     label: 'TERA',
     link: ['https://tera.codewithshin.com', 'https://github.com/shinokada/tera']
-  }
+  };
 
   const otherEx: GitHubSponsorPropsType = {
     user: 'shinokada',
-    cacheSeconds: '86400',
-  }
+    cacheSeconds: '86400'
+  };
 
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
 
@@ -109,10 +108,12 @@
 <HighlightCompo codeLang="ts" code={modules['./md/basic.md'] as string} />
 
 <H3>Style</H3>
-<p>Possible values: flat, flat-square, plastic, for-the-badge, social.
-  If not specified, the default style for this badge is "flat".</p>
+<p>
+  Possible values: flat, flat-square, plastic, for-the-badge, social. If not specified, the default
+  style for this badge is "flat".
+</p>
 
-  <CodeWrapper divClass='grid gap-4'>
+<CodeWrapper divClass="grid gap-4">
   <GitHubSponsor {...style2} />
   <GitHubSponsor {...style3} />
   <GitHubSponsor {...style4} />
@@ -121,11 +122,12 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/style.md'] as string} />
 
-
 <H3>Color</H3>
-<p>Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).</p>
+<p>
+  Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).
+</p>
 
-<CodeWrapper divClass='grid gap-4'>
+<CodeWrapper divClass="grid gap-4">
   <GitHubSponsor {...color1} />
   <GitHubSponsor {...color2} />
   <GitHubSponsor {...color3} />
@@ -153,7 +155,10 @@
 <HighlightCompo codeLang="ts" code={modules['./md/link.md'] as string} />
 
 <H3>Other</H3>
-<p><Code>cacheSeconds</Code> is HTTP cache lifetime (rules are applied to infer a default value on a per-badge basis, any values specified below the default will be ignored).</p>
+<p>
+  <Code>cacheSeconds</Code> is HTTP cache lifetime (rules are applied to infer a default value on a per-badge
+  basis, any values specified below the default will be ignored).
+</p>
 <CodeWrapper>
   <GitHubSponsor {...otherEx} />
 </CodeWrapper>
