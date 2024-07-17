@@ -112,8 +112,7 @@
   } from 'runes-webkit';
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
-  // import { Runatics } from 'runatics';
-  import Analytics from './utils/Analytics.svelte';
+  import { Runatics } from 'runatics';
   import {
     BellLineOthers,
     BeerLineFood,
@@ -154,8 +153,8 @@
   const githubUrl = `https://github.com/shinokada/${__NAME__}`;
 </script>
 
+<Runatics {analyticsId} />
 <RunesMetaTags {...metaTags} />
-<Analytics />
 
 <Nav
   {lis}
