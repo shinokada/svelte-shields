@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.5.1
+
+### Patch Changes
+
+- fix: component docs ([`b86a8e7d405520419e53cbd05db32058d20d24e7`](https://github.com/shinokada/svelte-shields/commit/b86a8e7d405520419e53cbd05db32058d20d24e7))
+
 ## 0.5.0
 
 ### Minor Changes
