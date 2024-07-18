@@ -1,8 +1,8 @@
-- license
-- user
-- repo
-- packageName
-- registry_uri
+- source
+- github_user
+- github_repo
+- npm_packageName
+- npm_registry_uri
 - style = 'flat'
 - logo
 - logoColor

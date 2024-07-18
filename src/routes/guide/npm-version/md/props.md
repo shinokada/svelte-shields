@@ -1,7 +1,7 @@
 - packageName
 - tag
 - style
-- logo = 'svelte'
+- logo
 - logoColor
 - logoSize
 - label
@@ -9,4 +9,5 @@
 - color
 - cacheSeconds
 - link
+- class: classname
 - ...attributes

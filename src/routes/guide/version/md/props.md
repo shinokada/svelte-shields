@@ -1,4 +1,4 @@
-- version
+- source
 - packageName
 - jsr_scope
 - npm_tag

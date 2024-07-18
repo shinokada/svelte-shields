@@ -8,4 +8,5 @@
 - color
 - cacheSeconds
 - link
+- class: classname
 - ...attributes

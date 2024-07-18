@@ -8,9 +8,10 @@
 - logo
 - logoColor
 - logoSize
-- label=''
+- label = ''
 - labelColor
 - color
 - cacheSeconds
 - link
+- class: classname
 - ...attributes
