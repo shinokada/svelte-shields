@@ -11,89 +11,89 @@ import BikeLineMap from './BikeLineMap.svelte';
 export const newSidebarList: ListType[] = [
   {
     name: 'Quickstart',
-    icon: BikeLineMap,
+    Icon: BikeLineMap,
     href: '/guide/quickstart'
   },
   {
     name: 'Static Badge',
-    icon: BellLineOthers,
+    Icon: BellLineOthers,
     href: '/guide/static-badge'
   },
   {
     name: 'License',
-    icon: ExpandOutline,
+    Icon: ExpandOutline,
     href: '/guide/license'
   },
   {
     name: 'Version',
-    icon: BellActiveAltOutline,
+    Icon: BellActiveAltOutline,
     children: [
       {
         name: 'All in one',
-        icon: BeerLineFood,
+        Icon: BeerLineFood,
         href: '/guide/version'
       },
       {
         name: 'GitHub Version',
-        icon: GithubFillLogos,
+        Icon: GithubFillLogos,
         href: '/guide/github-version'
       },
       {
         name: 'NPM Version',
-        icon: NpmjsLineLogos,
+        Icon: NpmjsLineLogos,
         href: '/guide/npm-version'
       },
       {
         name: 'Jsr Version',
-        icon: ClipboardListOutline,
+        Icon: ClipboardListOutline,
         href: '/guide/jsr-version'
       },
       {
         name: 'Pypi Version',
-        icon: GridPlusOutline,
+        Icon: GridPlusOutline,
         href: '/guide/pypi-version'
       }
     ]
   },
   {
     name: 'Download',
-    icon: DownloadLineSystem,
+    Icon: DownloadLineSystem,
     children: [
       {
         name: 'All in one',
-        icon: BeerLineFood,
+        Icon: BeerLineFood,
         href: '/guide/download'
       },
       {
         name: 'GitHub Download',
-        icon: GithubFillLogos,
+        Icon: GithubFillLogos,
         href: '/guide/github-download'
       },
       {
         name: 'NPM Download',
-        icon: NpmjsLineLogos,
+        Icon: NpmjsLineLogos,
         href: '/guide/npm-download'
       }
     ]
   },
   {
     name: 'GitHub',
-    icon: GithubFillLogos,
+    Icon: GithubFillLogos,
     children: [
       {
         name: 'GitHub Sponsor',
-        icon: GithubFillLogos,
+        Icon: GithubFillLogos,
         href: '/guide/github-sponsor'
       }
     ]
   },
   {
     name: 'NPM',
-    icon: NpmjsLineLogos,
+    Icon: NpmjsLineLogos,
     children: [
       {
         name: 'NPM Author Download',
-        icon: NpmjsLineLogos,
+        Icon: NpmjsLineLogos,
         href: '/guide/npm-author-download'
       }
     ]

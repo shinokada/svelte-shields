@@ -32,7 +32,7 @@
   type LiType = {
     name: string;
     href: string;
-    icon?: Component;
+    Icon?: Component;
   };
   interface Props {
     lis?: LiType[];
@@ -96,9 +96,9 @@
 </script>
 
 {#snippet navLi(lis: LiType[])}
-  {#each lis as { name, href, icon }}
-    {#if icon}
-      <icon class="mb-3 h-8 w-8 {random_tailwind_color()}"></icon>
+  {#each lis as { name, href, Icon }}
+    {#if Icon}
+      <Icon class="mb-3 h-8 w-8 {random_tailwind_color()}" />
     {/if}
     <NavLi {href}>{name}</NavLi>
   {/each}
@@ -179,11 +179,10 @@
 </header>
 
 <Drawer
-  width="w-64"
   drawerStatus={navDrawerStatus}
   closeDrawer={closeNavDrawer}
   params={transitionParams}
-  class="dark_bg_theme"
+  class="w-64 dark_bg_theme bg-gray-50"
 >
   <div class="flex items-center pb-4">
     <h5

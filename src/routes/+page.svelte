@@ -1,12 +1,10 @@
 <script lang="ts">
   import {
-    removeHyphensAndCapitalize,
     HomeCards,
     SupportBanner,
     TechInfo,
     ExpandOutline
   } from 'runes-webkit';
-  import type { Component } from 'svelte';
   import Python from './utils/icons/Python.svelte';
   import Npm from './utils/Npm.svelte';
   import Github from './utils/Github.svelte';
@@ -16,57 +14,57 @@
     {
       title: 'NpmVersion',
       description: 'Shields badge for npm version',
-      icon: Npm,
+      Icon: Npm,
       href: 'guide/npm-version'
     },
     {
       title: 'NpmDownload',
       description: 'Shields badge for npm download',
-      icon: Npm,
+      Icon: Npm,
       href: 'guide/npm-download'
     },
     {
       title: 'NpmAuthorDownload',
       description: 'Shields badge for npm author download',
-      icon: Npm,
+      Icon: Npm,
       href: 'guide/npm-author-download'
     },
     {
       title: 'GitHubVersion',
       description: 'Shields badge for GitHub release',
-      icon: Github,
+      Icon: Github,
       href: '/guide/github-version'
     },
     {
       title: 'GitHubDownload',
       description: 'Shields badge for GitHub download',
-      icon: Github,
+      Icon: Github,
       href: '/guide/github-download'
     },
     {
       title: 'License Component',
       description: 'Shields badge for GitHub and NPM license',
-      icon: ExpandOutline,
+      Icon: ExpandOutline,
       icon_class: 'text-green-500',
       href: '/guide/license'
     },
     {
       title: 'PypiVersion',
       description: 'Shields badge for Pypi version',
-      icon: Python,
+      Icon: Python,
       href: '/guide/pypi-version'
     },
     {
       title: 'StaticBadge',
       description: 'Shields badge for static badges',
-      icon: ExpandOutline,
+      Icon: ExpandOutline,
       icon_class: 'text-amber-500',
       href: '/guide/static-badge'
     },
     {
       title: 'JsrVersion',
       description: 'Shields badge for JSR version',
-      icon: ExpandOutline,
+      Icon: ExpandOutline,
       icon_class: 'text-red-500',
       href: '/guide/jsr-version'
     }
@@ -86,7 +84,7 @@
   };
 </script>
 
-<div class="relative mx-auto h-full max-w-7xl overflow-y-auto px-8 pb-20">
+<div class="relative mx-auto h-full max-w-7xl overflow-y-auto px-8 pb-20 mt-8">
   <SupportBanner>
     To Keep It Going, Please Show Your Love.<a href="https://ko-fi.com/Z8Z2CHALG" target="_blank"
       ><img
