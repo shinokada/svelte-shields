@@ -20,12 +20,12 @@ export const newSidebarList: ListType[] = [
     href: '/guide/static-badge'
   },
   {
-    name: 'License',
+    name: 'License Badge',
     Icon: ExpandOutline,
     href: '/guide/license'
   },
   {
-    name: 'Version',
+    name: 'Version Badge',
     Icon: BellActiveAltOutline,
     children: [
       {
@@ -56,7 +56,7 @@ export const newSidebarList: ListType[] = [
     ]
   },
   {
-    name: 'Download',
+    name: 'Download Badge',
     Icon: DownloadLineSystem,
     children: [
       {
@@ -77,7 +77,7 @@ export const newSidebarList: ListType[] = [
     ]
   },
   {
-    name: 'GitHub',
+    name: 'GitHub Badge',
     Icon: GithubFillLogos,
     children: [
       {
@@ -88,7 +88,7 @@ export const newSidebarList: ListType[] = [
     ]
   },
   {
-    name: 'NPM',
+    name: 'NPM Badge',
     Icon: NpmjsLineLogos,
     children: [
       {
