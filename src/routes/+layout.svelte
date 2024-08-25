@@ -1,128 +1,17 @@
-<script context="module" lang="ts">
-  export const newSidebarList: ListType[] = [
-    {
-      name: 'Quickstart',
-      icon: BikeLineMap,
-      href: '/guide/quickstart'
-    },
-    {
-      name: 'Static Badge',
-      icon: BellLineOthers,
-      href: '/guide/static-badge'
-    },
-    {
-      name: 'License',
-      icon: ExpandOutline,
-      href: '/guide/license'
-    },
-    {
-      name: 'Version',
-      icon: BellActiveAltOutline,
-      children: [
-        {
-          name: 'All in one',
-          icon: BeerLineFood,
-          href: '/guide/version'
-        },
-        {
-          name: 'GitHub Version',
-          icon: GithubFillLogos,
-          href: '/guide/github-version'
-        },
-        {
-          name: 'NPM Version',
-          icon: NpmjsLineLogos,
-          href: '/guide/npm-version'
-        },
-        {
-          name: 'Jsr Version',
-          icon: ClipboardListOutline,
-          href: '/guide/jsr-version'
-        },
-        {
-          name: 'Pypi Version',
-          icon: GridPlusOutline,
-          href: '/guide/pypi-version'
-        }
-      ]
-    },
-    {
-      name: 'Download',
-      icon: DownloadLineSystem,
-      children: [
-        {
-          name: 'All in one',
-          icon: BeerLineFood,
-          href: '/guide/download'
-        },
-        {
-          name: 'GitHub Download',
-          icon: GithubFillLogos,
-          href: '/guide/github-download'
-        },
-        {
-          name: 'NPM Download',
-          icon: NpmjsLineLogos,
-          href: '/guide/npm-download'
-        }
-      ]
-    },
-    {
-      name: 'GitHub',
-      icon: GithubFillLogos,
-      children: [
-        {
-          name: 'GitHub Sponsor',
-          icon: GithubFillLogos,
-          href: '/guide/github-sponsor'
-        }
-      ]
-    },
-    {
-      name: 'NPM',
-      icon: NpmjsLineLogos,
-      children: [
-        {
-          name: 'NPM Author Download',
-          icon: NpmjsLineLogos,
-          href: '/guide/npm-author-download'
-        }
-      ]
-    }
-  ];
-</script>
-
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
-  import type { Component } from 'svelte';
-  import type { ListType } from 'runes-webkit';
   import {
     Footer,
     OnThisPage,
     extract,
     Sidebar,
-    removeHyphensAndCapitalize,
-    ExpandOutline,
-    CogOutline,
-    BellActiveAltOutline,
-    GridPlusOutline,
-    ChartPieOutline,
-    ClipboardListOutline
+    removeHyphensAndCapitalize
   } from 'runes-webkit';
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';
-  import {
-    BellLineOthers,
-    BeerLineFood,
-    NpmjsLineLogos,
-    CupLineFood,
-    DownloadLineSystem,
-    PlayReverseLargeFillMedia,
-    GithubFillLogos
-  } from 'svelte-remix';
-  import BikeLineMap from './utils/BikeLineMap.svelte';
+  import { newSidebarList } from './utils/helper';
 
   let { children, data } = $props();
   const analyticsId = data.ANALYTICS_ID_RUNES_LIB;

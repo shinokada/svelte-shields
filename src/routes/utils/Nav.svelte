@@ -9,7 +9,7 @@
     uiHelpers,
     Darkmode,
     Dropdown,
-    DropdownItem,
+    DropdownUl, DropdownLi,
     Drawer
   } from 'svelte-5-ui-lib';
   import { page } from '$app/stores';
@@ -23,7 +23,7 @@
   } from 'runes-webkit';
   import DynamicCodeBlockStyle from './DynamicCodeBlockStyle.svelte';
   import { sineIn } from 'svelte/easing';
-  import { newSidebarList } from '../+layout.svelte';
+  import { newSidebarList } from './helper';
 
   function isIncluded(url: string, allowedUrls: string[]): boolean {
     return allowedUrls.some((allowedUrl) => url.startsWith(allowedUrl));
@@ -149,22 +149,23 @@
           <Dropdown
             {dropdownStatus}
             {closeDropdown}
-            transitionParams={dropdownTransitionParams}
-            divClass="absolute -left-[47px] top-8 w-12 pl-1.5"
-          >
+            params={dropdownTransitionParams}
+            class="absolute -left-[50px] top-2 w-12 pl-1.5">
+          <DropdownUl>
             {#if twitterUrl}
-              <DropdownItem href={twitterUrl} target="_blank" aClass="p-2 m-0"
-                ><XSolid /></DropdownItem
+              <DropdownLi href={twitterUrl} target="_blank" aClass="p-2 m-0"
+                ><XSolid /></DropdownLi
               >
             {/if}
             {#if githubUrl}
-              <DropdownItem href={githubUrl} target="_blank" aClass="p-2 m-0">
+              <DropdownLi href={githubUrl} target="_blank" aClass="p-2 m-0">
                 <GithubSolid />
-              </DropdownItem>
+              </DropdownLi>
             {/if}
-            <DropdownItem>
+            <DropdownLi>
               <Darkmode class="m-0 p-2" />
-            </DropdownItem>
+            </DropdownLi>
+          </DropdownUl>
           </Dropdown>
         </div>
       </div>
@@ -181,7 +182,7 @@
   width="w-64"
   drawerStatus={navDrawerStatus}
   closeDrawer={closeNavDrawer}
-  {transitionParams}
+  params={transitionParams}
   class="dark_bg_theme"
 >
   <div class="flex items-center pb-4">
