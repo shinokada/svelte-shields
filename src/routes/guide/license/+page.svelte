@@ -191,7 +191,7 @@
   required.
 </p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <License {...basic} />
   <License {...basic2} />
 </CodeWrapper>
@@ -200,7 +200,7 @@
 
 <H3>Style</H3>
 <p>GitHub</p>
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <License {...style1} />
   <License {...style2} />
   <License {...style3} />
@@ -210,7 +210,7 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/style1.md'] as string} />
 <p>NPM</p>
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <License {...style6} />
   <License {...style7} />
   <License {...style8} />
@@ -223,7 +223,7 @@
 <H3>Color</H3>
 
 <p>GitHub</p>
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <License {...color1} />
   <License {...color2} />
   <License {...color3} />
@@ -235,7 +235,7 @@
 <HighlightCompo codeLang="ts" code={modules['./md/color1.md'] as string} />
 
 <p>NPM</p>
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <License {...color7} />
   <License {...color8} />
   <License {...color9} />
@@ -248,7 +248,7 @@
 
 <H3>Logo and Label</H3>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <License {...logo_label} />
 </CodeWrapper>
 
@@ -256,7 +256,7 @@
 
 <H3>Link</H3>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <License {...link} />
 </CodeWrapper>
 
@@ -264,7 +264,7 @@
 
 <H3>Other</H3>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <License {...other} />
 </CodeWrapper>
 

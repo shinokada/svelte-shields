@@ -16,8 +16,9 @@
     color?: string | undefined | null;
     class?: string | undefined | null;
   }
-  interface CtxType extends BaseProps {}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
+
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
+
   interface Props extends BaseProps {
     title?: TitleType;
     desc?: DescType;

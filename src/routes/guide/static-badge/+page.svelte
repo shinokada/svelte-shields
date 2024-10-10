@@ -99,7 +99,7 @@
 </p>
 <p><Code>tag</Code> can be <Code>next, v1, v2, beta</Code>, etc.</p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <StaticBadge {...basic} />
   <StaticBadge {...basic2} />
 </CodeWrapper>
@@ -112,7 +112,7 @@
   style for this badge is "flat".
 </p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <StaticBadge {...style1} />
   <StaticBadge {...style2} />
   <StaticBadge {...style3} />
@@ -127,7 +127,7 @@
   Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).
 </p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <StaticBadge {...color1} />
   <StaticBadge {...color2} />
   <StaticBadge {...color3} />
@@ -140,7 +140,7 @@
 
 <H3>Logo & Label</H3>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <StaticBadge {...logo_label} />
 </CodeWrapper>
 

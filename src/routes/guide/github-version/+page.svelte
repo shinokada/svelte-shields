@@ -127,7 +127,7 @@
   style for this badge is "flat".
 </p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <GitHubVersion {...release2} />
   <GitHubVersion {...release3} />
   <GitHubVersion {...release4} />
@@ -142,7 +142,7 @@
   Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).
 </p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <GitHubVersion {...color1} />
   <GitHubVersion {...color2} />
   <GitHubVersion {...color3} />

@@ -1,4 +1,10 @@
-import { type ListType, ExpandOutline, GridPlusOutline, BellActiveAltOutline, ClipboardListOutline } from 'runes-webkit';
+import {
+  type ListType,
+  ExpandOutline,
+  GridPlusOutline,
+  BellActiveAltOutline,
+  ClipboardListOutline
+} from 'runes-webkit';
 import {
   BellLineOthers,
   BeerLineFood,

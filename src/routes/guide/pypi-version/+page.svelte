@@ -101,7 +101,7 @@
 </p>
 <p><Code>tag</Code> can be <Code>next, v1, v2, beta</Code>, etc.</p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <PypiVersion {...basic} />
 </CodeWrapper>
 
@@ -113,7 +113,7 @@
   style for this badge is "flat".
 </p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <PypiVersion {...style1} />
   <PypiVersion {...style2} />
   <PypiVersion {...style3} />
@@ -128,7 +128,7 @@
   Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).
 </p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <PypiVersion {...color1} />
   <PypiVersion {...color2} />
   <PypiVersion {...color3} />
@@ -141,7 +141,7 @@
 
 <H3>Logo & Label</H3>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <PypiVersion {...logo_label} />
 </CodeWrapper>
 

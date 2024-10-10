@@ -109,7 +109,7 @@
 </p>
 <p><Code>tag</Code> can be <Code>next, v1, v2, beta</Code>, etc.</p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <GitHubDownload {...basic} />
 </CodeWrapper>
 
@@ -121,7 +121,7 @@
   style for this badge is "flat".
 </p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <GitHubDownload {...style1} />
   <GitHubDownload {...style2} />
   <GitHubDownload {...style3} />
@@ -136,7 +136,7 @@
   Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).
 </p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <GitHubDownload {...color1} />
   <GitHubDownload {...color2} />
   <GitHubDownload {...color3} />

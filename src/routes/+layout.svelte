@@ -1,13 +1,7 @@
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
-  import {
-    Footer,
-    OnThisPage,
-    extract,
-    Sidebar,
-    removeHyphensAndCapitalize
-  } from 'runes-webkit';
+  import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize } from 'runes-webkit';
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';
@@ -37,9 +31,10 @@
     href: 'https://codewithshin.com'
   };
   const urlsToIncludeSwitcherAndSidebar = ['/guide/'];
+  /*eslint no-undef: "off"*/
   const siteName = removeHyphensAndCapitalize(__NAME__);
-  const twitterUrl = 'https://twitter.com/shinokada';
   const githubUrl = `https://github.com/shinokada/${__NAME__}`;
+  const twitterUrl = 'https://twitter.com/shinokada';
 </script>
 
 <Runatics {analyticsId} />

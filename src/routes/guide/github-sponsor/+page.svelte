@@ -113,7 +113,7 @@
   style for this badge is "flat".
 </p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <GitHubSponsor {...style2} />
   <GitHubSponsor {...style3} />
   <GitHubSponsor {...style4} />
@@ -127,7 +127,7 @@
   Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).
 </p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <GitHubSponsor {...color1} />
   <GitHubSponsor {...color2} />
   <GitHubSponsor {...color3} />

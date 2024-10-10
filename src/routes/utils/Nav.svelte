@@ -9,7 +9,8 @@
     uiHelpers,
     Darkmode,
     Dropdown,
-    DropdownUl, DropdownLi,
+    DropdownUl,
+    DropdownLi,
     Drawer
   } from 'svelte-5-ui-lib';
   import { page } from '$app/stores';
@@ -150,22 +151,23 @@
             {dropdownStatus}
             {closeDropdown}
             params={dropdownTransitionParams}
-            class="absolute -left-[50px] top-2 w-12 pl-1.5">
-          <DropdownUl>
-            {#if twitterUrl}
-              <DropdownLi href={twitterUrl} target="_blank" aClass="p-2 m-0"
-                ><XSolid /></DropdownLi
-              >
-            {/if}
-            {#if githubUrl}
-              <DropdownLi href={githubUrl} target="_blank" aClass="p-2 m-0">
-                <GithubSolid />
+            class="absolute -left-[50px] top-2 w-12 pl-1.5"
+          >
+            <DropdownUl>
+              {#if twitterUrl}
+                <DropdownLi href={twitterUrl} target="_blank" aClass="p-2 m-0"
+                  ><XSolid /></DropdownLi
+                >
+              {/if}
+              {#if githubUrl}
+                <DropdownLi href={githubUrl} target="_blank" aClass="p-2 m-0">
+                  <GithubSolid />
+                </DropdownLi>
+              {/if}
+              <DropdownLi>
+                <Darkmode class="m-0 p-2" />
               </DropdownLi>
-            {/if}
-            <DropdownLi>
-              <Darkmode class="m-0 p-2" />
-            </DropdownLi>
-          </DropdownUl>
+            </DropdownUl>
           </Dropdown>
         </div>
       </div>
@@ -182,7 +184,7 @@
   drawerStatus={navDrawerStatus}
   closeDrawer={closeNavDrawer}
   params={transitionParams}
-  class="w-64 dark_bg_theme bg-gray-50"
+  class="dark_bg_theme w-64 bg-gray-50"
 >
   <div class="flex items-center pb-4">
     <h5

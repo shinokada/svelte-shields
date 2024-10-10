@@ -106,7 +106,7 @@
 </p>
 <p><Code>tag</Code> can be <Code>next, v1, v2, beta</Code>, etc.</p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <NpmDownload {...basic} />
   <NpmDownload {...basic2} />
 </CodeWrapper>
@@ -119,7 +119,7 @@
   style for this badge is "flat".
 </p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <NpmDownload {...style1} />
   <NpmDownload {...style2} />
   <NpmDownload {...style3} />
@@ -134,7 +134,7 @@
   Background color of the right part (hex, rgb, rgba, hsl, hsla and css named colors supported).
 </p>
 
-<CodeWrapper divClass="grid gap-4">
+<CodeWrapper class="grid gap-4">
   <NpmDownload {...color1} />
   <NpmDownload {...color2} />
   <NpmDownload {...color3} />
