@@ -13,10 +13,12 @@ export interface BaseBadgePropsType {
   link?: LinkType;
   class?: string | undefined | null;
 }
+
 interface ExtendedStyle extends BaseBadgePropsType, HTMLImgAttributes {
   style?: 'flat' | 'flat-square' | 'for-the-badge' | 'plastic' | 'social';
 }
-export interface JsrVersionPropsType extends ExtendedStyle {
-  scope: string;
+
+export interface PypiVersionPropsType extends ExtendedStyle {
   packageName: string;
+  pypiBaseUrl?: string;
 }
