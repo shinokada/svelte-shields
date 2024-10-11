@@ -1,18 +1,12 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
-  import { NpmVersion } from '$lib';
+  import { HighlightCompo, CodeWrapper, Code, H2 } from 'runes-webkit';
   import type { NpmVersionPropsType } from '$lib';
-  const basic: NpmVersionPropsType = {
-    packageName: 'svelte-shields',
-    logo: 'svelte',
-    label: 'Svelte Shields'
-  };
-
-  const modules = import.meta.glob('./md/*.md', {
+  import * as ExampleComponents from './examples';
+  const exampleModules = import.meta.glob('./examples/*', {
     query: '?raw',
     import: 'default',
     eager: true
-  });
+  }) as Record<string, string>;
 </script>
 
 <h1>Quickstart - Svelte Shields</h1>
@@ -21,16 +15,21 @@
 
 <H2>Installation</H2>
 
-<HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
+<HighlightCompo codeLang="ts" code={exampleModules['./examples/installation.md'] as string} />
 
 <p>Enable Runes in <Code>svelte.config.js</Code>:</p>
 
-<HighlightCompo codeLang="ts" code={modules['./md/installation-2.md'] as string} />
+<HighlightCompo codeLang="ts" code={exampleModules['./examples/installation-2.md'] as string} />
 
 <H2>Basic usage</H2>
 
 <CodeWrapper>
-  <NpmVersion {...basic} />
+  <ExampleComponents.Basic />
+  {#snippet codeblock()}
+    <HighlightCompo
+      codeLang="ts"
+      replaceLib="svelte-shields"
+      code={exampleModules['./examples/Basic.svelte'] as string}
+    />
+  {/snippet}
 </CodeWrapper>
-
-<HighlightCompo codeLang="ts" code={modules['./md/basic.md'] as string} />

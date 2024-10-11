@@ -1,43 +1,32 @@
 <script lang="ts">
-  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
-  import { Download } from '$lib';
-  import type { DownloadPropsType } from '$lib';
-
-  const npmdownload: DownloadPropsType = {
-    source: 'npm',
-    packageName: 'svelte-shields',
-    interval: 'dw',
-    color: 'red'
-  };
-  const githubdownload: DownloadPropsType = {
-    source: 'github',
-    user: 'shinokada',
-    repo: 'tera',
-    color: 'red'
-  };
-
-  const modules = import.meta.glob('./md/*.md', {
+  import { HighlightCompo, CodeWrapper, H2 } from 'runes-webkit';
+  import * as ExampleComponents from './examples';
+  const exampleModules = import.meta.glob('./examples/*', {
     query: '?raw',
     import: 'default',
     eager: true
-  });
+  }) as Record<string, string>;
 </script>
 
 <h1>Download Badge - Svelte Shields</h1>
 
 <H2>Props</H2>
 
-<HighlightCompo codeLang="md" code={modules['./md/props.md'] as string} />
+<HighlightCompo codeLang="ts" code={exampleModules['./examples/props.md'] as string} />
 
 <H2>Types</H2>
 
-<HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string} />
+<HighlightCompo codeLang="ts" code={exampleModules['./examples/types.md'] as string} />
 
 <H2>Examples</H2>
 
-<CodeWrapper class="grid gap-4">
-  <Download {...npmdownload} />
-  <Download {...githubdownload} />
+<CodeWrapper>
+  <ExampleComponents.Basic />
+  {#snippet codeblock()}
+    <HighlightCompo
+      codeLang="ts"
+      replaceLib="svelte-shields"
+      code={exampleModules['./examples/Basic.svelte'] as string}
+    />
+  {/snippet}
 </CodeWrapper>
-
-<HighlightCompo codeLang="ts" code={modules['./md/examples.md'] as string} />
