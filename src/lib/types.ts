@@ -87,3 +87,26 @@ export interface DownloadPropsType extends ExtendedStyle {
   interval?: 'dw' | 'dm' | 'dy' | 'd18m';
   packageName?: string;
 }
+
+export interface LibType {
+  packageName: string;
+}
+
+export interface Versions {
+  latest: string | undefined;
+  previousStable: string | undefined;
+}
+
+export interface PackageVersions {
+  [packageName: string]: Versions;
+}
+
+export interface PageData {
+  versions: {
+    [packageName: string]: {
+      v1: string | undefined;
+      v2: string | undefined;
+    };
+  };
+  error?: string;
+}

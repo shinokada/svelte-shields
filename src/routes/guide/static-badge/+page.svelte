@@ -1,11 +1,14 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
   import * as ExampleComponents from './examples';
+  import type { PageData } from '$lib/types.js';
+
   const exampleModules = import.meta.glob('./examples/*', {
     query: '?raw',
     import: 'default',
     eager: true
   }) as Record<string, string>;
+  const { data } = $props<{ data: PageData }>();
 </script>
 
 <h1>Static Badge - Svelte Shields</h1>
@@ -94,6 +97,19 @@
       codeLang="ts"
       replaceLib="svelte-shields"
       code={exampleModules['./examples/Link.svelte'] as string}
+    />
+  {/snippet}
+</CodeWrapper>
+
+<H3>Dynamic</H3>
+
+<CodeWrapper>
+  <ExampleComponents.Dynamic {data} />
+  {#snippet codeblock()}
+    <HighlightCompo
+      codeLang="ts"
+      replaceLib="svelte-shields"
+      code={exampleModules['./examples/Dynamic.svelte'] as string}
     />
   {/snippet}
 </CodeWrapper>
