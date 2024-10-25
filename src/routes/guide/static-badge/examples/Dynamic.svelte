@@ -6,7 +6,7 @@
   function safeReplace(packageName: string | undefined) {
     return typeof packageName === 'string' ? packageName.replace(/-/g, '--') : '';
   }
-  console.log('data: ', data)
+  // console.log('data: ', data)
 </script>
 
 {#snippet runesIcon({ packageName }: LibType)}
