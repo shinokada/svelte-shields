@@ -98,6 +98,20 @@
   {/snippet}
 </CodeWrapper>
 
+<H3>Tag</H3>
+
+
+<CodeWrapper>
+  <ExampleComponents.Tag />
+  {#snippet codeblock()}
+    <HighlightCompo
+      codeLang="ts"
+      replaceLib="svelte-shields"
+      code={exampleModules['./examples/Tag.svelte'] as string}
+    />
+  {/snippet}
+</CodeWrapper>
+
 <H3>Other</H3>
 <p>
   <Code>cacheSeconds</Code> is HTTP cache lifetime (rules are applied to infer a default value on a per-badge
