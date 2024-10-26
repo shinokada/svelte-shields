@@ -100,7 +100,6 @@
 
 <H3>Tag</H3>
 
-
 <CodeWrapper>
   <ExampleComponents.Tag />
   {#snippet codeblock()}
