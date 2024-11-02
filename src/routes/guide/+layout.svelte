@@ -7,6 +7,6 @@
   let { children }: Props = $props();
 </script>
 
-<DocPage mainClass="mx-auto lg:pl-64">
+<DocPage mainClass="mx-auto lg:pl-64" div3Class="mx-8">
   {@render children()}
 </DocPage>

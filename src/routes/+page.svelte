@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { HomeCards, SupportBanner, TechInfo, ExpandOutline } from 'runes-webkit';
+  import { HomeCards, SupportBanner, TechInfo, ExpandOutline, BellActiveAltOutline } from 'runes-webkit';
   import Python from './utils/icons/Python.svelte';
   import Npm from './utils/Npm.svelte';
   import Github from './utils/Github.svelte';
@@ -35,6 +35,26 @@
       description: 'Shields badge for GitHub download',
       Icon: Github,
       href: '/guide/github-download'
+    },
+    {
+      title: 'GitHubSponsor',
+      description: 'Shields badge for GitHub sponsor',
+      Icon: Github,
+      href: '/guide/github-sponsor'
+    },
+    {
+      title: 'Download',
+      description: 'All-in-one Shields badge for download',
+      Icon: BellActiveAltOutline,
+      icon_class: 'text-orange-500',
+      href: '/guide/download'
+    },
+    {
+      title: 'Version',
+      description: 'All-in-one Shields badge for version',
+      Icon: BellActiveAltOutline,
+      icon_class: 'text-blue-500',
+      href: '/guide/version'
     },
     {
       title: 'License Component',
