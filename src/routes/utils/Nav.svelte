@@ -19,8 +19,7 @@
     random_tailwind_color,
     DotsHorizontalOutline,
     XSolid,
-    Sidebar,
-    sidebarList
+    Sidebar
   } from 'runes-webkit';
   import DynamicCodeBlockStyle from './DynamicCodeBlockStyle.svelte';
   import { sineIn } from 'svelte/easing';
@@ -49,8 +48,7 @@
     twitterUrl,
     githubUrl,
     headerClass,
-    urlsToIncludeSwitcher = ['/guide'],
-    ...restProps
+    urlsToIncludeSwitcher = ['/guide']
   }: Props = $props();
 
   let transitionParams = {

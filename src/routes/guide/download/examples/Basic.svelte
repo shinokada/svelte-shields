@@ -13,12 +13,6 @@
     repo: 'tera',
     color: 'red'
   };
-
-  const modules = import.meta.glob('./md/*.md', {
-    query: '?raw',
-    import: 'default',
-    eager: true
-  });
 </script>
 
 <div class="grid gap-4">

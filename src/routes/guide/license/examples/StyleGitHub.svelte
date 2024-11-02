@@ -1,17 +1,6 @@
 <script lang="ts">
   import { License, type LicensePropsType } from '$lib';
 
-  const basic: LicensePropsType = {
-    source: 'github',
-    github_user: 'shinokada',
-    github_repo: 'svelte-shields'
-  };
-
-  const basic2: LicensePropsType = {
-    source: 'npm',
-    npm_packageName: 'svelte-shields'
-  };
-
   const style1: LicensePropsType = {
     source: 'github',
     github_user: 'shinokada',

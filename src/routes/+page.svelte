@@ -1,5 +1,11 @@
 <script lang="ts">
-  import { HomeCards, SupportBanner, TechInfo, ExpandOutline, BellActiveAltOutline } from 'runes-webkit';
+  import {
+    HomeCards,
+    SupportBanner,
+    TechInfo,
+    ExpandOutline,
+    BellActiveAltOutline
+  } from 'runes-webkit';
   import Python from './utils/icons/Python.svelte';
   import Npm from './utils/Npm.svelte';
   import Github from './utils/Github.svelte';

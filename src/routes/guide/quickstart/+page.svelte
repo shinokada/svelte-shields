@@ -1,6 +1,5 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2 } from 'runes-webkit';
-  import type { NpmVersionPropsType } from '$lib';
   import * as ExampleComponents from './examples';
   const exampleModules = import.meta.glob('./examples/*', {
     query: '?raw',

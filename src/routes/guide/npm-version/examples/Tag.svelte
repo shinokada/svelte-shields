@@ -2,7 +2,7 @@
   import { NpmVersion, type NpmVersionPropsType } from '$lib';
 
   const basic: NpmVersionPropsType = {
-    packageName: 'svelte-awesome-icons',
+    packageName: 'svelte-awesome-icons'
   };
   const basic2: NpmVersionPropsType = {
     packageName: 'svelte-awesome-icons',
