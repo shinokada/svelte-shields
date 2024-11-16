@@ -22,18 +22,20 @@ export const load = async ({ url }) => {
       image: imgUrl
     }
   };
-
-  try {
-    const versions = await fetchPackageVersions(svelte5_icons);
-    return {
-      pageMetaTags,
-      versions
-    };
-  } catch (error) {
-    console.error('Failed to fetch versions:', error);
-    return {
-      versions: {},
-      error: 'Failed to fetch versions'
-    };
+  return {
+    pageMetaTags
   }
+  // try {
+  //   const versions = await fetchPackageVersions(svelte5_icons);
+  //   return {
+  //     pageMetaTags,
+  //     versions
+  //   };
+  // } catch (error) {
+  //   console.error('Failed to fetch versions:', error);
+  //   return {
+  //     versions: {},
+  //     error: 'Failed to fetch versions'
+  //   };
+  // }
 };
