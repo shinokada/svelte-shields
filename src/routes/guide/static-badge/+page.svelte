@@ -105,7 +105,7 @@
 <H3>Dynamic</H3>
 
 <CodeWrapper>
-  <ExampleComponents.Dynamic {data}/>
+  <ExampleComponents.Dynamic {data} />
   {#snippet codeblock()}
     <HighlightCompo
       codeLang="ts"

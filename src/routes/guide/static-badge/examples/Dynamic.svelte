@@ -11,10 +11,10 @@
   interface Versions {
     [key: string]: VersionInfo;
   }
-  
+
   let versions = $state<Versions>({});
   let isLoading = $state(true);
-  
+
   // Handle the Promise without making the effect async
   $effect(() => {
     data.versions.then((versionData: Versions) => {
@@ -22,12 +22,11 @@
       isLoading = false;
     });
   });
-  
+
   function safeReplace(packageName: string | undefined) {
     return typeof packageName === 'string' ? packageName.replace(/-/g, '--') : '';
   }
 </script>
-
 
 {#snippet runesIcon({ packageName }: LibType)}
   {#if isLoading}
