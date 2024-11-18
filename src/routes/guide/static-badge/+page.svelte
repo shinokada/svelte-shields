@@ -8,8 +8,8 @@
     import: 'default',
     eager: true
   }) as Record<string, string>;
-  const { data } = $props<{ data: PageData }>();
-  console.log('data.pageMetaTags', data.pageMetaTags);
+  let { data } = $props<{ data: PageData }>();
+  // console.log('data.versions', data.versions);
 </script>
 
 <h1>Static Badge - Svelte Shields</h1>
@@ -105,6 +105,7 @@
 <H3>Dynamic</H3>
 
 <CodeWrapper>
+  <ExampleComponents.Dynamic {data}/>
   {#snippet codeblock()}
     <HighlightCompo
       codeLang="ts"

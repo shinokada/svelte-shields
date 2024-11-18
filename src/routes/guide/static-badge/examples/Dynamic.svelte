@@ -3,6 +3,7 @@
   import { svelte5_icons } from '$lib/data/icons';
   import { StaticBadge } from '$lib';
   let { data } = $props<{ data: PageData }>();
+  
   function safeReplace(packageName: string | undefined) {
     return typeof packageName === 'string' ? packageName.replace(/-/g, '--') : '';
   }
