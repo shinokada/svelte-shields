@@ -25,6 +25,11 @@
   import { sineIn } from 'svelte/easing';
   import { newSidebarList } from './helper';
 
+  let activeUrl = $state($page.url.pathname);
+  $effect(() => {
+    activeUrl = $page.url.pathname;
+  });
+
   function isIncluded(url: string, allowedUrls: string[]): boolean {
     return allowedUrls.some((allowedUrl) => url.startsWith(allowedUrl));
   }
@@ -171,7 +176,7 @@
       </div>
     {/snippet}
     {#if lis}
-      <NavUl class={ulclass}>
+      <NavUl {activeUrl} class={ulclass}>
         {@render navLi(lis)}
       </NavUl>
     {/if}
