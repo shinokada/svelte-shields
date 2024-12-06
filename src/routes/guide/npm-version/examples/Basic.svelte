@@ -2,11 +2,10 @@
   import { NpmVersion, type NpmVersionPropsType } from '$lib';
 
   const basic: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib'
+    packageName: 'svelte'
   };
   const basic2: NpmVersionPropsType = {
-    packageName: 'flowbite-svelte-icons',
-    tag: 'next'
+    packageName: '@sveltejs/kit'
   };
 </script>
 

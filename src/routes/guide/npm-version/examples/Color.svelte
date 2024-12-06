@@ -2,32 +2,32 @@
   import { NpmVersion, type NpmVersionPropsType } from '$lib';
 
   const color1: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+    packageName: 'svelte',
     color: 'green'
   };
 
   const color2: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+    packageName: 'svelte',
     color: '00FF00'
   };
 
   const color3: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+    packageName: 'svelte',
     color: 'rgb(0, 255, 0)'
   };
 
   const color4: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+    packageName: 'svelte',
     color: 'rgba(0, 255, 0, 1)'
   };
 
   const color5: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+    packageName: 'svelte',
     color: 'hsl(120, 100%, 50%)'
   };
 
   const color6: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+    packageName: 'svelte',
     color: 'hsla(120, 100%, 50%, 1)'
   };
 </script>

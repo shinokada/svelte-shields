@@ -2,23 +2,23 @@
   import { NpmVersion, type NpmVersionPropsType } from '$lib';
 
   const style1: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+    packageName: 'svelte',
     style: 'flat'
   };
   const style2: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+    packageName: 'svelte',
     style: 'flat-square'
   };
   const style3: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+    packageName: 'svelte',
     style: 'for-the-badge'
   };
   const style4: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+    packageName: 'svelte',
     style: 'plastic'
   };
   const style5: NpmVersionPropsType = {
-    packageName: 'svelte-5-ui-lib',
+    packageName: 'svelte',
     style: 'social'
   };
 </script>
