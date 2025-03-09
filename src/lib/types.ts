@@ -11,7 +11,6 @@ export interface BaseBadgePropsType {
   color?: string | undefined | null;
   cacheSeconds?: string | undefined | null;
   link?: LinkType;
-  class?: string | undefined | null;
 }
 interface ExtendedStyle extends BaseBadgePropsType, HTMLImgAttributes {
   style?: 'flat' | 'flat-square' | 'for-the-badge' | 'plastic' | 'social';
