@@ -16,9 +16,6 @@
 
 <HighlightCompo codeLang="ts" code={exampleModules['./examples/installation.md'] as string} />
 
-<p>Enable Runes in <Code>svelte.config.js</Code>:</p>
-
-<HighlightCompo codeLang="ts" code={exampleModules['./examples/installation-2.md'] as string} />
 
 <H2>Basic usage</H2>
 
