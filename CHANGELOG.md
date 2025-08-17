@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.5.2
+
+### Patch Changes
+
+- fix: StaticBadge update
+
 ## 0.5.1
 
 ### Patch Changes

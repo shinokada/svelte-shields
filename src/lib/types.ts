@@ -51,7 +51,10 @@ export interface PypiVersionPropsType extends ExtendedStyle {
 }
 
 export interface StaticBadgePropsType extends ExtendedStyle {
-  badgeContent: string;
+  badgeContent?: string;
+  message?: string;
+  badgeLabel?: string;
+  badgeColor?: string;
 }
 
 export interface JsrVersionPropsType extends ExtendedStyle {

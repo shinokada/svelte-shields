@@ -3,6 +3,9 @@
 
   let {
     badgeContent,
+    message,
+    badgeLabel,
+    badgeColor = 'blue',
     style,
     logo,
     logoColor,
@@ -16,18 +19,30 @@
     ...attributes
   }: StaticBadgePropsType = $props();
 
-  const styleOpt = style ? `style=${style}` : 'style=flat';
-  const logoOpt = logo ? `&logo=${logo}` : '';
-  const logoColorOpt = logoColor ? `&logoColor=${logoColor}` : '';
-  const logoSizeOpt = logoSize ? `&logoSize=${logoSize}` : '';
-  const labelOpt = label ? `&label=${encodeURIComponent(label)}` : '';
-  const labelColorOpt = labelColor ? `&labelColor=${labelColor}` : '';
-  const colorOpt = color ? `&color=${color}` : '';
-  const cacheSecondsOpt = cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '';
-  const link1 = link ? `&link=${encodeURIComponent(link[0])}` : '';
-  const link2 = link ? `&link=${encodeURIComponent(link[1])}` : '';
+  // Build the badge content - either use provided badgeContent or construct from parts
+  const constructedBadgeContent = badgeContent || 
+    (badgeLabel && message ? `${badgeLabel}-${message}-${badgeColor}` : '');
+
+  // Build query parameters
+  const params = new URLSearchParams();
+  
+  if (style) params.set('style', style);
+  else params.set('style', 'flat');
+  
+  if (logo) params.set('logo', logo);
+  if (logoColor) params.set('logoColor', logoColor);
+  if (logoSize) params.set('logoSize', logoSize.toString());
+  if (label) params.set('label', label);
+  if (labelColor) params.set('labelColor', labelColor);
+  if (color) params.set('color', color);
+  if (cacheSeconds) params.set('cacheSeconds', cacheSeconds.toString());
+  if (link) {
+    if (link[0]) params.set('link', link[0]);
+    if (link[1]) params.set('link', link[1]);
+  }
+
   let srcData = $state(
-    `https://img.shields.io/badge/${encodeURIComponent(badgeContent)}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
+    `https://img.shields.io/badge/${encodeURIComponent(constructedBadgeContent)}?${params.toString()}`
   );
 </script>
 
@@ -42,6 +57,9 @@
 [Go to docs](https://svelte-shields.codewithshin.com/)
 ## Props
 @prop badgeContent
+@prop message
+@prop badgeLabel
+@prop badgeColor = 'blue'
 @prop style
 @prop logo
 @prop logoColor

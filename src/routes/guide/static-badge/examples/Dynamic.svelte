@@ -30,7 +30,7 @@
 
 {#snippet runesIcon({ packageName }: LibType)}
   {#if isLoading}
-    <StaticBadge badgeContent="loading..." />
+    <StaticBadge badgeContent="status-loading-yellow" />
   {:else}
     <StaticBadge
       badgeContent={safeReplace(packageName) +

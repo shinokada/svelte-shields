@@ -99,14 +99,13 @@
     runesMetaTagsVersion: __RUNES_METATAGS_VERSION__,
     svelteVersion: __SVELTE_VERSION__,
     svelteKitVersion: __SVELTEKIT_VERSION__,
-		svelte5uilibVersion: __SVELTE_5_UI_LIB_VERSION__,
     svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__,
     viteVersion: __VITE_VERSION__
   };
 </script>
 
 <div class="relative mx-auto mt-8 h-full max-w-7xl overflow-y-auto px-8 pb-20">
-  <SupportBanner>
+  <SupportBanner class="relative mt-4">
     To Keep It Going, Please Show Your Love.<a href="https://ko-fi.com/Z8Z2CHALG" target="_blank"
       ><img
         height="40"
@@ -119,7 +118,7 @@
 
   <h1 class="my-8 flex justify-center">Svelte Shields</h1>
 
-  <HomeCards cards={shields_cards} />
+  <HomeCards cards={shields_cards} cardClass="dark:bg-stone-950 dark:hover:bg-stone-900"/>
 
-  <TechInfo {...pkg} />
+  <TechInfo {...pkg} class="dark:bg-stone-950"/>
 </div>
