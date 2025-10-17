@@ -160,12 +160,12 @@
       {closeSidebar}
       breakpoint="lg"
       classes={{
-        div: "dark:bg-stone-900 bg-gray-50",
+        div: "dark:bg-stone-950 bg-gray-50",
         nonactive: "p-1 hover:bg-gray-200",
         active:
           "flex items-center p-1 text-base font-normal text-white dark:hover:text-white hover:text-gray-900 bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
       }}
-      class="z-50 h-screen border-r border-gray-50 lg:top-[74px] dark:border-gray-700 dark:bg-stone-900"
+      class="z-50 h-screen border-r border-gray-50 lg:top-[74px] dark:border-gray-700 dark:bg-stone-950"
     >
       <CloseButton
         onclick={closeSidebar}
@@ -215,4 +215,4 @@
   {/if}
   {@render children()}
 </div>
-<Footer {brand} {lis} />
+<Footer {brand} {lis} class="dark:bg-stone-950 border border-t-gray-600"/>
