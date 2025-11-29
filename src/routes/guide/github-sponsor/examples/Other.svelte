@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { GitHubSponsor, type GitHubSponsorPropsType } from '$lib';
+	import { GitHubSponsor, type GitHubSponsorPropsType } from '$lib';
 
-  const otherEx: GitHubSponsorPropsType = {
-    user: 'shinokada',
-    cacheSeconds: '86400'
-  };
+	const otherEx: GitHubSponsorPropsType = {
+		user: 'shinokada',
+		cacheSeconds: '86400'
+	};
 </script>
 
 <GitHubSponsor {...otherEx} />

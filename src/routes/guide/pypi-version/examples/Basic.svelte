@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { PypiVersion, type PypiVersionPropsType } from '$lib';
+	import { PypiVersion, type PypiVersionPropsType } from '$lib';
 
-  const basic: PypiVersionPropsType = {
-    packageName: 'vennfig'
-  };
+	const basic: PypiVersionPropsType = {
+		packageName: 'vennfig'
+	};
 </script>
 
 <PypiVersion {...basic} />

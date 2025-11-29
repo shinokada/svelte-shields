@@ -8,23 +8,23 @@ const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-shields';
 const versions = fetchPackageVersions(svelte5_icons);
 
 export const load = async ({ url }) => {
-  const pageMetaTags: MetaProps = {
-    title,
-    description,
-    og: {
-      title,
-      description,
-      image: imgUrl,
-      url: url.href
-    },
-    twitter: {
-      title,
-      description,
-      image: imgUrl
-    }
-  };
-  return {
-    pageMetaTags,
-    versions
-  };
+	const pageMetaTags: MetaProps = {
+		title,
+		description,
+		og: {
+			title,
+			description,
+			image: imgUrl,
+			url: url.href
+		},
+		twitter: {
+			title,
+			description,
+			image: imgUrl
+		}
+	};
+	return {
+		pageMetaTags,
+		versions
+	};
 };

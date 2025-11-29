@@ -10,33 +10,33 @@ const keywords = 'svelte, runes, sveltekit, shields.io, badges';
 // const versions = fetchPackageVersions(svelte5_icons);
 
 export const load = ({ url }) => {
-  const layoutMetaTags: MetaProps = {
-    title,
-    description,
-    keywords,
-    twitter: {
-      card: 'summary_large_image',
-      site: '@shinokada',
-      creator: '@shinokada',
-      title,
-      description,
-      image: imgUrl,
-      imageAlt: title
-    },
-    og: {
-      type: 'website',
-      title,
-      description,
-      url: url.href,
-      image: imgUrl,
-      imageAlt: title,
-      siteName: title,
-      imageWidth: '1200',
-      imageHeight: '630'
-    }
-  };
-  return {
-    layoutMetaTags,
-    ANALYTICS_ID_RUNES_LIB
-  };
+	const layoutMetaTags: MetaProps = {
+		title,
+		description,
+		keywords,
+		twitter: {
+			card: 'summary_large_image',
+			site: '@shinokada',
+			creator: '@shinokada',
+			title,
+			description,
+			image: imgUrl,
+			imageAlt: title
+		},
+		og: {
+			type: 'website',
+			title,
+			description,
+			url: url.href,
+			image: imgUrl,
+			imageAlt: title,
+			siteName: title,
+			imageWidth: '1200',
+			imageHeight: '630'
+		}
+	};
+	return {
+		layoutMetaTags,
+		ANALYTICS_ID_RUNES_LIB
+	};
 };
