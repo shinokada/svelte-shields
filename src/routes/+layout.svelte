@@ -27,7 +27,6 @@
 		SidebarGroup,
 		SidebarDropdownWrapper,
 		SidebarItem,
-		CloseButton,
 		SidebarBrand
 	} from 'flowbite-svelte';
 	import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
@@ -170,7 +169,8 @@
 		>
 			<SidebarGroup>
 				<SidebarBrand>
-					<span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white ms-8 lg:sr-only"
+					<span
+						class="ms-8 self-center text-lg font-semibold whitespace-nowrap lg:sr-only dark:text-white"
 						>Svelte Shields</span
 					>
 				</SidebarBrand>

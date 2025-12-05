@@ -17,7 +17,6 @@
 		...attributes
 	}: NpmDownloadPropsType = $props();
 
-	// const intervalOpt = interval ? `&interval=${interval}` : 'dw'
 	const styleOpt = $derived(style ? `style=${style}` : 'style=flat');
 	const logoOpt = $derived(logo ? `&logo=${logo}` : '');
 	const logoColorOpt = $derived(logoColor ? `&logoColor=${logoColor}` : '');
@@ -26,8 +25,8 @@
 	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
 	const colorOpt = $derived(color ? `&color=${color}` : '');
 	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
-	const link1 = $derived(link ? `&link=${encodeURIComponent(link[0])}` : '');
-	const link2 = $derived(link ? `&link=${encodeURIComponent(link[1])}` : '');
+	const link1 = $derived(link?.[0] ? `&link=${encodeURIComponent(link[0])}` : '');
+	const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
 
 	let srcData = $derived(
 		`https://img.shields.io/npm/${interval}/${packageName}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`

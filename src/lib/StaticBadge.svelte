@@ -40,8 +40,8 @@
 		if (color) p.set('color', color);
 		if (cacheSeconds) p.set('cacheSeconds', cacheSeconds.toString());
 		if (link) {
-			if (link[0]) p.set('link', link[0]);
-			if (link[1]) p.set('link', link[1]);
+			if (link[0]) p.append('link', link[0]);
+			if (link[1]) p.append('link', link[1]);
 		}
 
 		return p;
