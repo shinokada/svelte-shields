@@ -42,9 +42,9 @@
 		Icon?: Component;
 	};
 	let { children, data } = $props();
-	const analyticsId = data.ANALYTICS_ID_RUNES_LIB;
+	const analyticsId = $derived(data.ANALYTICS_ID_RUNES_LIB);
 	// metaTags
-	let metaTags = $state(
+	let metaTags = $derived(
 		page.data.pageMetaTags
 			? deepMerge(page.data.layoutMetaTags, page.data.pageMetaTags)
 			: data.layoutMetaTags

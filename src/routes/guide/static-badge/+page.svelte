@@ -27,8 +27,8 @@
 
 <H3>Basic usage</H3>
 <p>
-	<Code>badgeContent</Code> may be the name of an unscoped package like <Code>package-name</Code> or
-	a scoped package like <Code>@author/package-name</Code>.
+	<Code>badgeContent</Code> may be the name of an unscoped package like <Code>package-name</Code> or a
+	scoped package like <Code>@author/package-name</Code>.
 </p>
 <p><Code>tag</Code> can be <Code>next, v1, v2, beta</Code>, etc.</p>
 

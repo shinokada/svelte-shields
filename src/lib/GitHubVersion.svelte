@@ -21,20 +21,20 @@
 		...attributes
 	}: GitHubVersionPropsType = $props();
 
-	const styleOpt = style ? `style=${style}` : 'style=flat';
-	const include_prereleasesOpt = include_prereleases ? `&include_prereleases` : '';
-	const sortOpt = sort ? `&sort=${sort}` : '';
-	const filterOpt = filter ? `&filter=${filter}` : '';
-	const logoOpt = logo ? `&logo=${logo}` : '';
-	const logoColorOpt = logoColor ? `&logoColor=${logoColor}` : '';
-	const logoSizeOpt = logoSize ? `&logoSize=${logoSize}` : '';
-	const labelOpt = label ? `&label=${encodeURIComponent(label)}` : '';
-	const labelColorOpt = labelColor ? `&labelColor=${labelColor}` : '';
-	const colorOpt = color ? `&color=${color}` : '';
-	const cacheSecondsOpt = cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '';
-	const link1 = link ? `&link=${encodeURIComponent(link[0])}` : '';
-	const link2 = link ? `&link=${encodeURIComponent(link[1])}` : '';
-	let srcData = $state(
+	const styleOpt = $derived(style ? `style=${style}` : 'style=flat');
+	const include_prereleasesOpt = $derived(include_prereleases ? `&include_prereleases` : '');
+	const sortOpt = $derived(sort ? `&sort=${sort}` : '');
+	const filterOpt = $derived(filter ? `&filter=${filter}` : '');
+	const logoOpt = $derived(logo ? `&logo=${logo}` : '');
+	const logoColorOpt = $derived(logoColor ? `&logoColor=${logoColor}` : '');
+	const logoSizeOpt = $derived(logoSize ? `&logoSize=${logoSize}` : '');
+	const labelOpt = $derived(label ? `&label=${encodeURIComponent(label)}` : '');
+	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
+	const colorOpt = $derived(color ? `&color=${color}` : '');
+	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
+	const link1 = $derived(link ? `&link=${encodeURIComponent(link[0])}` : '');
+	const link2 = $derived(link ? `&link=${encodeURIComponent(link[1])}` : '');
+	let srcData = $derived(
 		`https://img.shields.io/github/v/${display_name}/${user}/${repo}?${styleOpt}${include_prereleasesOpt}${sortOpt}${filterOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
 	);
 </script>

@@ -21,31 +21,31 @@
 	}: VersionPropsType = $props();
 
 	// npm
-	const tagOpt = npm_tag ? `/${npm_tag}` : '';
+	const tagOpt = $derived(npm_tag ? `/${npm_tag}` : '');
 	// pypi
-	const pypiBaseUrlOpt = pypiBaseUrl ? `&pypiBaseUrl=${pypiBaseUrl}` : '';
+	const pypiBaseUrlOpt = $derived(pypiBaseUrl ? `&pypiBaseUrl=${pypiBaseUrl}` : '');
 
 	// common
-	const styleOpt = style ? `style=${style}` : 'style=flat';
-	const logoOpt = logo ? `&logo=${logo}` : '';
-	const logoColorOpt = logoColor ? `&logoColor=${logoColor}` : '';
-	const logoSizeOpt = logoSize ? `&logoSize=${logoSize}` : '';
-	const labelOpt = label ? `&label=${encodeURIComponent(label)}` : '';
-	const labelColorOpt = labelColor ? `&labelColor=${labelColor}` : '';
-	const colorOpt = color ? `&color=${color}` : '';
-	const cacheSecondsOpt = cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '';
-	const link1 = link ? `&link=${encodeURIComponent(link[0])}` : '';
-	const link2 = link ? `&link=${encodeURIComponent(link[1])}` : '';
+	const styleOpt = $derived(style ? `style=${style}` : 'style=flat');
+	const logoOpt = $derived(logo ? `&logo=${logo}` : '');
+	const logoColorOpt = $derived(logoColor ? `&logoColor=${logoColor}` : '');
+	const logoSizeOpt = $derived(logoSize ? `&logoSize=${logoSize}` : '');
+	const labelOpt = $derived(label ? `&label=${encodeURIComponent(label)}` : '');
+	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
+	const colorOpt = $derived(color ? `&color=${color}` : '');
+	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
+	const link1 = $derived(link ? `&link=${encodeURIComponent(link[0])}` : '');
+	const link2 = $derived(link ? `&link=${encodeURIComponent(link[1])}` : '');
 
-	const npmSrcData = $state(
+	const npmSrcData = $derived(
 		`https://img.shields.io/npm/v/${packageName}${tagOpt}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
 	);
 
-	const jsrSrcData = $state(
+	const jsrSrcData = $derived(
 		`https://img.shields.io/jsr/v/${jsr_scope}/${packageName}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
 	);
 
-	const pypiSrcData = $state(
+	const pypiSrcData = $derived(
 		`https://img.shields.io/pypi/v/${packageName}?${styleOpt}${pypiBaseUrlOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
 	);
 </script>

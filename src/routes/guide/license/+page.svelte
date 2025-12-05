@@ -25,8 +25,7 @@
 <p>
 	Use <Code>npm</Code> or <Code>github</Code> for <Code>source</Code>. For <Code>github</Code>, <Code
 		>github_user</Code
-	> and <Code>github_repo</Code> are required. For <Code>npm</Code>, <Code>npm_packageName</Code> is
-	required.
+	> and <Code>github_repo</Code> are required. For <Code>npm</Code>, <Code>npm_packageName</Code> is required.
 </p>
 
 <CodeWrapper>
