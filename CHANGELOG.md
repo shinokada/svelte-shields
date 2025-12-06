@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 0.5.3
+
+### Patch Changes
+
+- fix: component docs, fix pnpm check
+
 ## 0.5.2
 
 ### Patch Changes
