@@ -35,7 +35,7 @@
 	const colorOpt = $derived(color ? `&color=${color}` : '');
 	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
 	const link1 = $derived(link?.[0] ? `&link=${encodeURIComponent(link[0])}` : '');
-  const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
+	const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
 
 	const npmSrcData = $derived(
 		`https://img.shields.io/npm/v/${packageName}${tagOpt}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
