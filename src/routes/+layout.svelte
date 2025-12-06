@@ -27,7 +27,6 @@
 		SidebarGroup,
 		SidebarDropdownWrapper,
 		SidebarItem,
-		CloseButton,
 		SidebarBrand
 	} from 'flowbite-svelte';
 	import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
@@ -42,9 +41,9 @@
 		Icon?: Component;
 	};
 	let { children, data } = $props();
-	const analyticsId = data.ANALYTICS_ID_RUNES_LIB;
+	const analyticsId = $derived(data.ANALYTICS_ID_RUNES_LIB);
 	// metaTags
-	let metaTags = $state(
+	let metaTags = $derived(
 		page.data.pageMetaTags
 			? deepMerge(page.data.layoutMetaTags, page.data.pageMetaTags)
 			: data.layoutMetaTags
@@ -105,12 +104,12 @@
 <Navbar
 	breakpoint="lg"
 	fluid
-	class="fixed top-0 left-0 z-50 border-b border-gray-100 bg-white py-4  sm:px-12 dark:border-gray-700 dark:bg-stone-950"
+	class="dark-bg-theme fixed top-0 left-0 z-50 border-b border-gray-100 bg-white   sm:px-12 lg:py-0 dark:border-gray-700"
 	navContainerClass="lg:justify-between"
 >
 	<NavBrand href="/">
 		<span
-			class="text-primary-900 dark:text-primary-500 self-center text-2xl font-semibold whitespace-nowrap lg:text-3xl"
+			class="text-primary-900 dark:text-primary-500 ml-4 self-center text-2xl font-semibold whitespace-nowrap xl:ml-8 xl:text-3xl"
 			>Svelte Shields</span
 		>
 	</NavBrand>
@@ -119,7 +118,7 @@
 		{#if include}
 			<DynamicCodeBlockStyle class="hidden lg:block" />
 		{/if}
-		<DotsHorizontalOutline class="mt-1.5 mr-4 ml-6 dark:text-white" size="lg" />
+		<DotsHorizontalOutline class="mt-2 mr-4 ml-6 dark:text-white" size="lg" />
 		<Dropdown simple class="p-1">
 			{#if blueskyUrl}
 				<DropdownItem href={blueskyUrl} target="_blank" class="m-0 p-0.5">
@@ -141,7 +140,7 @@
 		breakpoint="lg"
 		{activeUrl}
 		class="order-2 lg:order-1"
-		classes={{ active: activeClass, nonActive: nonActiveClass, ul: 'p-0' }}
+		classes={{ active: activeClass, nonActive: nonActiveClass }}
 	>
 		<NavLi href="/guide/github-version">Guide</NavLi>
 		<NavLi href="/guide/quickstart">Quickstart</NavLi>
@@ -152,8 +151,7 @@
 	{#if urlsToIncludeSwitcherAndSidebar.some((path) => activeUrl.startsWith(path))}
 		<SidebarButton
 			onclick={sidebarUi.toggle}
-			class="fixed top-5 left-0
-     z-100 mb-2"
+			class="fixed top-0.5 left-0 z-100 p-2"
 			breakpoint="lg"
 		/>
 		<Sidebar
@@ -169,14 +167,10 @@
 			}}
 			class="z-50 h-screen border-r border-gray-50 lg:top-[74px] dark:border-gray-700 dark:bg-stone-950"
 		>
-			<CloseButton
-				onclick={closeSidebar}
-				color="gray"
-				class="absolute top-3 right-1 p-2 lg:hidden"
-			/>
 			<SidebarGroup>
 				<SidebarBrand>
-					<span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white"
+					<span
+						class="ms-8 self-center text-lg font-semibold whitespace-nowrap lg:sr-only dark:text-white"
 						>Svelte Shields</span
 					>
 				</SidebarBrand>

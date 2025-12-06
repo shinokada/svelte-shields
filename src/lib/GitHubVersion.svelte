@@ -21,20 +21,20 @@
 		...attributes
 	}: GitHubVersionPropsType = $props();
 
-	const styleOpt = style ? `style=${style}` : 'style=flat';
-	const include_prereleasesOpt = include_prereleases ? `&include_prereleases` : '';
-	const sortOpt = sort ? `&sort=${sort}` : '';
-	const filterOpt = filter ? `&filter=${filter}` : '';
-	const logoOpt = logo ? `&logo=${logo}` : '';
-	const logoColorOpt = logoColor ? `&logoColor=${logoColor}` : '';
-	const logoSizeOpt = logoSize ? `&logoSize=${logoSize}` : '';
-	const labelOpt = label ? `&label=${encodeURIComponent(label)}` : '';
-	const labelColorOpt = labelColor ? `&labelColor=${labelColor}` : '';
-	const colorOpt = color ? `&color=${color}` : '';
-	const cacheSecondsOpt = cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '';
-	const link1 = link ? `&link=${encodeURIComponent(link[0])}` : '';
-	const link2 = link ? `&link=${encodeURIComponent(link[1])}` : '';
-	let srcData = $state(
+	const styleOpt = $derived(style ? `style=${style}` : 'style=flat');
+	const include_prereleasesOpt = $derived(include_prereleases ? `&include_prereleases` : '');
+	const sortOpt = $derived(sort ? `&sort=${sort}` : '');
+	const filterOpt = $derived(filter ? `&filter=${filter}` : '');
+	const logoOpt = $derived(logo ? `&logo=${logo}` : '');
+	const logoColorOpt = $derived(logoColor ? `&logoColor=${logoColor}` : '');
+	const logoSizeOpt = $derived(logoSize ? `&logoSize=${logoSize}` : '');
+	const labelOpt = $derived(label ? `&label=${encodeURIComponent(label)}` : '');
+	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
+	const colorOpt = $derived(color ? `&color=${color}` : '');
+	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
+	const link1 = $derived(link?.[0] ? `&link=${encodeURIComponent(link[0])}` : '');
+	const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
+	let srcData = $derived(
 		`https://img.shields.io/github/v/${display_name}/${user}/${repo}?${styleOpt}${include_prereleasesOpt}${sortOpt}${filterOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
 	);
 </script>
@@ -52,23 +52,41 @@
 
 <!--
 @component
-[Go to docs](https://svelte-shields.codewithshin.com/)
+# GitHubVersion
+
 ## Props
-@prop user
-@prop repo
-@prop include_prereleases
-@prop sort
-@prop filter
-@prop display_name = 'release'
-@prop style = 'flat'
-@prop logo
-@prop logoColor
-@prop logoSize
-@prop label = ''
-@prop labelColor
-@prop color
-@prop cacheSeconds
-@prop link
-@prop class: classname
-@prop ...attributes
+
+| Name | Type | Default | Required |
+| ---- | ---- | ------- | -------- |
+| user | `string` | - | ✓ |
+| repo | `string` | - | ✓ |
+| include_prereleases | `boolean` | - |  |
+| sort | `'date' \| 'semver'` | - |  |
+| filter | `string` | - |  |
+| display_name | `'tag' \| 'release'` | `release` |  |
+| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | `flat` |  |
+| logo | `string \| undefined \| null` | - |  |
+| logoColor | `string \| undefined \| null` | - |  |
+| logoSize | `string \| undefined \| null` | - |  |
+| label | `string \| undefined \| null` | `` |  |
+| labelColor | `string \| undefined \| null` | - |  |
+| color | `string \| undefined \| null` | - |  |
+| cacheSeconds | `string \| undefined \| null` | - |  |
+| link | `LinkType` | - |  |
+| attributes | `HTMLAttributes` | - |  |
+
+## Usage
+
+```svelte
+<script>
+  import { GitHubVersion } from 'svelte-shields';
+</script>
+
+<GitHubVersion user="example" repo="example" />
+```
+
+## Reference
+
+[Go to docs](https://svelte-shields.codewithshin.com/)
+
 -->

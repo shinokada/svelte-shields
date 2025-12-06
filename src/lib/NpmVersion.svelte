@@ -17,18 +17,18 @@
 		...attributes
 	}: NpmVersionPropsType = $props();
 
-	const styleOpt = style ? `style=${style}` : 'style=flat';
-	const logoOpt = logo ? `&logo=${logo}` : '';
-	const tagOpt = tag ? `/${tag}` : '';
-	const logoColorOpt = logoColor ? `&logoColor=${logoColor}` : '';
-	const logoSizeOpt = logoSize ? `&logoSize=${logoSize}` : '';
-	const labelOpt = label ? `&label=${encodeURIComponent(label)}` : '';
-	const labelColorOpt = labelColor ? `&labelColor=${labelColor}` : '';
-	const colorOpt = color ? `&color=${color}` : '';
-	const cacheSecondsOpt = cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '';
-	const link1 = link ? `&link=${encodeURIComponent(link[0])}` : '';
-	const link2 = link ? `&link=${encodeURIComponent(link[1])}` : '';
-	let srcData = $state(
+	const styleOpt = $derived(style ? `style=${style}` : 'style=flat');
+	const logoOpt = $derived(logo ? `&logo=${logo}` : '');
+	const tagOpt = $derived(tag ? `/${tag}` : '');
+	const logoColorOpt = $derived(logoColor ? `&logoColor=${logoColor}` : '');
+	const logoSizeOpt = $derived(logoSize ? `&logoSize=${logoSize}` : '');
+	const labelOpt = $derived(label ? `&label=${encodeURIComponent(label)}` : '');
+	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
+	const colorOpt = $derived(color ? `&color=${color}` : '');
+	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
+	const link1 = $derived(link?.[0] ? `&link=${encodeURIComponent(link[0])}` : '');
+	const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
+	let srcData = $derived(
 		`https://img.shields.io/npm/v/${packageName}${tagOpt}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
 	);
 </script>
@@ -41,19 +41,37 @@
 
 <!--
 @component
-[Go to docs](https://svelte-shields.codewithshin.com/)
+# NpmVersion
+
 ## Props
-@prop packageName
-@prop tag
-@prop style
-@prop logo
-@prop logoColor
-@prop logoSize
-@prop label
-@prop labelColor
-@prop color
-@prop cacheSeconds
-@prop link
-@prop class: classname
-@prop ...attributes
+
+| Name | Type | Default | Required |
+| ---- | ---- | ------- | -------- |
+| packageName | `string` | - | ✓ |
+| tag | `string` | - |  |
+| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | - |  |
+| logo | `string \| undefined \| null` | - |  |
+| logoColor | `string \| undefined \| null` | - |  |
+| logoSize | `string \| undefined \| null` | - |  |
+| label | `string \| undefined \| null` | - |  |
+| labelColor | `string \| undefined \| null` | - |  |
+| color | `string \| undefined \| null` | - |  |
+| cacheSeconds | `string \| undefined \| null` | - |  |
+| link | `LinkType` | - |  |
+| attributes | `HTMLAttributes` | - |  |
+
+## Usage
+
+```svelte
+<script>
+  import { NpmVersion } from 'svelte-shields';
+</script>
+
+<NpmVersion packageName="example" />
+```
+
+## Reference
+
+[Go to docs](https://svelte-shields.codewithshin.com/)
+
 -->

@@ -1,6 +1,6 @@
 import type { HTMLImgAttributes } from 'svelte/elements';
 
-export type LinkType = string[] | [string, string];
+export type LinkType = [string, string];
 export interface BaseBadgePropsType {
 	style?: 'flat' | 'flat-square' | 'for-the-badge' | 'plastic' | 'social';
 	logo?: string | undefined | null;

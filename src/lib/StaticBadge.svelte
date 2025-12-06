@@ -21,28 +21,33 @@
 	}: StaticBadgePropsType = $props();
 
 	// Build the badge content - either use provided badgeContent or construct from parts
-	const constructedBadgeContent =
-		badgeContent || (badgeLabel && message ? `${badgeLabel}-${message}-${badgeColor}` : '');
+	const constructedBadgeContent = $derived(
+		badgeContent || (badgeLabel && message ? `${badgeLabel}-${message}-${badgeColor}` : '')
+	);
 
 	// Build query parameters
-	const params = new SvelteURLSearchParams();
+	const params = $derived.by(() => {
+		const p = new SvelteURLSearchParams();
 
-	if (style) params.set('style', style);
-	else params.set('style', 'flat');
+		if (style) p.set('style', style);
+		else p.set('style', 'flat');
 
-	if (logo) params.set('logo', logo);
-	if (logoColor) params.set('logoColor', logoColor);
-	if (logoSize) params.set('logoSize', logoSize.toString());
-	if (label) params.set('label', label);
-	if (labelColor) params.set('labelColor', labelColor);
-	if (color) params.set('color', color);
-	if (cacheSeconds) params.set('cacheSeconds', cacheSeconds.toString());
-	if (link) {
-		if (link[0]) params.set('link', link[0]);
-		if (link[1]) params.set('link', link[1]);
-	}
+		if (logo) p.set('logo', logo);
+		if (logoColor) p.set('logoColor', logoColor);
+		if (logoSize) p.set('logoSize', logoSize.toString());
+		if (label) p.set('label', label);
+		if (labelColor) p.set('labelColor', labelColor);
+		if (color) p.set('color', color);
+		if (cacheSeconds) p.set('cacheSeconds', cacheSeconds.toString());
+		if (link) {
+			if (link?.[0]) p.append('link', link[0]);
+			if (link?.[1]) p.append('link', link[1]);
+		}
 
-	let srcData = $state(
+		return p;
+	});
+
+	let srcData = $derived(
 		`https://img.shields.io/badge/${encodeURIComponent(constructedBadgeContent)}?${params.toString()}`
 	);
 </script>
@@ -55,21 +60,39 @@
 
 <!--
 @component
-[Go to docs](https://svelte-shields.codewithshin.com/)
+# StaticBadge
+
 ## Props
-@prop badgeContent
-@prop message
-@prop badgeLabel
-@prop badgeColor = 'blue'
-@prop style
-@prop logo
-@prop logoColor
-@prop logoSize
-@prop label
-@prop labelColor
-@prop color
-@prop cacheSeconds
-@prop link
-@prop class: classname
-@prop ...attributes
+
+| Name | Type | Default | Required |
+| ---- | ---- | ------- | -------- |
+| badgeContent | `string` | - |  |
+| message | `string` | - |  |
+| badgeLabel | `string` | - |  |
+| badgeColor | `string` | `blue` |  |
+| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | - |  |
+| logo | `string \| undefined \| null` | - |  |
+| logoColor | `string \| undefined \| null` | - |  |
+| logoSize | `string \| undefined \| null` | - |  |
+| label | `string \| undefined \| null` | - |  |
+| labelColor | `string \| undefined \| null` | - |  |
+| color | `string \| undefined \| null` | - |  |
+| cacheSeconds | `string \| undefined \| null` | - |  |
+| link | `LinkType` | - |  |
+| attributes | `HTMLAttributes` | - |  |
+
+## Usage
+
+```svelte
+<script>
+  import { StaticBadge } from 'svelte-shields';
+</script>
+
+<StaticBadge />
+```
+
+## Reference
+
+[Go to docs](https://svelte-shields.codewithshin.com/)
+
 -->

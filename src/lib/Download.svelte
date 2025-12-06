@@ -21,60 +21,74 @@
 	}: DownloadPropsType = $props();
 
 	// common
-	const styleOpt = style ? `style=${style}` : 'style=flat';
-	const logoOpt = logo ? `&logo=${logo}` : '';
-	const logoColorOpt = logoColor ? `&logoColor=${logoColor}` : '';
-	const logoSizeOpt = logoSize ? `&logoSize=${logoSize}` : '';
-	const labelOpt = label ? `&label=${encodeURIComponent(label)}` : '';
-	const labelColorOpt = labelColor ? `&labelColor=${labelColor}` : '';
-	const colorOpt = color ? `&color=${color}` : '';
-	const cacheSecondsOpt = cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '';
-	const link1 = link ? `&link=${encodeURIComponent(link[0])}` : '';
-	const link2 = link ? `&link=${encodeURIComponent(link[1])}` : '';
+	const styleOpt = $derived(style ? `style=${style}` : 'style=flat');
+	const logoOpt = $derived(logo ? `&logo=${logo}` : '');
+	const logoColorOpt = $derived(logoColor ? `&logoColor=${logoColor}` : '');
+	const logoSizeOpt = $derived(logoSize ? `&logoSize=${logoSize}` : '');
+	const labelOpt = $derived(label ? `&label=${encodeURIComponent(label)}` : '');
+	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
+	const colorOpt = $derived(color ? `&color=${color}` : '');
+	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
+	const link1 = $derived(link?.[0] ? `&link=${encodeURIComponent(link[0])}` : '');
+	const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
 
-	const npmSrcData = $state(
+	const npmSrcData = $derived(
 		`https://img.shields.io/npm/${interval}/${packageName}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
 	);
 
-	let githubSrcData = $state(
+	const githubSrcData = $derived(
 		`https://img.shields.io/github/downloads/${user}/${repo}/total?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
 	);
 </script>
 
 {#if link}
 	{#if source === 'npm'}
-		<!-- NPM -->
 		<object data={npmSrcData} title="NPM downloads" class={classname}> </object>
 	{:else}
-		<!-- GitHub -->
 		<object data={githubSrcData} title="GitHub downloads" class={classname}> </object>
 	{/if}
 {:else if source === 'npm'}
-	<!-- NPM -->
 	<img src={npmSrcData} alt="NPM downloads" class={classname} {...attributes} />
 {:else}
-	<!-- GitHub -->
 	<img src={githubSrcData} alt="GitHub downloads" class={classname} {...attributes} />
 {/if}
 
 <!--
 @component
-[Go to docs](https://svelte-shields.codewithshin.com/)
+# Download
+
 ## Props
-@prop source
-@prop user
-@prop repo
-@prop interval
-@prop packageName
-@prop style = 'flat'
-@prop logo
-@prop logoColor
-@prop logoSize
-@prop label
-@prop labelColor
-@prop color
-@prop cacheSeconds
-@prop link
-@prop class: classname
-@prop ...attributes
+
+| Name | Type | Default | Required |
+| ---- | ---- | ------- | -------- |
+| source | `'npm' \| 'github'` | - | ✓ |
+| user | `string` | - |  |
+| repo | `string` | - |  |
+| interval | `'dw' \| 'dm' \| 'dy' \| 'd18m'` | - |  |
+| packageName | `string` | - |  |
+| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | `flat` |  |
+| logo | `string \| undefined \| null` | - |  |
+| logoColor | `string \| undefined \| null` | - |  |
+| logoSize | `string \| undefined \| null` | - |  |
+| label | `string \| undefined \| null` | - |  |
+| labelColor | `string \| undefined \| null` | - |  |
+| color | `string \| undefined \| null` | - |  |
+| cacheSeconds | `string \| undefined \| null` | - |  |
+| link | `LinkType` | - |  |
+| attributes | `HTMLAttributes` | - |  |
+
+## Usage
+
+```svelte
+<script>
+  import { Download } from 'svelte-shields';
+</script>
+
+<Download source={value} />
+```
+
+## Reference
+
+[Go to docs](https://svelte-shields.codewithshin.com/)
+
 -->
