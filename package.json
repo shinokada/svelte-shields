@@ -37,7 +37,7 @@
 		"copy:packagejson": "svelte-lib-helpers package",
 		"gen:docs5": "svelte-lib-helpers docs5",
 		"gen:compodoc": "tsx script/compoDoc.ts",
-		"lib-helpers": "pnpm gen:docs5 && pnpm prepack && pnpm gen:exports && pnpm copy:packagejson",
+		"lib-helpers": "pnpm gen:compodoc && pnpm prepack && pnpm gen:exports && pnpm copy:packagejson",
 		"ch": "npx changeset",
 		"cv": "npx changeset version",
 		"cp": "npx changeset publish"
