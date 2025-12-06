@@ -52,23 +52,41 @@
 
 <!--
 @component
-[Go to docs](https://svelte-shields.codewithshin.com/)
+# GitHubVersion
+
 ## Props
-@prop user
-@prop repo
-@prop include_prereleases
-@prop sort
-@prop filter
-@prop display_name = 'release'
-@prop style = 'flat'
-@prop logo
-@prop logoColor
-@prop logoSize
-@prop label = ''
-@prop labelColor
-@prop color
-@prop cacheSeconds
-@prop link
-@prop class: classname
-@prop ...attributes
+
+| Name | Type | Default | Required |
+| ---- | ---- | ------- | -------- |
+| user | `string` | - | ✓ |
+| repo | `string` | - | ✓ |
+| include_prereleases | `boolean` | - |  |
+| sort | `'date' \| 'semver'` | - |  |
+| filter | `string` | - |  |
+| display_name | `'tag' \| 'release'` | `release` |  |
+| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | `flat` |  |
+| logo | `string \| undefined \| null` | - |  |
+| logoColor | `string \| undefined \| null` | - |  |
+| logoSize | `string \| undefined \| null` | - |  |
+| label | `string \| undefined \| null` | `` |  |
+| labelColor | `string \| undefined \| null` | - |  |
+| color | `string \| undefined \| null` | - |  |
+| cacheSeconds | `string \| undefined \| null` | - |  |
+| link | `LinkType` | - |  |
+| attributes | `HTMLImgAttributes` | - |  |
+
+## Usage
+
+```svelte
+<script>
+  import { GitHubVersion } from 'svelte-shields';
+</script>
+
+<GitHubVersion user="example" repo="example" />
+```
+
+## Reference
+
+[Go to docs](https://svelte-shields.codewithshin.com/)
+
 -->

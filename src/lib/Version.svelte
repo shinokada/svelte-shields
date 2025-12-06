@@ -52,44 +52,56 @@
 
 {#if link}
 	{#if source === 'npm'}
-		<!-- NPM -->
 		<object data={npmSrcData} title="NPM version of {packageName}" class={classname}> </object>
 	{:else if source === 'pypi'}
-		<!-- Pypi -->
 		<object data={pypiSrcData} title="Pypi version of {packageName}" class={classname}> </object>
 	{:else}
-		<!-- JSR -->
 		<object data={jsrSrcData} title="JSR version of {packageName}" class={classname}> </object>
 	{/if}
 {:else if source === 'npm'}
-	<!-- NPM -->
 	<img src={npmSrcData} alt="NPM version of {packageName}" class={classname} {...attributes} />
 {:else if source === 'pypi'}
-	<!-- Pypi -->
 	<img src={pypiSrcData} alt="Pypi version of {packageName}" class={classname} {...attributes} />
 {:else}
-	<!-- JSR -->
 	<img src={jsrSrcData} alt="JSR version of {packageName}" class={classname} {...attributes} />
 {/if}
 
 <!--
 @component
-[Go to docs](https://svelte-shields.codewithshin.com/)
+# Version
+
 ## Props
-@prop source
-@prop packageName
-@prop jsr_scope
-@prop npm_tag
-@prop pypiBaseUrl
-@prop style = 'flat'
-@prop logo
-@prop logoColor
-@prop logoSize
-@prop label
-@prop labelColor
-@prop color
-@prop cacheSeconds
-@prop link
-@prop class: classname
-@prop ...attributes
+
+| Name | Type | Default | Required |
+| ---- | ---- | ------- | -------- |
+| source | `'jsr' \| 'npm' \| 'pypi'` | - | ✓ |
+| packageName | `string` | - | ✓ |
+| jsr_scope | `string` | - |  |
+| npm_tag | `string` | - |  |
+| pypiBaseUrl | `string` | - |  |
+| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | `flat` |  |
+| logo | `string \| undefined \| null` | - |  |
+| logoColor | `string \| undefined \| null` | - |  |
+| logoSize | `string \| undefined \| null` | - |  |
+| label | `string \| undefined \| null` | - |  |
+| labelColor | `string \| undefined \| null` | - |  |
+| color | `string \| undefined \| null` | - |  |
+| cacheSeconds | `string \| undefined \| null` | - |  |
+| link | `LinkType` | - |  |
+| attributes | `HTMLImgAttributes` | - |  |
+
+## Usage
+
+```svelte
+<script>
+  import { Version } from 'svelte-shields';
+</script>
+
+<Version source={value} packageName="example" />
+```
+
+## Reference
+
+[Go to docs](https://svelte-shields.codewithshin.com/)
+
 -->

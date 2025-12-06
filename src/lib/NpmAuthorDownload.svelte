@@ -41,19 +41,37 @@
 
 <!--
 @component
-[Go to docs](https://svelte-shields.codewithshin.com/)
+# NpmAuthorDownload
+
 ## Props
-@prop interval = 'dw'
-@prop author
-@prop style = 'flat'
-@prop logo
-@prop logoColor
-@prop logoSize
-@prop label
-@prop labelColor
-@prop color
-@prop cacheSeconds
-@prop link
-@prop class: classname
-@prop ...attributes
+
+| Name | Type | Default | Required |
+| ---- | ---- | ------- | -------- |
+| interval | `'dw' \| 'dm' \| 'dy' \| 'd18m'` | `dw` |  |
+| author | `string` | - | ✓ |
+| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | `flat` |  |
+| logo | `string \| undefined \| null` | - |  |
+| logoColor | `string \| undefined \| null` | - |  |
+| logoSize | `string \| undefined \| null` | - |  |
+| label | `string \| undefined \| null` | - |  |
+| labelColor | `string \| undefined \| null` | - |  |
+| color | `string \| undefined \| null` | - |  |
+| cacheSeconds | `string \| undefined \| null` | - |  |
+| link | `LinkType` | - |  |
+| attributes | `HTMLImgAttributes` | - |  |
+
+## Usage
+
+```svelte
+<script>
+  import { NpmAuthorDownload } from 'svelte-shields';
+</script>
+
+<NpmAuthorDownload author="example" />
+```
+
+## Reference
+
+[Go to docs](https://svelte-shields.codewithshin.com/)
+
 -->

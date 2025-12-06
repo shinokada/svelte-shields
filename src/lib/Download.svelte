@@ -43,38 +43,52 @@
 
 {#if link}
 	{#if source === 'npm'}
-		<!-- NPM -->
 		<object data={npmSrcData} title="NPM downloads" class={classname}> </object>
 	{:else}
-		<!-- GitHub -->
 		<object data={githubSrcData} title="GitHub downloads" class={classname}> </object>
 	{/if}
 {:else if source === 'npm'}
-	<!-- NPM -->
 	<img src={npmSrcData} alt="NPM downloads" class={classname} {...attributes} />
 {:else}
-	<!-- GitHub -->
 	<img src={githubSrcData} alt="GitHub downloads" class={classname} {...attributes} />
 {/if}
 
 <!--
 @component
-[Go to docs](https://svelte-shields.codewithshin.com/)
+# Download
+
 ## Props
-@prop source
-@prop user
-@prop repo
-@prop interval
-@prop packageName
-@prop style = 'flat'
-@prop logo
-@prop logoColor
-@prop logoSize
-@prop label
-@prop labelColor
-@prop color
-@prop cacheSeconds
-@prop link
-@prop class: classname
-@prop ...attributes
+
+| Name | Type | Default | Required |
+| ---- | ---- | ------- | -------- |
+| source | `'npm' \| 'github'` | - | ✓ |
+| user | `string` | - |  |
+| repo | `string` | - |  |
+| interval | `'dw' \| 'dm' \| 'dy' \| 'd18m'` | - |  |
+| packageName | `string` | - |  |
+| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | `flat` |  |
+| logo | `string \| undefined \| null` | - |  |
+| logoColor | `string \| undefined \| null` | - |  |
+| logoSize | `string \| undefined \| null` | - |  |
+| label | `string \| undefined \| null` | - |  |
+| labelColor | `string \| undefined \| null` | - |  |
+| color | `string \| undefined \| null` | - |  |
+| cacheSeconds | `string \| undefined \| null` | - |  |
+| link | `LinkType` | - |  |
+| attributes | `HTMLImgAttributes` | - |  |
+
+## Usage
+
+```svelte
+<script>
+  import { Download } from 'svelte-shields';
+</script>
+
+<Download source={value} />
+```
+
+## Reference
+
+[Go to docs](https://svelte-shields.codewithshin.com/)
+
 -->

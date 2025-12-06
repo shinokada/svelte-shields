@@ -45,38 +45,52 @@
 
 {#if link}
 	{#if source === 'npm'}
-		<!-- NPM -->
 		<object data={npmSrcData} title="{source} License" class={classname}> </object>
 	{:else}
-		<!-- GitHub -->
 		<object data={githubSrcData} title="{source} License" class={classname}> </object>
 	{/if}
 {:else if source === 'npm'}
-	<!-- NPM -->
 	<img src={npmSrcData} alt="{source} License" class={classname} {...attributes} />
 {:else}
-	<!-- GitHub -->
 	<img src={githubSrcData} alt="{source} License" class={classname} {...attributes} />
 {/if}
 
 <!--
 @component
-[Go to docs](https://svelte-shields.codewithshin.com/)
+# License
+
 ## Props
-@prop source
-@prop github_user
-@prop github_repo
-@prop npm_packageName
-@prop npm_registry_uri
-@prop style = 'flat'
-@prop logo
-@prop logoColor
-@prop logoSize
-@prop label
-@prop labelColor
-@prop color
-@prop cacheSeconds
-@prop link
-@prop class: classname
-@prop ...attributes
+
+| Name | Type | Default | Required |
+| ---- | ---- | ------- | -------- |
+| source | `'github' \| 'npm'` | - | ✓ |
+| github_user | `string` | - |  |
+| github_repo | `string` | - |  |
+| npm_packageName | `string` | - |  |
+| npm_registry_uri | `string` | - |  |
+| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | `flat` |  |
+| logo | `string \| undefined \| null` | - |  |
+| logoColor | `string \| undefined \| null` | - |  |
+| logoSize | `string \| undefined \| null` | - |  |
+| label | `string \| undefined \| null` | - |  |
+| labelColor | `string \| undefined \| null` | - |  |
+| color | `string \| undefined \| null` | - |  |
+| cacheSeconds | `string \| undefined \| null` | - |  |
+| link | `LinkType` | - |  |
+| attributes | `HTMLImgAttributes` | - |  |
+
+## Usage
+
+```svelte
+<script>
+  import { License } from 'svelte-shields';
+</script>
+
+<License source={value} />
+```
+
+## Reference
+
+[Go to docs](https://svelte-shields.codewithshin.com/)
+
 -->

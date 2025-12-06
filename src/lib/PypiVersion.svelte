@@ -41,19 +41,37 @@
 
 <!--
 @component
-[Go to docs](https://svelte-shields.codewithshin.com/)
+# PypiVersion
+
 ## Props
-@prop packageName
-@prop pypiBaseUrl
-@prop style
-@prop logo
-@prop logoColor
-@prop logoSize
-@prop label
-@prop labelColor
-@prop color
-@prop cacheSeconds
-@prop link
-@prop class: classname
-@prop ...attributes
+
+| Name | Type | Default | Required |
+| ---- | ---- | ------- | -------- |
+| packageName | `string` | - | ✓ |
+| pypiBaseUrl | `string` | - |  |
+| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | - |  |
+| logo | `string \| undefined \| null` | - |  |
+| logoColor | `string \| undefined \| null` | - |  |
+| logoSize | `string \| undefined \| null` | - |  |
+| label | `string \| undefined \| null` | - |  |
+| labelColor | `string \| undefined \| null` | - |  |
+| color | `string \| undefined \| null` | - |  |
+| cacheSeconds | `string \| undefined \| null` | - |  |
+| link | `LinkType` | - |  |
+| attributes | `HTMLImgAttributes` | - |  |
+
+## Usage
+
+```svelte
+<script>
+  import { PypiVersion } from 'svelte-shields';
+</script>
+
+<PypiVersion packageName="example" />
+```
+
+## Reference
+
+[Go to docs](https://svelte-shields.codewithshin.com/)
+
 -->

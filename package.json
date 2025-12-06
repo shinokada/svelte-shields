@@ -36,6 +36,7 @@
 		"gen:exports": "svelte-lib-helpers exports",
 		"copy:packagejson": "svelte-lib-helpers package",
 		"gen:docs5": "svelte-lib-helpers docs5",
+		"gen:compodoc": "tsx script/compoDoc.ts",
 		"lib-helpers": "pnpm gen:docs5 && pnpm prepack && pnpm gen:exports && pnpm copy:packagejson",
 		"ch": "npx changeset",
 		"cv": "npx changeset version",
@@ -57,6 +58,7 @@
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.29.8",
+		"@types/node": "^22.10.2",
 		"@eslint/compat": "^2.0.0",
 		"@eslint/js": "^9.39.1",
 		"@playwright/test": "^1.57.0",
@@ -92,6 +94,7 @@
 		"svelte-supertiny": "^3.0.1",
 		"tailwind-merge": "^3.4.0",
 		"tailwindcss": "^4.1.17",
+		"tsx": "^4.21.0",
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.48.1",
 		"vite": "^7.2.6",
