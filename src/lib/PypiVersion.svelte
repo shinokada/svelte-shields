@@ -58,7 +58,7 @@
 | color | `string \| undefined \| null` | - |  |
 | cacheSeconds | `string \| undefined \| null` | - |  |
 | link | `LinkType` | - |  |
-| attributes | `HTMLImgAttributes` | - |  |
+| attributes | `HTMLAttributes` | - |  |
 
 ## Usage
 

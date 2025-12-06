@@ -32,8 +32,8 @@
 	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
 	const colorOpt = $derived(color ? `&color=${color}` : '');
 	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
-	const link1 = $derived(link ? `&link=${encodeURIComponent(link[0])}` : '');
-	const link2 = $derived(link ? `&link=${encodeURIComponent(link[1])}` : '');
+	const link1 = $derived(link?.[0] ? `&link=${encodeURIComponent(link[0])}` : '');
+	const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
 	let srcData = $derived(
 		`https://img.shields.io/github/v/${display_name}/${user}/${repo}?${styleOpt}${include_prereleasesOpt}${sortOpt}${filterOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
 	);
@@ -73,7 +73,7 @@
 | color | `string \| undefined \| null` | - |  |
 | cacheSeconds | `string \| undefined \| null` | - |  |
 | link | `LinkType` | - |  |
-| attributes | `HTMLImgAttributes` | - |  |
+| attributes | `HTMLAttributes` | - |  |
 
 ## Usage
 
