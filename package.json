@@ -1,7 +1,7 @@
 {
   "name": "svelte-shields",
   "version": "0.5.3",
-  "description": "A collection of Shilds badge components for Svelte Runes",
+  "description": "A collection of Shields badge components for Svelte Runes",
   "license": "MIT",
   "homepage": "https://svelte-shields.codewithshin.com/",
   "author": {
