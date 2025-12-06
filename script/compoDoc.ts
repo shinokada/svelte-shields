@@ -378,7 +378,8 @@ function findSvelteFiles(dir: string): string[] {
 
 			if (stat.isDirectory()) {
 				// Skip node_modules and hidden directories
-				if (!entry.startsWith('.') && entry !== 'node_modules') {
+				const excludedDirs = ['node_modules', 'dist', 'build', '.svelte-kit'];
+				if (!entry.startsWith('.') && !excludedDirs.includes(entry)) {
 					files.push(...findSvelteFiles(fullPath));
 				}
 			} else if (entry.endsWith('.svelte')) {
