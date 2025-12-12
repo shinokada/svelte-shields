@@ -21,13 +21,13 @@ export function buildBadgeParams(props: BaseBadgePropsType): string {
 	// Style is always included
 	params.push(`style=${style}`);
 
-	// Optional parameters
-	if (logo) params.push(`logo=${logo}`);
-	if (logoColor) params.push(`logoColor=${logoColor}`);
-	if (logoSize) params.push(`logoSize=${logoSize}`);
+	// Optional parameters - all values must be URL-encoded for shields.io compatibility
+	if (logo) params.push(`logo=${encodeURIComponent(logo)}`);
+	if (logoColor) params.push(`logoColor=${encodeURIComponent(logoColor)}`);
+	if (logoSize) params.push(`logoSize=${encodeURIComponent(logoSize)}`);
 	if (label) params.push(`label=${encodeURIComponent(label)}`);
-	if (labelColor) params.push(`labelColor=${labelColor}`);
-	if (color) params.push(`color=${color}`);
+	if (labelColor) params.push(`labelColor=${encodeURIComponent(labelColor)}`);
+	if (color) params.push(`color=${encodeURIComponent(color)}`);
 	if (cacheSeconds) params.push(`cacheSeconds=${cacheSeconds}`);
 	if (link?.[0]) params.push(`link=${encodeURIComponent(link[0])}`);
 	if (link?.[1]) params.push(`link=${encodeURIComponent(link[1])}`);
@@ -53,19 +53,24 @@ export async function checkBadgeLoad(
 
 	return new Promise((resolve) => {
 		const img = new Image();
+		let settled = false;
 
-		const timeoutId = setTimeout(() => resolve(false), timeout);
+		const finish = (ok: boolean) => {
+			if (settled) return;
+			settled = true;
+			clearTimeout(timeoutId);
+			resolve(ok);
+		};
 
 		img.onload = () => {
-			clearTimeout(timeoutId);
-			resolve(img.naturalWidth > minWidth && img.naturalHeight > minHeight);
+			finish(img.naturalWidth > minWidth && img.naturalHeight > minHeight);
 		};
 
 		img.onerror = () => {
-			clearTimeout(timeoutId);
-			resolve(false);
+			finish(false);
 		};
 
+		const timeoutId = setTimeout(() => finish(false), timeout);
 		img.src = url;
 	});
 }

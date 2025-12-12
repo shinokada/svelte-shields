@@ -63,6 +63,27 @@ describe('buildBadgeParams', () => {
 			});
 			expect(result).toContain('link=https%3A%2F%2Fexample.org');
 		});
+
+		it('should encode color values that contain #', () => {
+			const result = buildBadgeParams({ style: 'flat', color: '#fff' });
+			// encodeURIComponent('#fff') => %23fff
+			expect(result).toContain('color=%23fff');
+		});
+
+		it('should encode logoColor values that contain #', () => {
+			const result = buildBadgeParams({ style: 'flat', logoColor: '#FF0000' });
+			expect(result).toContain('logoColor=%23FF0000');
+		});
+
+		it('should encode labelColor values that contain #', () => {
+			const result = buildBadgeParams({ style: 'flat', labelColor: '#00FF00' });
+			expect(result).toContain('labelColor=%2300FF00');
+		});
+
+		it('should encode logo with special characters', () => {
+			const result = buildBadgeParams({ style: 'flat', logo: 'my logo' });
+			expect(result).toContain('logo=my%20logo');
+		});
 	});
 
 	describe('multiple parameters', () => {
@@ -138,7 +159,7 @@ describe('buildBadgeUrl', () => {
 
 	it('should handle empty params', () => {
 		const url = buildBadgeUrl('/npm/v/test', '');
-		expect(url).toBe('https://img.shields.io/npm/v/test?');
+		expect(url).toBe('https://img.shields.io/npm/v/test');
 	});
 
 	it('should handle paths with special characters', () => {

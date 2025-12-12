@@ -12,3 +12,4 @@ export { default as StaticBadge } from './StaticBadge.svelte';
 export { default as Version } from './Version.svelte';
 export * from './types';
 export { buildBadgeParams, checkBadgeLoad } from './utils/badgeHelpers';
+export { buildBadgeUrl, SHIELDS_IO_BASE } from './utils/constants';

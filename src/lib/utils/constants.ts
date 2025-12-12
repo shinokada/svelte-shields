@@ -11,5 +11,5 @@ export const SHIELDS_IO_BASE = 'https://img.shields.io';
  * @returns Complete badge URL
  */
 export function buildBadgeUrl(path: string, params: string): string {
-	return `${SHIELDS_IO_BASE}${path}?${params}`;
+	return params ? `${SHIELDS_IO_BASE}${path}?${params}` : `${SHIELDS_IO_BASE}${path}`;
 }

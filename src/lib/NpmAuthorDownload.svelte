@@ -32,7 +32,9 @@
 			link
 		})
 	);
-	const srcData = $derived(buildBadgeUrl(`/npm-stat/${interval}/${author}`, params));
+	const srcData = $derived(
+		buildBadgeUrl(`/npm-stat/${interval}/${encodeURIComponent(author)}`, params)
+	);
 </script>
 
 {#if link}

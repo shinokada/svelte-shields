@@ -19,7 +19,7 @@
 		...attributes
 	}: NpmVersionPropsType = $props();
 
-	const tagPath = $derived(tag ? `/${tag}` : '');
+	const tagPath = $derived(tag ? `/${encodeURIComponent(tag)}` : '');
 	const params = $derived(
 		buildBadgeParams({
 			style,
@@ -33,7 +33,9 @@
 			link
 		})
 	);
-	const srcData = $derived(buildBadgeUrl(`/npm/v/${packageName}${tagPath}`, params));
+	const srcData = $derived(
+		buildBadgeUrl(`/npm/v/${encodeURIComponent(packageName)}${tagPath}`, params)
+	);
 </script>
 
 {#if link}

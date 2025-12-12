@@ -13,6 +13,7 @@
 
 	/**
 	 * Check if badge loads successfully
+	 * Prevents race conditions by ensuring only one resolution occurs
 	 */
 	async function checkBadgeLoad(url: string): Promise<boolean> {
 		if (!browser) return false;
@@ -20,16 +21,22 @@
 		return new Promise((resolve) => {
 			const img = new Image();
 			let timeoutId: ReturnType<typeof setTimeout>;
+			let settled = false;
+
+			const finish = (ok: boolean) => {
+				if (settled) return;
+				settled = true;
+				clearTimeout(timeoutId);
+				resolve(ok);
+			};
 
 			img.onload = () => {
-				clearTimeout(timeoutId);
-				resolve(img.naturalWidth > 50 && img.naturalHeight > 10);
+				finish(img.naturalWidth > 50 && img.naturalHeight > 10);
 			};
 			img.onerror = () => {
-				clearTimeout(timeoutId);
-				resolve(false);
+				finish(false);
 			};
-			timeoutId = setTimeout(() => resolve(false), 5000);
+			timeoutId = setTimeout(() => finish(false), 5000);
 			img.src = url;
 		});
 	}
