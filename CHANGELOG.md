@@ -1,5 +1,14 @@
 # svelte-icon-webkit
 
+## 0.5.4
+
+### Patch Changes
+
+- fix: Refactors 12 Svelte badge components to use centralized buildBadgeParams and buildBadgeUrl utilities
+  -fix: adds checkBadgeLoad and constants (SHIELDS_IO_BASE)
+  -docs: expands docs/testing guidance and quickstart with a SafeGuard example
+  -fix: exposes the new helpers from the library entry point.
+
 ## 0.5.3
 
 ### Patch Changes
