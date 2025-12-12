@@ -1,10 +1,12 @@
 <script lang="ts">
 	import type { NpmVersionPropsType } from './types';
+	import { buildBadgeParams } from './utils/badgeHelpers';
+	import { buildBadgeUrl } from './utils/constants';
 
 	let {
 		packageName,
 		tag,
-		style,
+		style = 'flat',
 		logo,
 		logoColor,
 		logoSize,
@@ -17,20 +19,21 @@
 		...attributes
 	}: NpmVersionPropsType = $props();
 
-	const styleOpt = $derived(style ? `style=${style}` : 'style=flat');
-	const logoOpt = $derived(logo ? `&logo=${logo}` : '');
-	const tagOpt = $derived(tag ? `/${tag}` : '');
-	const logoColorOpt = $derived(logoColor ? `&logoColor=${logoColor}` : '');
-	const logoSizeOpt = $derived(logoSize ? `&logoSize=${logoSize}` : '');
-	const labelOpt = $derived(label ? `&label=${encodeURIComponent(label)}` : '');
-	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
-	const colorOpt = $derived(color ? `&color=${color}` : '');
-	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
-	const link1 = $derived(link?.[0] ? `&link=${encodeURIComponent(link[0])}` : '');
-	const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
-	let srcData = $derived(
-		`https://img.shields.io/npm/v/${packageName}${tagOpt}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
+	const tagPath = $derived(tag ? `/${tag}` : '');
+	const params = $derived(
+		buildBadgeParams({
+			style,
+			logo,
+			logoColor,
+			logoSize,
+			label,
+			labelColor,
+			color,
+			cacheSeconds,
+			link
+		})
 	);
+	const srcData = $derived(buildBadgeUrl(`/npm/v/${packageName}${tagPath}`, params));
 </script>
 
 {#if link}
@@ -49,7 +52,7 @@
 | ---- | ---- | ------- | -------- |
 | packageName | `string` | - | ✓ |
 | tag | `string` | - |  |
-| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | - |  |
+| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | `flat` |  |
 | logo | `string \| undefined \| null` | - |  |
 | logoColor | `string \| undefined \| null` | - |  |
 | logoSize | `string \| undefined \| null` | - |  |

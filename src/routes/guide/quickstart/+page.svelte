@@ -29,3 +29,36 @@
 		/>
 	{/snippet}
 </CodeWrapper>
+
+<H2>Handling Badge Load Failures</H2>
+
+<p>
+	Badges may fail to load due to network issues or service downtime. Here's how to add safeguards to
+	gracefully handle these scenarios:
+</p>
+
+<CodeWrapper>
+	<ExampleComponents.SafeGuard />
+	{#snippet codeblock()}
+		<HighlightCompo
+			lang="ts"
+			replaceLib="svelte-shields"
+			code={exampleModules['./examples/SafeGuard.svelte'] as string}
+		/>
+	{/snippet}
+</CodeWrapper>
+
+<p>
+	This pattern allows you to detect when badges fail to load and provide appropriate fallback UI,
+	improving the user experience when external services are unavailable.
+</p>
+
+<H2>Key Features</H2>
+
+<ul>
+	<li>✅ Simple, presentational components with minimal dependencies</li>
+	<li>✅ Full TypeScript support with comprehensive prop types</li>
+	<li>✅ Supports all shields.io badge styles and customization options</li>
+	<li>✅ Browser-native error handling - leverage standard <code>img</code> behavior</li>
+	<li>✅ Flexible - implement your own error handling strategies</li>
+</ul>

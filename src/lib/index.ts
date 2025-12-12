@@ -11,3 +11,4 @@ export { default as PypiVersion } from './PypiVersion.svelte';
 export { default as StaticBadge } from './StaticBadge.svelte';
 export { default as Version } from './Version.svelte';
 export * from './types';
+export { buildBadgeParams, checkBadgeLoad } from './utils/badgeHelpers';

@@ -1,5 +1,7 @@
 <script lang="ts">
 	import type { LicensePropsType } from './types';
+	import { buildBadgeParams } from './utils/badgeHelpers';
+	import { buildBadgeUrl } from './utils/constants';
 
 	let {
 		source,
@@ -20,26 +22,29 @@
 		...attributes
 	}: LicensePropsType = $props();
 
-	const styleOpt = $derived(style ? `style=${style}` : 'style=flat');
-	const registryOpt = $derived(
+	const registryParam = $derived(
 		npm_registry_uri ? `&registry_uri=${encodeURIComponent(npm_registry_uri)}` : ''
 	);
-	const logoOpt = $derived(logo ? `&logo=${logo}` : '');
-	const logoColorOpt = $derived(logoColor ? `&logoColor=${logoColor}` : '');
-	const logoSizeOpt = $derived(logoSize ? `&logoSize=${logoSize}` : '');
-	const labelOpt = $derived(label ? `&label=${encodeURIComponent(label)}` : '');
-	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
-	const colorOpt = $derived(color ? `&color=${color}` : '');
-	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
-	const link1 = $derived(link?.[0] ? `&link=${encodeURIComponent(link[0])}` : '');
-	const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
+	const params = $derived(
+		buildBadgeParams({
+			style,
+			logo,
+			logoColor,
+			logoSize,
+			label,
+			labelColor,
+			color,
+			cacheSeconds,
+			link
+		})
+	);
 
 	const npmSrcData = $derived(
-		`https://img.shields.io/npm/l/${npm_packageName}?${styleOpt}${registryOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
+		buildBadgeUrl(`/npm/l/${npm_packageName}`, `${params}${registryParam}`)
 	);
 
 	const githubSrcData = $derived(
-		`https://img.shields.io/github/license/${github_user}/${github_repo}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
+		buildBadgeUrl(`/github/license/${github_user}/${github_repo}`, params)
 	);
 </script>
 
