@@ -1,5 +1,7 @@
 <script lang="ts">
 	import type { NpmDownloadPropsType } from './types';
+	import { buildBadgeParams } from './utils/badgeHelpers';
+	import { buildBadgeUrl } from './utils/constants';
 
 	let {
 		interval = 'dw',
@@ -17,20 +19,20 @@
 		...attributes
 	}: NpmDownloadPropsType = $props();
 
-	const styleOpt = $derived(style ? `style=${style}` : 'style=flat');
-	const logoOpt = $derived(logo ? `&logo=${logo}` : '');
-	const logoColorOpt = $derived(logoColor ? `&logoColor=${logoColor}` : '');
-	const logoSizeOpt = $derived(logoSize ? `&logoSize=${logoSize}` : '');
-	const labelOpt = $derived(label ? `&label=${encodeURIComponent(label)}` : '');
-	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
-	const colorOpt = $derived(color ? `&color=${color}` : '');
-	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
-	const link1 = $derived(link?.[0] ? `&link=${encodeURIComponent(link[0])}` : '');
-	const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
-
-	let srcData = $derived(
-		`https://img.shields.io/npm/${interval}/${packageName}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
+	const params = $derived(
+		buildBadgeParams({
+			style,
+			logo,
+			logoColor,
+			logoSize,
+			label,
+			labelColor,
+			color,
+			cacheSeconds,
+			link
+		})
 	);
+	const srcData = $derived(buildBadgeUrl(`/npm/${interval}/${packageName}`, params));
 </script>
 
 {#if link}

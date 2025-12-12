@@ -1,10 +1,12 @@
 <script lang="ts">
 	import type { PypiVersionPropsType } from './types';
+	import { buildBadgeParams } from './utils/badgeHelpers';
+	import { buildBadgeUrl } from './utils/constants';
 
 	let {
 		packageName,
 		pypiBaseUrl,
-		style,
+		style = 'flat',
 		logo,
 		logoColor,
 		logoSize,
@@ -17,20 +19,21 @@
 		...attributes
 	}: PypiVersionPropsType = $props();
 
-	const styleOpt = $derived(style ? `style=${style}` : 'style=flat');
-	const pypiBaseUrlOpt = $derived(pypiBaseUrl ? `&pypiBaseUrl=${pypiBaseUrl}` : '');
-	const logoOpt = $derived(logo ? `&logo=${logo}` : '');
-	const logoColorOpt = $derived(logoColor ? `&logoColor=${logoColor}` : '');
-	const logoSizeOpt = $derived(logoSize ? `&logoSize=${logoSize}` : '');
-	const labelOpt = $derived(label ? `&label=${encodeURIComponent(label)}` : '');
-	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
-	const colorOpt = $derived(color ? `&color=${color}` : '');
-	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
-	const link1 = $derived(link?.[0] ? `&link=${encodeURIComponent(link[0])}` : '');
-	const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
-	let srcData = $derived(
-		`https://img.shields.io/pypi/v/${packageName}?${styleOpt}${pypiBaseUrlOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
+	const pypiBaseUrlParam = $derived(pypiBaseUrl ? `&pypiBaseUrl=${pypiBaseUrl}` : '');
+	const params = $derived(
+		buildBadgeParams({
+			style,
+			logo,
+			logoColor,
+			logoSize,
+			label,
+			labelColor,
+			color,
+			cacheSeconds,
+			link
+		})
 	);
+	const srcData = $derived(buildBadgeUrl(`/pypi/v/${packageName}`, `${params}${pypiBaseUrlParam}`));
 </script>
 
 {#if link}
@@ -49,7 +52,7 @@
 | ---- | ---- | ------- | -------- |
 | packageName | `string` | - | ✓ |
 | pypiBaseUrl | `string` | - |  |
-| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | - |  |
+| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | `flat` |  |
 | logo | `string \| undefined \| null` | - |  |
 | logoColor | `string \| undefined \| null` | - |  |
 | logoSize | `string \| undefined \| null` | - |  |

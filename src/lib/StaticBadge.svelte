@@ -1,13 +1,14 @@
 <script lang="ts">
 	import type { StaticBadgePropsType } from './types';
-	import { SvelteURLSearchParams } from 'svelte/reactivity';
+	import { buildBadgeParams } from './utils/badgeHelpers';
+	import { buildBadgeUrl } from './utils/constants';
 
 	let {
 		badgeContent,
 		message,
 		badgeLabel,
 		badgeColor = 'blue',
-		style,
+		style = 'flat',
 		logo,
 		logoColor,
 		logoSize,
@@ -25,30 +26,22 @@
 		badgeContent || (badgeLabel && message ? `${badgeLabel}-${message}-${badgeColor}` : '')
 	);
 
-	// Build query parameters
-	const params = $derived.by(() => {
-		const p = new SvelteURLSearchParams();
+	const params = $derived(
+		buildBadgeParams({
+			style,
+			logo,
+			logoColor,
+			logoSize,
+			label,
+			labelColor,
+			color,
+			cacheSeconds,
+			link
+		})
+	);
 
-		if (style) p.set('style', style);
-		else p.set('style', 'flat');
-
-		if (logo) p.set('logo', logo);
-		if (logoColor) p.set('logoColor', logoColor);
-		if (logoSize) p.set('logoSize', logoSize.toString());
-		if (label) p.set('label', label);
-		if (labelColor) p.set('labelColor', labelColor);
-		if (color) p.set('color', color);
-		if (cacheSeconds) p.set('cacheSeconds', cacheSeconds.toString());
-		if (link) {
-			if (link?.[0]) p.append('link', link[0]);
-			if (link?.[1]) p.append('link', link[1]);
-		}
-
-		return p;
-	});
-
-	let srcData = $derived(
-		`https://img.shields.io/badge/${encodeURIComponent(constructedBadgeContent)}?${params.toString()}`
+	const srcData = $derived(
+		buildBadgeUrl(`/badge/${encodeURIComponent(constructedBadgeContent)}`, params)
 	);
 </script>
 
@@ -70,7 +63,7 @@
 | message | `string` | - |  |
 | badgeLabel | `string` | - |  |
 | badgeColor | `string` | `blue` |  |
-| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | - |  |
+| style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | `flat` |  |
 | logo | `string \| undefined \| null` | - |  |
 | logoColor | `string \| undefined \| null` | - |  |
 | logoSize | `string \| undefined \| null` | - |  |

@@ -1,11 +1,13 @@
 <script lang="ts">
 	import type { DownloadPropsType } from './types';
+	import { buildBadgeParams } from './utils/badgeHelpers';
+	import { buildBadgeUrl } from './utils/constants';
 
 	let {
 		source,
 		user,
 		repo,
-		interval,
+		interval = 'dw',
 		packageName,
 		style = 'flat',
 		logo,
@@ -20,25 +22,23 @@
 		...attributes
 	}: DownloadPropsType = $props();
 
-	// common
-	const styleOpt = $derived(style ? `style=${style}` : 'style=flat');
-	const logoOpt = $derived(logo ? `&logo=${logo}` : '');
-	const logoColorOpt = $derived(logoColor ? `&logoColor=${logoColor}` : '');
-	const logoSizeOpt = $derived(logoSize ? `&logoSize=${logoSize}` : '');
-	const labelOpt = $derived(label ? `&label=${encodeURIComponent(label)}` : '');
-	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
-	const colorOpt = $derived(color ? `&color=${color}` : '');
-	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
-	const link1 = $derived(link?.[0] ? `&link=${encodeURIComponent(link[0])}` : '');
-	const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
-
-	const npmSrcData = $derived(
-		`https://img.shields.io/npm/${interval}/${packageName}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
+	const params = $derived(
+		buildBadgeParams({
+			style,
+			logo,
+			logoColor,
+			logoSize,
+			label,
+			labelColor,
+			color,
+			cacheSeconds,
+			link
+		})
 	);
 
-	const githubSrcData = $derived(
-		`https://img.shields.io/github/downloads/${user}/${repo}/total?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
-	);
+	const npmSrcData = $derived(buildBadgeUrl(`/npm/${interval}/${packageName}`, params));
+
+	const githubSrcData = $derived(buildBadgeUrl(`/github/downloads/${user}/${repo}/total`, params));
 </script>
 
 {#if link}
@@ -64,7 +64,7 @@
 | source | `'npm' \| 'github'` | - | ✓ |
 | user | `string` | - |  |
 | repo | `string` | - |  |
-| interval | `'dw' \| 'dm' \| 'dy' \| 'd18m'` | - |  |
+| interval | `'dw' \| 'dm' \| 'dy' \| 'd18m'` | `dw` |  |
 | packageName | `string` | - |  |
 | style | `'flat' \| 'flat-square' \| 'for-the-badge' \| 'plastic' \| 'social'` | `flat` |  |
 | logo | `string \| undefined \| null` | - |  |

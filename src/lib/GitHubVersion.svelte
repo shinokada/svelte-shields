@@ -1,5 +1,7 @@
 <script lang="ts">
 	import type { GitHubVersionPropsType } from './types';
+	import { buildBadgeParams } from './utils/badgeHelpers';
+	import { buildBadgeUrl } from './utils/constants';
 
 	let {
 		user,
@@ -21,21 +23,29 @@
 		...attributes
 	}: GitHubVersionPropsType = $props();
 
-	const styleOpt = $derived(style ? `style=${style}` : 'style=flat');
-	const include_prereleasesOpt = $derived(include_prereleases ? `&include_prereleases` : '');
-	const sortOpt = $derived(sort ? `&sort=${sort}` : '');
-	const filterOpt = $derived(filter ? `&filter=${filter}` : '');
-	const logoOpt = $derived(logo ? `&logo=${logo}` : '');
-	const logoColorOpt = $derived(logoColor ? `&logoColor=${logoColor}` : '');
-	const logoSizeOpt = $derived(logoSize ? `&logoSize=${logoSize}` : '');
-	const labelOpt = $derived(label ? `&label=${encodeURIComponent(label)}` : '');
-	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
-	const colorOpt = $derived(color ? `&color=${color}` : '');
-	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
-	const link1 = $derived(link?.[0] ? `&link=${encodeURIComponent(link[0])}` : '');
-	const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
-	let srcData = $derived(
-		`https://img.shields.io/github/v/${display_name}/${user}/${repo}?${styleOpt}${include_prereleasesOpt}${sortOpt}${filterOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
+	// GitHub-specific parameters
+	const includePrereleasesParam = $derived(include_prereleases ? `&include_prereleases` : '');
+	const sortParam = $derived(sort ? `&sort=${sort}` : '');
+	const filterParam = $derived(filter ? `&filter=${filter}` : '');
+
+	const params = $derived(
+		buildBadgeParams({
+			style,
+			logo,
+			logoColor,
+			logoSize,
+			label,
+			labelColor,
+			color,
+			cacheSeconds,
+			link
+		})
+	);
+	const srcData = $derived(
+		buildBadgeUrl(
+			`/github/v/${display_name}/${user}/${repo}`,
+			`${params}${includePrereleasesParam}${sortParam}${filterParam}`
+		)
 	);
 </script>
 

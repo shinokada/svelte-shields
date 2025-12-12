@@ -1,5 +1,7 @@
 <script lang="ts">
 	import type { VersionPropsType } from './types';
+	import { buildBadgeParams } from './utils/badgeHelpers';
+	import { buildBadgeUrl } from './utils/constants';
 
 	let {
 		source,
@@ -20,33 +22,30 @@
 		...attributes
 	}: VersionPropsType = $props();
 
-	// npm
-	const tagOpt = $derived(npm_tag ? `/${npm_tag}` : '');
-	// pypi
-	const pypiBaseUrlOpt = $derived(pypiBaseUrl ? `&pypiBaseUrl=${pypiBaseUrl}` : '');
+	// Source-specific parameters
+	const tagPath = $derived(npm_tag ? `/${npm_tag}` : '');
+	const pypiBaseUrlParam = $derived(pypiBaseUrl ? `&pypiBaseUrl=${pypiBaseUrl}` : '');
 
-	// common
-	const styleOpt = $derived(style ? `style=${style}` : 'style=flat');
-	const logoOpt = $derived(logo ? `&logo=${logo}` : '');
-	const logoColorOpt = $derived(logoColor ? `&logoColor=${logoColor}` : '');
-	const logoSizeOpt = $derived(logoSize ? `&logoSize=${logoSize}` : '');
-	const labelOpt = $derived(label ? `&label=${encodeURIComponent(label)}` : '');
-	const labelColorOpt = $derived(labelColor ? `&labelColor=${labelColor}` : '');
-	const colorOpt = $derived(color ? `&color=${color}` : '');
-	const cacheSecondsOpt = $derived(cacheSeconds ? `&cacheSeconds=${cacheSeconds}` : '');
-	const link1 = $derived(link?.[0] ? `&link=${encodeURIComponent(link[0])}` : '');
-	const link2 = $derived(link?.[1] ? `&link=${encodeURIComponent(link[1])}` : '');
-
-	const npmSrcData = $derived(
-		`https://img.shields.io/npm/v/${packageName}${tagOpt}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
+	const params = $derived(
+		buildBadgeParams({
+			style,
+			logo,
+			logoColor,
+			logoSize,
+			label,
+			labelColor,
+			color,
+			cacheSeconds,
+			link
+		})
 	);
 
-	const jsrSrcData = $derived(
-		`https://img.shields.io/jsr/v/${jsr_scope}/${packageName}?${styleOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
-	);
+	const npmSrcData = $derived(buildBadgeUrl(`/npm/v/${packageName}${tagPath}`, params));
+
+	const jsrSrcData = $derived(buildBadgeUrl(`/jsr/v/${jsr_scope}/${packageName}`, params));
 
 	const pypiSrcData = $derived(
-		`https://img.shields.io/pypi/v/${packageName}?${styleOpt}${pypiBaseUrlOpt}${logoOpt}${logoColorOpt}${logoSizeOpt}${labelOpt}${labelColorOpt}${colorOpt}${cacheSecondsOpt}${link1}${link2}`
+		buildBadgeUrl(`/pypi/v/${packageName}`, `${params}${pypiBaseUrlParam}`)
 	);
 </script>
 

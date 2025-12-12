@@ -17,3 +17,5 @@ coverage/
 
 # md files
 *.md
+
+src/routes/utils/highlight
