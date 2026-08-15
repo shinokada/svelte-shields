@@ -2,6 +2,7 @@
 	"name": "svelte-shields",
 	"version": "0.5.4",
 	"description": "A collection of Shields badge components for Svelte Runes",
+	"packageManager": "pnpm@11.21.0",
 	"license": "MIT",
 	"homepage": "https://svelte-shields.codewithshin.com/",
 	"author": {
