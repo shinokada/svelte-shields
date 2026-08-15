@@ -106,7 +106,7 @@ function extractProps(scriptContent: string, typesContent: string): PropInfo[] {
 		const simpleMatch = propItem.match(/(\w+)(?:\s*=\s*(.+))?/);
 
 		let propName: string;
-		let defaultValue = '-';
+		let defaultValue: string | undefined;
 
 		if (aliasMatch) {
 			propName = aliasMatch[1];
